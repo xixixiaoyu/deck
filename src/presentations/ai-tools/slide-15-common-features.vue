@@ -90,13 +90,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     border: 'border-amber-200',
     text: 'text-amber-600',
   },
-  blue: {
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    text: 'text-blue-600',
-  },
   rose: { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
-  cyan: { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
 }
 </script>
 <template>

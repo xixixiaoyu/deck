@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useTheme } from '@/utils/composables'
 import {
-  CubeIcon,
   FireIcon,
   MoonIcon,
   SparklesIcon,
@@ -15,7 +14,6 @@ const themeIcons = {
   dark: MoonIcon,
   light: SunIcon,
   blue: SparklesIcon,
-  blue: CubeIcon,
   green: FireIcon,
 }
 
