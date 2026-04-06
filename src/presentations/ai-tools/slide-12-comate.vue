@@ -5,16 +5,16 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'SPEC规范驱动',
-    description: 'Doc→Tasks→Changes→Preview白盒流程，极大抑制幻觉',
+    title: '核心差异点',
+    description: 'SPEC 规范驱动，白盒 Doc→Tasks→Code',
+  },
+  {
+    title: '工作流改变',
+    description: '先规范确认再生成，拒绝幻觉返工',
   },
   {
     title: '多智能体矩阵',
     description: 'Plan/Architect/Zulu协作式开发',
-  },
-  {
-    title: 'Figma2Code',
-    description: '设计稿直接转换为高质量代码',
   },
   {
     title: '企业级安全',
@@ -22,8 +22,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '定价', value: '个人免费', color: 'emerald' },
-  { label: 'IDC评估', value: '9项8满分', color: 'blue' },
+  { label: '付费模式', value: '个人核心免费', color: 'emerald' },
+  { label: '选型建议', value: '注重规范/安全', color: 'blue' },
   { label: '定位', value: '企业级严谨', color: 'cyan' },
 ]
 </script>
@@ -45,7 +45,7 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          企业级严谨开发工具，IDC评估9项8满分，适合金融/政务场景
+          注重规范、安全的工程团队/学生闭眼入。SPEC 规范驱动，极大抑制幻觉。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

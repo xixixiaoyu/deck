@@ -5,25 +5,25 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Builder模式',
-    description: '自然语言一键生成完整项目框架+环境+测试',
+    title: '核心差异点',
+    description: '多模型聚合 + 中文优化，SOLO 模式闭环',
   },
   {
-    title: 'Chat模式',
-    description: '全代码库对话，深度理解项目',
+    title: '工作流改变',
+    description: '图像转代码 + 全流程自动化',
+  },
+  {
+    title: 'Builder模式',
+    description: '自然语言一键生成完整项目框架+环境+测试',
   },
   {
     title: '设计稿直出代码',
     description: 'Figma/设计稿直接转换为代码',
   },
-  {
-    title: 'SOLO智能体',
-    description: '闭环式智能体，自主完成任务',
-  },
 ]
 const highlights = [
-  { label: '定价', value: '免费', color: 'emerald' },
-  { label: '定位', value: '国内首款AI原生IDE', color: 'blue' },
+  { label: '付费模式', value: '基础永久免费', color: 'emerald' },
+  { label: '选型建议', value: '国内开发者', color: 'blue' },
   { label: '效率', value: '提升50%', color: 'cyan' },
 ]
 </script>
@@ -39,11 +39,14 @@ const highlights = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Trae </HeadingGradient>
-            <p class="text-slate-500 text-sm">字节跳动 · 国内首款AI原生IDE</p>
+            <p class="text-slate-500 text-sm">
+              字节跳动 · 字节跳动 AI 原生 IDE
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          国内首款AI原生IDE，免费+豆包/DeepSeek原生支持，适合0-1项目
+          国内开发者、预算有限初创团队闭眼入。图像转代码 +
+          全流程自动化，中文体验极佳。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

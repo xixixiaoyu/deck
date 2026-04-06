@@ -5,19 +5,16 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Context Engine',
-    description:
-      '实时索引整个栈（代码、依赖、架构、Git历史、Issue），从数千来源智能提炼相关上下文',
+    title: '核心差异点',
+    description: 'Context Engine 大型代码库理解，SWE-bench 冠军',
+  },
+  {
+    title: '工作流改变',
+    description: '多 Agent 云端并行，自动 PR 修复',
   },
   {
     title: '全平台 Agent',
-    description:
-      'VS Code/JetBrains IDE + CLI（shell集成） + GitHub代码审查（inline评论 + 一键修复）',
-  },
-  {
-    title: '协调式多 Agent',
-    description:
-      'Intent工作区里Agent团队分工（协调器+并行执行）、持久记忆、任务列表 → PR全流程',
+    description: 'VS Code/JetBrains IDE + CLI（shell集成） + GitHub代码审查',
   },
   {
     title: '企业级安全',
@@ -25,9 +22,9 @@ const features = [
   },
 ]
 const highlights = [
-  { label: 'SWE-Bench Pro', value: '51.80%', color: 'rose' },
-  { label: 'PR胜率', value: '+12.8%', color: 'pink' },
-  { label: '定价', value: '$20-200+/月', color: 'red' },
+  { label: '付费模式', value: '约 $20/月', color: 'rose' },
+  { label: '选型建议', value: '大型复杂项目', color: 'pink' },
+  { label: 'SWE-Bench Pro', value: '51.80%', color: 'red' },
 ]
 </script>
 <template>
@@ -48,7 +45,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          企业级"上下文记忆引擎"驱动的AI软件Agent——专为大型复杂代码库而生，像"永不失忆的资深架构师"
+          大型复杂项目、团队协作开发者闭眼入。SWE-bench
+          冠军，专为大型复杂代码库而生。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

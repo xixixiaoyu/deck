@@ -5,8 +5,12 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '双引擎',
-    description: '混元+DeepSeek双引擎，灵活切换',
+    title: '核心差异点',
+    description: '全流程一体化，腾讯云生态 + 等保安全',
+  },
+  {
+    title: '工作流改变',
+    description: '自然语言到部署一键闭环',
   },
   {
     title: '微信/小程序集成',
@@ -16,14 +20,10 @@ const features = [
     title: '全链路生成',
     description: '代码生成+审查一体化',
   },
-  {
-    title: '企业合规',
-    description: '符合国内企业合规要求',
-  },
 ]
 const highlights = [
-  { label: '定位', value: '腾讯生态', color: 'blue' },
-  { label: '引擎', value: '混元+DeepSeek', color: 'emerald' },
+  { label: '付费模式', value: '免费 + 积分', color: 'emerald' },
+  { label: '选型建议', value: '腾讯云/微信生态', color: 'blue' },
   { label: '适用', value: '团队协作', color: 'cyan' },
 ]
 </script>
@@ -44,7 +44,9 @@ const highlights = [
             <p class="text-slate-500 text-sm">腾讯 · 微信生态深度集成</p>
           </div>
         </div>
-        <p class="text-slate-600">腾讯生态深度集成，适合微信/小程序开发场景</p>
+        <p class="text-slate-600">
+          腾讯云/微信生态用户、企业级合规开发闭眼入。等保安全，自然语言到部署一键闭环。
+        </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>

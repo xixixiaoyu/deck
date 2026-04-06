@@ -5,9 +5,12 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Spec-Driven 工作流',
-    description:
-      '自然语言提示 → 自动生成EARS规范（需求+验收标准）、设计文档、任务清单，再顺序执行',
+    title: '核心差异点',
+    description: 'Spec 规范驱动 + 4 层架构，意图结构化',
+  },
+  {
+    title: '工作流改变',
+    description: '先规格文档确认，再 Agent 执行迭代',
   },
   {
     title: 'Agent Hooks + Autopilot',
@@ -15,18 +18,14 @@ const features = [
       '文件保存等事件触发AI自动文档/测试/优化；Autopilot模式自主完成大型任务',
   },
   {
-    title: '多模态 + 深度上下文',
-    description: '支持图片输入（UI设计稿）、架构分析、错误诊断、commit消息生成',
-  },
-  {
     title: 'Steering 文件',
     description: '项目级自定义Agent行为、编码规范，实现团队标准化',
   },
 ]
 const highlights = [
-  { label: '出品方', value: 'AWS', color: 'cyan' },
-  { label: '平台', value: 'IDE+CLI', color: 'teal' },
-  { label: '定价', value: '按量计费', color: 'blue' },
+  { label: '付费模式', value: '订阅 $19+/月', color: 'cyan' },
+  { label: '选型建议', value: 'AWS 用户/规范团队', color: 'teal' },
+  { label: '平台', value: 'IDE+CLI', color: 'blue' },
 ]
 </script>
 <template>
@@ -45,8 +44,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          AWS出品的Agentic IDE + CLI，把"vibe
-          coding"升级为结构化、可控的生产级流程——"规范驱动开发"先锋
+          AWS 用户、追求结构化规范的团队闭眼入。Spec 规范驱动 + 4
+          层架构，意图结构化。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

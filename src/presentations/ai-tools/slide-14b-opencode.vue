@@ -5,30 +5,27 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Plan + Build 双模式',
-    description:
-      'Tab键切换，先规划（Plan），再执行构建（Build），每步改码/跑命令都可审批',
+    title: '核心差异点',
+    description: '开源 CLI 代理，75+ 模型灵活 + 本地支持',
+  },
+  {
+    title: '工作流改变',
+    description: '终端 Plan & Build 双模式自主执行',
   },
   {
     title: '75+ 模型任意选',
     description:
-      '免费模型内置 + Models.dev支持（Claude、GPT、Gemini、本地Ollama等）',
-  },
-  {
-    title: '多平台零锁死',
-    description:
-      'TUI终端 + VS Code/Cursor扩展 + 桌面App Beta（macOS/Windows/Linux）',
+      '内置 + Models.dev 支持（Claude、GPT、Gemini、本地 Ollama 等）',
   },
   {
     title: '隐私第一',
-    description:
-      '不存储任何代码/上下文，支持LSP自动加载、多会话并行、undo/redo',
+    description: '不存储任何代码/上下文，支持多会话并行、undo/redo',
   },
 ]
 const highlights = [
-  { label: 'GitHub Stars', value: '120K+', color: 'orange' },
-  { label: '月活用户', value: '5M+', color: 'amber' },
-  { label: '贡献者', value: '800+', color: 'red' },
+  { label: '付费模式', value: '开源免费', color: 'emerald' },
+  { label: '选型建议', value: '追求自定义极客', color: 'blue' },
+  { label: '定位', value: '终端优先', color: 'orange' },
 ]
 </script>
 <template>
@@ -47,7 +44,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          开源、隐私至上、终端优先的"瑞士军刀"AI编码Agent——让你在终端、IDE或桌面App里像指挥"AI实习生"一样工作
+          成本敏感、追求自定义的极客开发者闭眼入。终端 Plan & Build
+          双模式自主执行，支持 75+ 模型。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -5,18 +5,17 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
+    title: '核心差异点',
+    description: 'Quest 模式 Agentic 平台，Repo Wiki 项目知识图',
+  },
+  {
+    title: '工作流改变',
+    description: '自然语言需求自动规划生成完整项目',
+  },
+  {
     title: 'Agentic IDE + CLI 双形态',
     description:
-      '深度代码库理解 + 自主Agent（Quest Mode任务委托、Agentic Chat协作编程、NEXT精准补全）',
-  },
-  {
-    title: '真实工程思维',
-    description:
-      '自主规划 → 编码 → 测试 → 验证全流程，支持多文件重构、架构感知、持久记忆',
-  },
-  {
-    title: '多模式交互',
-    description: '自然语言 → 生产级代码 + 浏览器自动化（QoderWork桌面助手）',
+      '深度代码库理解 + 自主Agent（Quest Mode任务委托、Agentic Chat协作编程）',
   },
   {
     title: '全球最新大模型',
@@ -25,14 +24,14 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '发布时间', value: '2025年底', color: 'blue' },
-  { label: '定位', value: 'Cursor最强竞品', color: 'cyan' },
+  { label: '付费模式', value: '积分制(低成本)', color: 'blue' },
+  { label: '选型建议', value: '企业级大项目', color: 'cyan' },
   { label: '评价', value: '2026最值得试', color: 'emerald' },
 ]
 const whyImportant = [
-  'Product Hunt 评分 5.0，YouTube/Medium多篇评测称其为"2026最值得试的Cursor替代品"',
-  '在中文社区（如知乎、CSDN 2026盘点）已多次与Cursor、Trae并列为"Agentic新势力"',
-  '定位与Windsurf/Claude Code高度重合，但强调"真实软件开发"而非单纯原型',
+  '自然语言需求自动规划生成完整项目，适合原型构建与企业级大型项目。',
+  'Repo Wiki 项目知识图，深度理解复杂业务逻辑。',
+  '在 2026 年盘点中被视为 Agentic 编程平台的新标杆。',
 ]
 </script>
 <template>
@@ -48,7 +47,7 @@ const whyImportant = [
           <div>
             <HeadingGradient :level="2" size="3xl"> Qoder </HeadingGradient>
             <p class="text-gray-600 dark:text-gray-300 text-lg">
-              新一代Agentic Coding Platform（智能体编程平台）
+              企业级大型项目、原型构建开发者闭眼入
             </p>
           </div>
         </div>

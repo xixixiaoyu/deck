@@ -5,30 +5,27 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
+    title: '核心差异点',
+    description: 'OpenAI CLI/桌面 Agent，云端沙盒执行',
+  },
+  {
+    title: '工作流改变',
+    description: '多多模态 + 定时任务，自主批量处理',
+  },
+  {
     title: '多Agent并行工作流',
     description:
-      '一个任务拆成多个Agent同时跑（Worktrees + 云环境），几周工作几天内完成；支持跨项目管理，像指挥中心',
+      '一个任务拆成多个Agent同时跑（Worktrees + 云环境），几周工作几天内完成',
   },
   {
     title: '云沙箱 + 本地混合',
-    description:
-      '每个任务在隔离云环境中预加载你的仓库，能读写文件、跑测试、执行命令；本地模式则更注重human-in-the-loop审批',
-  },
-  {
-    title: '全形态覆盖',
-    description:
-      '桌面App（macOS）+ VS Code扩展 + CLI + GitHub深度集成（@codex review自动PR审查）',
-  },
-  {
-    title: 'GPT-5.x-Codex模型',
-    description:
-      '专为Agentic优化，长上下文压缩 + 指令遵循强 + 测试迭代能力顶尖',
+    description: '隔离云环境中预加载仓库，能读写文件、跑测试、执行命令',
   },
 ]
 const highlights = [
-  { label: '采用率', value: '60%+', color: 'emerald' },
-  { label: '控制模式', value: '3级', color: 'teal' },
-  { label: '定价', value: '$20-200+/月', color: 'green' },
+  { label: '付费模式', value: 'ChatGPT 计划内', color: 'emerald' },
+  { label: '选型建议', value: 'OpenAI 生态用户', color: 'teal' },
+  { label: '采用率', value: '60%+', color: 'green' },
 ]
 </script>
 <template>
@@ -47,8 +44,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          OpenAI官方Agentic编码平台，主打多Agent并行 + 长时程任务 +
-          云沙箱执行，适合想"放手让AI干活"的开发者/团队
+          OpenAI 生态用户、后端批量任务开发者闭眼入。主打多 Agent 并行 +
+          长时程任务 + 云沙箱执行。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

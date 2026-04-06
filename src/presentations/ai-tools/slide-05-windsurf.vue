@@ -5,12 +5,12 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Cascade Agent',
-    description: '深度代码库理解 + 实时感知 + 多步规划执行（10步前思考）',
+    title: '核心差异点',
+    description: '能动型 IDE，Flows + Cascade 主动预测修复',
   },
   {
-    title: 'Arena Mode',
-    description: '并行模型盲测投票，选择最佳方案',
+    title: '工作流改变',
+    description: 'AI 预览部署，心流式无打断开发',
   },
   {
     title: 'Plan Mode',
@@ -22,9 +22,9 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '定价范围', value: '免费-$60/月', color: 'emerald' },
-  { label: '定位', value: 'Agentic最强', color: 'cyan' },
-  { label: '排名', value: '常居榜首', color: 'blue' },
+  { label: '付费模式', value: 'Pro $15/月', color: 'emerald' },
+  { label: '选型建议', value: '追求心流开发', color: 'cyan' },
+  { label: '定位', value: 'Agentic最强', color: 'blue' },
 ]
 </script>
 <template>
@@ -43,7 +43,7 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          Agentic工作流最强工具，2026年常居功率排名榜首，免费层吸引力大
+          预算敏感、追求心流开发的个人开发者闭眼入。Agentic工作流领先工具。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

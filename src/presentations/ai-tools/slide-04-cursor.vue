@@ -5,12 +5,12 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Tab (Supermaven)',
-    description: '高级自动补全，下一动作预测，速度与精准度领先',
+    title: '核心差异点',
+    description: 'AI 原生 VS Code 分支，Agent 后台自主多文件编辑',
   },
   {
-    title: 'Agent Mode / Composer 2',
-    description: '自然语言驱动多文件编辑、并行Agent、自主构建-测试-演示全流程',
+    title: '工作流改变',
+    description: '从补全跃升为异步 Agent 执行复杂任务',
   },
   {
     title: '完整代码库索引',
@@ -22,8 +22,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '市场份额', value: '18%', color: 'blue' },
-  { label: '定价', value: '$20/月', color: 'cyan' },
+  { label: '付费模式', value: 'Pro $20/月', color: 'blue' },
+  { label: '选型建议', value: '追求极致 Agent', color: 'cyan' },
   { label: '评价', value: 'AI原生IDE标杆', color: 'emerald' },
 ]
 </script>
@@ -43,7 +43,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          AI原生IDE标杆，市场份额约18%，被誉为"切换即生产力跃升"的最佳选择
+          VS Code 重度用户，追求极致 Agent
+          体验者闭眼入。AI原生IDE标杆，市场份额领先。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

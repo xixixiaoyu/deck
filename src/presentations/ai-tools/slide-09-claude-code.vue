@@ -5,16 +5,16 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '终端原生Agent',
-    description: '全代码库感知、多文件重构、自主执行Git/测试/调试循环',
+    title: '核心差异点',
+    description: 'CLI Agentic，Subagents 并行拆解长时任务',
+  },
+  {
+    title: '工作流改变',
+    description: '终端自主执行，人类仅关键节点干预',
   },
   {
     title: 'Auto Mode',
     description: '安全自动执行 + 记忆（跨会话记住项目模式）',
-  },
-  {
-    title: '多Agent审查',
-    description: '协作式代码审查与优化',
   },
   {
     title: 'Opus 4.6模型',
@@ -22,8 +22,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '定价', value: '$20/月起', color: 'emerald' },
-  { label: '定位', value: '深度思考', color: 'blue' },
+  { label: '付费模式', value: 'Pro $20/月', color: 'emerald' },
+  { label: '选型建议', value: '资深开发者', color: 'blue' },
   { label: '评价', value: '开发者最爱', color: 'cyan' },
 ]
 </script>
@@ -45,7 +45,7 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          2026年爆款，常被开发者评为"最爱工具"，适合大型复杂项目
+          资深开发者、复杂代码库重构者闭眼入。终端自主执行，高效拆解长时任务。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

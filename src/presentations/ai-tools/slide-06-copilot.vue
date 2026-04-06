@@ -5,12 +5,12 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '智能补全',
-    description: '行/函数级智能补全 + Copilot Chat',
+    title: '核心差异点',
+    description: 'GitHub 生态深度集成，PR 审查自动化',
   },
   {
-    title: '自主Agent',
-    description: 'Issue→分支→代码→PR全自动',
+    title: '工作流改变',
+    description: 'IDE 插件无缝补全 + Agent 辅助',
   },
   {
     title: '代码审查',
@@ -22,8 +22,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '市场份额', value: '37%', color: 'cyan' },
-  { label: '定价', value: '$10/月起', color: 'blue' },
+  { label: '付费模式', value: 'Pro $10/月', color: 'cyan' },
+  { label: '选型建议', value: 'GitHub重度用户', color: 'blue' },
   { label: '定位', value: '默认选择', color: 'emerald' },
 ]
 </script>
@@ -53,7 +53,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          市场份额约37%，仍是"默认选择"，GitHub生态无缝集成
+          GitHub 重度用户、团队协作开发者闭眼入。GitHub生态无缝集成，PR
+          审查自动化。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

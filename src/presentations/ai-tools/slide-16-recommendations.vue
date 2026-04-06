@@ -6,22 +6,22 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const recommendations = [
   {
     title: '最佳组合',
-    description:
-      'Cursor（日常）+ Claude Code（复杂任务）+ 1款本土工具（中文/免费）',
+    description: 'Cursor（日常）+ Claude Code（复杂任务）+ Trae（中文/免费）',
     icon: '🎯',
     color: 'blue',
+  },
+  {
+    title: '选型小贴士',
+    description:
+      '预算有限优先 Trae / antigravity / Opencode；追求规范选 Comate / Kiro；大型项目选 Augment / Qoder；生态绑定选 Copilot / Codebuddy。',
+    icon: '💡',
+    color: 'emerald',
   },
   {
     title: '核心提醒',
     description: 'AI再强，仍需你把控架构与业务逻辑——工具是"放大器"，不是替代品',
     icon: '⚠️',
     color: 'amber',
-  },
-  {
-    title: '隐私优先',
-    description: '隐私敏感场景优先自托管/企业版（如文心快码）',
-    icon: '🔒',
-    color: 'blue',
   },
 ]
 const futureTrends = [

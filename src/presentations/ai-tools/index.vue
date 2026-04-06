@@ -24,6 +24,7 @@ import Slide14bOpencode from './slide-14b-opencode.vue'
 import Slide14cKiro from './slide-14c-kiro.vue'
 import Slide14dAugment from './slide-14d-augment.vue'
 import Slide14eCodex from './slide-14e-codex.vue'
+import Slide14fAntigravity from './slide-14f-antigravity.vue'
 import Slide14Comparison from './slide-14-comparison.vue'
 import Slide15CommonFeatures from './slide-15-common-features.vue'
 import Slide16Recommendations from './slide-16-recommendations.vue'
@@ -68,6 +69,7 @@ const slides = [
   Slide14cKiro,
   Slide14dAugment,
   Slide14eCodex,
+  Slide14fAntigravity,
   Slide14Comparison,
   Slide15CommonFeatures,
   Slide16Recommendations,
