@@ -22,51 +22,52 @@ const tierData: Tier[] = [
   {
     id: '夯',
     label: '夯中之夯',
-    subLabel: '统治级 Agent / 绝对统治力',
+    subLabel: '深度工程化 / 极致硬核',
     color: 'from-red-600 to-orange-600',
     tools: [
-      { name: 'Cursor', desc: '目前的 T0 级神作，Composer 2.0 独领风骚' },
-      { name: 'Windsurf', desc: 'Cascade 提前 10 步预判，心流体验拉满' },
+      { name: 'Claude Code', desc: '终端最强推理 Agent，Anthropic 原生加持' },
+      { name: 'Augment', desc: '企业级性能怪兽，全链路上下文极速索引' },
     ],
   },
   {
     id: '顶级',
     label: '确实顶级',
-    subLabel: '第一梯队 / 强力竞争者',
+    subLabel: '第一梯队 / 差异化神作',
     color: 'from-orange-500 to-amber-500',
     tools: [
-      { name: 'Trae', desc: '设计稿直出 + 深度中文优化，字节出品确实夯' },
-      { name: 'Claude Code', desc: 'Anthropic 官方 Agent，终端推理之王' },
+      { name: 'Codex', desc: 'OpenAI 编程模型鼻祖，虽然低调但底蕴深厚' },
+      { name: 'Qoder', desc: '代码知识图谱 + 深度工程化，重构与理解之王' },
     ],
   },
   {
     id: '人上人',
     label: '人上人选',
-    subLabel: '进阶之选 / 特定领域王者',
+    subLabel: '进阶之选 / 主流神作',
     color: 'from-amber-400 to-yellow-500',
     tools: [
-      { name: 'Augment', desc: '极速索引与全链路安全，企业级性能怪兽' },
-      { name: 'Comate', desc: '百度出品，合规与本土化结合最好的选择' },
+      { name: 'Cursor', desc: '目前公认的主流 T0，Composer 2.0 体验极佳' },
+      { name: 'Windsurf', desc: 'Cascade 深度 Agent，心流预判与编排极强' },
     ],
   },
   {
     id: 'NPC',
     label: '众生相',
-    subLabel: '中规中矩 / 稳健补全',
+    subLabel: '常规插件 / 标准补全',
     color: 'from-emerald-500 to-teal-500',
     tools: [
-      { name: 'Qoder', desc: '代码知识图谱，大型项目重构可用' },
-      { name: 'Kiro', desc: '专注极致规范与代码审计' },
+      { name: 'Trae', desc: '设计稿直出 + 深度中文优化，字节出品稳如 NPC' },
+      { name: 'Comate', desc: '百度出品，稳健的补全与合规性落地选择' },
+      { name: 'CodeBuddy', desc: '中规中矩的编程助手，适合基础场景辅助' },
+      { name: 'Kiro', desc: '专注极致规范与代码审计，特定场景可用' },
     ],
   },
   {
     id: '拉',
     label: '有点拉胯',
-    subLabel: '落后时代 / 纯补全型',
+    subLabel: '落后时代 / 效率瓶颈',
     color: 'from-slate-400 to-slate-600',
     tools: [
       { name: '传统补全插件', desc: '还停留在单行补全时代，建议尽快升级' },
-      { name: '自制极简脚本', desc: '适合极客折腾，生产力效率一般' },
     ],
   },
 ]
@@ -161,12 +162,12 @@ const tierData: Tier[] = [
           </div>
           <p class="text-xs leading-relaxed">
             <strong class="text-slate-800">选型逻辑：</strong>
-            <span class="text-red-600 font-bold">「夯」</span>级看重全自动 Agent
-            编排；
+            <span class="text-red-600 font-bold">「夯」</span
+            >级侧重深度工程化与极致推理；
             <span class="text-orange-600 font-bold">「顶级」</span
-            >看重特定场景的极致提效；
-            <span class="text-emerald-600 font-bold">「NPC」</span
-            >级主打稳健与合规。
+            >看重底蕴与差异化；
+            <span class="text-amber-600 font-bold">「人上人」</span
+            >级主打主流体验与心流编排。
           </p>
         </div>
       </div>
