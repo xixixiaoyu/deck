@@ -21,6 +21,7 @@ import Slide10Qoder from './slide-10-qoder.vue'
 import Slide11Trae from './slide-11-trae.vue'
 import Slide12Comate from './slide-12-comate.vue'
 import Slide13CodeBuddy from './slide-13-codebuddy.vue'
+import Slide14aOpenSourceAgents from './slide-14a-open-source-agents.vue'
 import Slide14Comparison from './slide-14-comparison.vue'
 import Slide15CommonFeatures from './slide-15-common-features.vue'
 import Slide16Recommendations from './slide-16-recommendations.vue'
@@ -62,6 +63,7 @@ const slides = [
   Slide11Trae,
   Slide12Comate,
   Slide13CodeBuddy,
+  Slide14aOpenSourceAgents,
   Slide14Comparison,
   Slide15CommonFeatures,
   Slide16Recommendations,
