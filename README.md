@@ -1,4 +1,4 @@
-# Jiansi Deck | 简思演示
+# Deck | 极简演示
 
 一个基于 Vue 3 + TypeScript + Vite 构建的现代化演示文稿引擎。
 

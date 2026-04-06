@@ -1,4 +1,4 @@
-# Jiansi Deck (简思演示) - 工程上下文 (AGENTS.md)
+# Deck (极简演示) - 工程上下文 (AGENTS.md)
 
 ## 项目使命 (Mission)
 

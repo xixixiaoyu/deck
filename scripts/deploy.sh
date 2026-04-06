@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Jiansi Deck (简思演示) 自动化部署脚本
+# Deck (极简演示) 自动化部署脚本
 # 功能：本地构建 -> SSH 同步 -> 远程部署
 # 作者：Senior Engineer Persona
 
