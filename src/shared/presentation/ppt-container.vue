@@ -519,37 +519,37 @@ watch(currentSlide, (newVal, oldVal) => {
 
 .controls {
   position: fixed;
-  bottom: 32px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(var(--surface) / 0.7);
+  gap: 12px;
+  background: rgba(var(--surface) / 0.8);
   border: 1px solid rgb(var(--border) / 0.4);
-  padding: 6px 12px;
-  border-radius: 24px;
-  backdrop-filter: blur(16px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
   box-shadow:
-    0 4px 20px -4px rgb(0 0 0 / 0.1),
-    0 2px 8px -2px rgb(0 0 0 / 0.05);
+    0 10px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.05);
   z-index: 1000;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .controls:hover {
-  background: rgba(var(--surface) / 0.85);
+  background: rgba(var(--surface) / 0.9);
   box-shadow:
-    0 10px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.05);
+    0 20px 25px -5px rgb(0 0 0 / 0.15),
+    0 10px 10px -5px rgb(0 0 0 / 0.05);
   transform: translateX(-50%) translateY(-2px);
 }
 
 .control-btn {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border: none;
-  border-radius: 50%;
+  border-radius: 12px;
   background: transparent;
   color: rgb(var(--text-muted));
   cursor: pointer;
@@ -562,6 +562,7 @@ watch(currentSlide, (newVal, oldVal) => {
 .control-btn:hover:not(:disabled) {
   background: rgb(var(--accent) / 0.1);
   color: rgb(var(--accent));
+  transform: scale(1.05);
 }
 
 .control-btn.active {
@@ -576,7 +577,7 @@ watch(currentSlide, (newVal, oldVal) => {
 
 .control-divider {
   width: 1px;
-  height: 20px;
+  height: 24px;
   background: rgb(var(--border) / 0.6);
   margin: 0 4px;
 }
@@ -584,33 +585,38 @@ watch(currentSlide, (newVal, oldVal) => {
 .slide-info {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: rgb(var(--text-muted));
-  font-weight: 500;
+  gap: 8px;
+  color: rgb(var(--text-primary));
+  font-weight: 600;
   padding: 0 8px;
-  font-size: 13px;
+  font-size: 14px;
   font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  justify-content: center;
 }
 
 .total-pages {
-  opacity: 0.6;
+  color: rgb(var(--text-muted));
+  font-weight: 500;
 }
 
 .page-edit {
-  min-width: 32px;
-  padding: 2px 6px;
-  border-radius: 6px;
-  background: rgb(var(--surface-muted) / 0.5);
+  min-width: 40px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgb(var(--surface-muted) / 0.6);
   color: rgb(var(--text-primary));
   border: 1px solid transparent;
   transition: all 0.2s ease;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .page-edit:focus {
   outline: none;
   background: rgb(var(--surface-muted));
-  border-color: rgb(var(--accent) / 0.3);
+  border-color: rgb(var(--accent) / 0.4);
+  box-shadow: 0 0 0 3px rgb(var(--accent) / 0.1);
 }
 
 .progress-bar {
@@ -812,6 +818,31 @@ watch(currentSlide, (newVal, oldVal) => {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgb(var(--text-muted) / 0.4);
+}
+
+/* 代码块滚动条美化 */
+:deep(pre) {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--accent) / 0.6) rgb(var(--border) / 0.2);
+}
+
+:deep(pre)::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+:deep(pre)::-webkit-scrollbar-track {
+  background: rgb(var(--border) / 0.25);
+  border-radius: 9999px;
+}
+
+:deep(pre)::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgb(var(--accent)), #9333ea);
+  border-radius: 9999px;
+}
+
+:deep(pre)::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, rgb(var(--accent) / 0.8), #7e22ce);
 }
 
 @media (max-width: 768px) {

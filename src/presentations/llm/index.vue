@@ -102,72 +102,19 @@ const slides = [
 </script>
 
 <template>
-  <div
-    class="relative flex h-screen w-screen overflow-hidden bg-surface text-text-primary"
-    style="
-      --surface: 248 250 252;
-      --surface-muted: 241 245 249;
-      --text-primary: 15 23 42;
-      --text-muted: 71 85 105;
-    "
-  >
+  <div class="presentation-llm">
     <BackgroundManager />
-    <main
-      class="relative z-10 flex h-full w-full items-center justify-center px-6 py-6 sm:px-10"
-    >
-      <div class="deck-shell h-full w-full">
-        <ppt-container :slides="slides" />
-      </div>
-    </main>
+    <ppt-container
+      :slides="slides"
+      title="大语言模型应用开发实战"
+      thumbnails-label="个大模型核心概念"
+    />
   </div>
 </template>
 
 <style scoped>
-.deck-shell :deep(.ppt-container) {
-  @apply bg-transparent;
-}
-
-.deck-shell :deep(.controls) {
-  @apply fixed bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-3 py-1.5 text-xs text-text-primary shadow-xl shadow-black/40 backdrop-blur-xl;
-}
-
-.deck-shell :deep(.control-btn) {
-  @apply flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-slate-900 text-sm font-semibold shadow-md shadow-black/30 ring-1 ring-black/5 transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-cyan-300 disabled:cursor-not-allowed disabled:opacity-40;
-}
-
-.deck-shell :deep(.slide-info) {
-  @apply min-w-[56px] text-center text-xs font-semibold text-slate-900;
-}
-
-.deck-shell :deep(.progress-bar) {
-  @apply fixed inset-x-0 bottom-0 h-[3px] bg-slate-900/30;
-}
-
-.deck-shell :deep(.progress) {
-  @apply h-full bg-gradient-to-r from-accent to-accent transition-all duration-300;
-}
-
-.deck-shell :deep(pre) {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.6) rgba(148, 163, 184, 0.2);
-}
-
-.deck-shell :deep(pre)::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
-}
-
-.deck-shell :deep(pre)::-webkit-scrollbar-track {
-  background: rgba(148, 163, 184, 0.25);
-  border-radius: 9999px;
-}
-
-.deck-shell :deep(pre)::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #6366f1 0%, #22d3ee 50%, #10b981 100%);
-  border-radius: 9999px;
-}
-
-.deck-shell :deep(pre)::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #4f46e5 0%, #06b6d4 50%, #059669 100%);
+.presentation-llm {
+  width: 100vw;
+  height: 100vh;
 }
 </style>
