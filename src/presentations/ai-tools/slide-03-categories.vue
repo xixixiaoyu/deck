@@ -24,7 +24,7 @@ const categories: Category[] = [
     id: 'ide-extension',
     title: 'IDE扩展/助手',
     description: '无缝嵌入现有工作流，最易上手',
-    tools: ['GitHub Copilot', 'Tabnine', 'Amazon Q'],
+    tools: ['GitHub Copilot'],
     color: 'cyan',
     icon: '🔌',
   },

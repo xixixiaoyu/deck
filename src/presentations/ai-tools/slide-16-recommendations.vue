@@ -19,7 +19,7 @@ const recommendations = [
   },
   {
     title: '隐私优先',
-    description: '隐私敏感场景优先自托管/企业版（如Tabnine、文心快码）',
+    description: '隐私敏感场景优先自托管/企业版（如文心快码）',
     icon: '🔒',
     color: 'blue',
   },
@@ -61,11 +61,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     bg: 'bg-amber-50',
     border: 'border-amber-200',
     text: 'text-amber-600',
-  },
-  blue: {
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    text: 'text-blue-600',
   },
 }
 </script>

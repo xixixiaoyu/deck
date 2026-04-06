@@ -29,18 +29,6 @@ const comparisonData: ComparisonRow[] = [
     color: 'emerald',
   },
   {
-    scenario: 'AWS云项目',
-    tool: 'Amazon Q Developer',
-    reason: '云原生深度',
-    color: 'amber',
-  },
-  {
-    scenario: '隐私/企业合规',
-    tool: 'Tabnine',
-    reason: '自托管+上下文引擎',
-    color: 'blue',
-  },
-  {
     scenario: '中文/免费0-1项目',
     tool: 'Trae / 文心快码',
     reason: '自然语言+规范驱动',
@@ -58,9 +46,7 @@ const colorMap: Record<string, string> = {
   cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
   emerald: 'bg-emerald-50 border-emerald-200 text-emerald-700',
   amber: 'bg-amber-50 border-amber-200 text-amber-700',
-  blue: 'bg-blue-50 border-blue-200 text-blue-700',
   rose: 'bg-rose-50 border-rose-200 text-rose-700',
-  cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
 }
 </script>
 <template>
