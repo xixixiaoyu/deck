@@ -5,16 +5,16 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Composer 2 进化',
-    description: '基于 Kimi K2.5 + RL 强化学习，支持 100+ 步长周期任务处理',
+    title: 'Tab 极致补全',
+    description: '毫秒级感知意图，支持跨文件预测与 Copilot++ 丝滑心流体验',
   },
   {
     title: '工作流改变',
-    description: '从“手动补全”跃升为“异步委托”，支持 16+ 并行 Agent 协作',
+    description: '从“单行纠错”跃升为“全量委托”，支持 16+ 并行 Agent 协作',
   },
   {
-    title: 'SWE-bench 性能',
-    description: '73.7% (Multilingual) 顶级水平，跨语言 Bug 修复闭环',
+    title: 'Composer 2 进化',
+    description: '基于 Kimi K2.5 + RL 强化学习，支持 100+ 步长周期任务处理',
   },
   {
     title: '优缺点小结',
@@ -22,9 +22,9 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $20/月', color: 'blue' },
-  { label: '核心引擎', value: 'Composer 2', color: 'cyan' },
-  { label: '心流体验', value: '异步委托 · 零中断', color: 'emerald' },
+  { label: '补全黑科技', value: 'Copilot++', color: 'blue' },
+  { label: 'Agent 引擎', value: 'Composer 2', color: 'cyan' },
+  { label: '订阅模式', value: 'Pro $20/月', color: 'emerald' },
 ]
 </script>
 <template>
@@ -45,8 +45,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          VS Code 重度用户首选。基于 Composer 2 (Kimi K2.5) 模型，在
-          Terminal-Bench 2.0 (61.7%) 与 SWE-bench (73.7%) 表现极佳。
+          VS Code 重度用户首选。Copilot++ 极致补全与 Composer 2 强力 Agent
+          驱动的完整 AI 原生 IDE。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -22,14 +22,14 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '首购 $2/月起', color: 'blue' },
+  { label: '付费模式', value: '$10/月起', color: 'blue' },
   { label: '选型建议', value: '企业级大型项目', color: 'cyan' },
   { label: '知识图谱', value: '10万文件深度理解', color: 'emerald' },
 ]
 const whyImportant = [
   '自然语言需求自动规划生成完整项目，适合原型构建与企业级大型项目。',
   'Repo Wiki 项目知识图，深度理解复杂业务逻辑。',
-  '国产性价比极高，Pro 版约 $20/月，Windows 适配优秀。',
+  '国产性价比极高，Windows 终端准确率领先，适配优秀。',
 ]
 </script>
 <template>
