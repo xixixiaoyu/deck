@@ -4,20 +4,20 @@
 
 @layer base {
   :root {
-    --surface: 17 24 39;
-    --surface-muted: 30 41 59;
-    --text-primary: 226 232 240;
-    --text-muted: 148 163 184;
+    --surface: 248 250 252;
+    --surface-muted: 241 245 249;
+    --text-primary: 15 23 42;
+    --text-muted: 100 116 139;
     --accent: 13 148 136;
-    --border: 71 85 105;
-    --highlight: 253 224 71;
+    --border: 203 213 225;
+    --highlight: 234 179 8;
     --mesh-saturation: 1.08;
     --mesh-contrast: 1.04;
     --grid-size: 26px;
     --grid-size-mobile: 22px;
-    --grid-opacity: 0.12;
+    --grid-opacity: 0.08;
     --veil-blur: 6px;
-    --veil-opacity: 0.1;
+    --veil-opacity: 0.3;
   }
 
   body {

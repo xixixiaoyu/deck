@@ -388,8 +388,9 @@ watch(currentSlide, (newVal, oldVal) => {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #000;
+  background: transparent;
   outline: none;
+  z-index: 1;
 }
 
 .slides-viewport {
