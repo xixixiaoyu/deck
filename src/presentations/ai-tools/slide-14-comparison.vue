@@ -2,141 +2,190 @@
 import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
+
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-interface ComparisonRow {
-  scenario: string
-  tool: string
-  reason: string
-  color: string
+
+interface Tool {
+  name: string
+  desc: string
 }
-const comparisonData: ComparisonRow[] = [
+
+interface Tier {
+  id: string
+  label: string
+  subLabel: string
+  color: string
+  tools: Tool[]
+}
+
+const tierData: Tier[] = [
   {
-    scenario: '极致体验/Agent 驱动',
-    tool: 'Cursor / Claude Code',
-    reason: 'Composer 2 / 73.7% ~ 80.8% SWE',
-    color: 'blue',
+    id: '夯',
+    label: '夯中之夯',
+    subLabel: '统治级 Agent / 绝对统治力',
+    color: 'from-red-600 to-orange-600',
+    tools: [
+      { name: 'Cursor', desc: '目前的 T0 级神作，Composer 2.0 独领风骚' },
+      { name: 'Windsurf', desc: 'Cascade 提前 10 步预判，心流体验拉满' },
+    ],
   },
   {
-    scenario: '心流/主动预测',
-    tool: 'Windsurf',
-    reason: 'Cascade 提前 10 步思考',
-    color: 'cyan',
+    id: '顶级',
+    label: '确实顶级',
+    subLabel: '第一梯队 / 强力竞争者',
+    color: 'from-orange-500 to-amber-500',
+    tools: [
+      { name: 'Trae', desc: '设计稿直出 + 深度中文优化，字节出品确实夯' },
+      { name: 'Claude Code', desc: 'Anthropic 官方 Agent，终端推理之王' },
+    ],
   },
   {
-    scenario: '追求规范/合规',
-    tool: 'Comate / Kiro / Augment',
-    reason: 'SPEC 驱动 / 审计追踪',
-    color: 'emerald',
+    id: '人上人',
+    label: '人上人选',
+    subLabel: '进阶之选 / 特定领域王者',
+    color: 'from-amber-400 to-yellow-500',
+    tools: [
+      { name: 'Augment', desc: '极速索引与全链路安全，企业级性能怪兽' },
+      { name: 'Comate', desc: '百度出品，合规与本土化结合最好的选择' },
+    ],
   },
   {
-    scenario: '大型项目/企业级',
-    tool: 'Qoder / Codebuddy / Augment',
-    reason: '知识图谱 / 全链路安全',
-    color: 'amber',
+    id: 'NPC',
+    label: '众生相',
+    subLabel: '中规中矩 / 稳健补全',
+    color: 'from-emerald-500 to-teal-500',
+    tools: [
+      { name: 'Qoder', desc: '代码知识图谱，大型项目重构可用' },
+      { name: 'Kiro', desc: '专注极致规范与代码审计' },
+    ],
   },
   {
-    scenario: '中文优化/UI 重度',
-    tool: 'Trae',
-    reason: '设计稿直出 / 永久免费',
-    color: 'rose',
-  },
-  {
-    scenario: '预算有限/极客',
-    tool: 'antigravity / Opencode',
-    reason: '顶级模型白嫖 / 开源自管',
-    color: 'blue',
+    id: '拉',
+    label: '有点拉胯',
+    subLabel: '落后时代 / 纯补全型',
+    color: 'from-slate-400 to-slate-600',
+    tools: [
+      { name: '传统补全插件', desc: '还停留在单行补全时代，建议尽快升级' },
+      { name: '自制极简脚本', desc: '适合极客折腾，生产力效率一般' },
+    ],
   },
 ]
-const colorMap: Record<string, string> = {
-  blue: 'bg-blue-50 border-blue-200 text-blue-700',
-  cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
-  emerald: 'bg-emerald-50 border-emerald-200 text-emerald-700',
-  amber: 'bg-amber-50 border-amber-200 text-amber-700',
-  rose: 'bg-rose-50 border-rose-200 text-rose-700',
-}
 </script>
+
 <template>
   <Section>
-    <Card padding="lg">
-      <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl"> 快速对比建议 </HeadingGradient>
-        <p class="mt-3 text-slate-600 text-lg">2026年实用选型指南</p>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="w-full">
-          <thead>
-            <tr class="border-b-2 border-slate-200">
-              <th
-                class="text-left py-3 px-4 text-sm font-semibold text-slate-700"
-              >
-                场景
-              </th>
-              <th
-                class="text-left py-3 px-4 text-sm font-semibold text-slate-700"
-              >
-                首选工具
-              </th>
-              <th
-                class="text-left py-3 px-4 text-sm font-semibold text-slate-700"
-              >
-                理由
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              v-for="(row, index) in comparisonData"
-              :key="index"
-              class="border-b border-slate-100 hover:bg-slate-50 transition-colors"
-            >
-              <td class="py-3 px-4">
-                <span class="font-medium text-slate-800">{{
-                  row.scenario
-                }}</span>
-              </td>
-              <td class="py-3 px-4">
-                <span
-                  class="inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium border"
-                  :class="colorMap[row.color]"
-                >
-                  {{ row.tool }}
-                </span>
-              </td>
-              <td class="py-3 px-4 text-sm text-slate-600">
-                {{ row.reason }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div
-        class="mt-6 p-5 rounded-xl bg-gradient-to-r from-blue-50 via-cyan-50 to-emerald-50 border border-slate-200"
-      >
-        <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
-          <svg
-            class="w-5 h-5 text-blue-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-            />
-          </svg>
-          选型提示
-        </h4>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          根据团队规模、预算、隐私要求和技术栈选择合适的工具。
-          <strong class="text-blue-600">AI原生IDE</strong> 适合追求极致体验；
-          <strong class="text-cyan-600">IDE扩展</strong>
-          适合无缝融入现有工作流；
-          <strong class="text-emerald-600">Terminal CLI</strong>
-          适合复杂推理场景。
+    <Card padding="lg" class="flex flex-col h-full">
+      <div class="mb-8 text-center shrink-0">
+        <HeadingGradient :level="2" size="4xl">
+          AI 编程工具「夯拉榜」
+        </HeadingGradient>
+        <p class="mt-3 text-slate-500 text-lg font-medium">
+          2026 开发者实用选型指南
         </p>
+      </div>
+
+      <div class="flex-grow space-y-4 overflow-y-auto pr-2 custom-scrollbar">
+        <div
+          v-for="tier in tierData"
+          :key="tier.id"
+          class="group flex items-stretch gap-4 rounded-2xl bg-white/40 border border-slate-100 hover:border-slate-200 transition-all duration-300"
+        >
+          <!-- Tier Label -->
+          <div
+            class="w-32 shrink-0 flex flex-col items-center justify-center rounded-l-2xl text-white shadow-lg relative overflow-hidden"
+            :class="tier.color"
+          >
+            <div
+              class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"
+            ></div>
+            <span
+              class="text-4xl font-black italic relative z-10 drop-shadow-md"
+              >{{ tier.id }}</span
+            >
+            <span
+              class="text-xs font-bold tracking-widest mt-2 opacity-90 relative z-10 bg-black/20 px-2 py-0.5 rounded"
+            >
+              {{ tier.label }}
+            </span>
+          </div>
+
+          <!-- Tier Content -->
+          <div class="flex-grow p-4 flex flex-col justify-center">
+            <div class="mb-3">
+              <span
+                class="text-xs font-bold text-slate-400 uppercase tracking-widest"
+              >
+                {{ tier.subLabel }}
+              </span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div
+                v-for="tool in tier.tools"
+                :key="tool.name"
+                class="flex flex-col p-3 rounded-xl bg-white/80 border border-slate-100/50 hover:shadow-md transition-all group/tool"
+              >
+                <div class="flex items-center gap-2 mb-1">
+                  <span
+                    class="font-bold text-slate-800 group-hover/tool:text-blue-600 transition-colors"
+                  >
+                    {{ tool.name }}
+                  </span>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed">
+                  {{ tool.desc }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-6 p-4 rounded-xl bg-slate-50 border border-slate-200 shrink-0"
+      >
+        <div class="flex items-center gap-3 text-slate-600">
+          <div class="p-1.5 bg-blue-100 rounded-lg text-blue-600">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </div>
+          <p class="text-xs leading-relaxed">
+            <strong class="text-slate-800">选型逻辑：</strong>
+            <span class="text-red-600 font-bold">「夯」</span>级看重全自动 Agent
+            编排；
+            <span class="text-orange-600 font-bold">「顶级」</span
+            >看重特定场景的极致提效；
+            <span class="text-emerald-600 font-bold">「NPC」</span
+            >级主打稳健与合规。
+          </p>
+        </div>
       </div>
     </Card>
   </Section>
 </template>
+
+<style scoped>
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
+</style>
