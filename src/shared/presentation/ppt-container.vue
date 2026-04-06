@@ -482,283 +482,141 @@ watch(currentSlide, (newVal, oldVal) => {
 
 <style scoped>
 .ppt-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: transparent;
-  outline: none;
-  z-index: 1;
+  @apply fixed inset-0 overflow-hidden bg-transparent outline-none z-[1];
 }
 
 .slides-viewport {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  @apply w-full h-full overflow-hidden;
 }
 
 .slide-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  @apply flex w-full h-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)];
 }
 
 .slide {
-  flex: 0 0 100%;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  @apply flex-[0_0_100%] w-screen h-screen flex items-center justify-center relative overflow-hidden;
 }
 
 .controls {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(var(--surface) / 0.8);
-  border: 1px solid rgb(var(--border) / 0.4);
-  padding: 8px 16px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
-  box-shadow:
-    0 10px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.05);
-  z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.controls:hover {
-  background: rgba(var(--surface) / 0.9);
-  box-shadow:
-    0 20px 25px -5px rgb(0 0 0 / 0.15),
-    0 10px 10px -5px rgb(0 0 0 / 0.05);
-  transform: translateX(-50%) translateY(-2px);
+  @apply fixed bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-surface/80 border border-border/40 px-4 py-2 rounded-[20px] backdrop-blur-[20px] shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.05)] z-[1000];
 }
 
 .control-btn {
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 12px;
-  background: transparent;
-  color: rgb(var(--text-muted));
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply w-9 h-9 border-none rounded-xl bg-transparent text-text-muted cursor-pointer transition-all duration-200 flex items-center justify-center outline-none;
 }
 
 .control-btn:hover:not(:disabled) {
-  background: rgb(var(--accent) / 0.1);
-  color: rgb(var(--accent));
-  transform: scale(1.05);
+  @apply bg-accent/10 text-accent;
 }
 
 .control-btn.active {
-  background: rgb(var(--accent));
-  color: white;
+  @apply bg-accent text-white;
 }
 
 .control-btn:disabled {
-  opacity: 0.2;
-  cursor: not-allowed;
+  @apply opacity-20 cursor-not-allowed;
 }
 
 .control-divider {
-  width: 1px;
-  height: 24px;
-  background: rgb(var(--border) / 0.6);
-  margin: 0 4px;
+  @apply w-px h-6 bg-border/60 mx-1;
 }
 
 .slide-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgb(var(--text-primary));
-  font-weight: 600;
-  padding: 0 8px;
-  font-size: 14px;
-  font-variant-numeric: tabular-nums;
-  min-width: 80px;
-  justify-content: center;
+  @apply flex items-center gap-2 text-text-primary font-semibold px-2 text-sm [font-variant-numeric:tabular-nums] min-w-[80px] justify-center;
 }
 
 .total-pages {
-  color: rgb(var(--text-muted));
-  font-weight: 500;
+  @apply text-text-muted font-medium;
 }
 
 .page-edit {
-  min-width: 40px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  background: rgb(var(--surface-muted) / 0.6);
-  color: rgb(var(--text-primary));
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
-  font-weight: 700;
-  font-size: 14px;
+  @apply min-w-[40px] px-2 py-1 rounded-lg bg-surface-muted/60 text-text-primary border border-transparent transition-all duration-200 font-bold text-sm;
 }
 
 .page-edit:focus {
-  outline: none;
-  background: rgb(var(--surface-muted));
-  border-color: rgb(var(--accent) / 0.4);
-  box-shadow: 0 0 0 3px rgb(var(--accent) / 0.1);
+  @apply outline-none bg-surface-muted border-accent/40 ring-4 ring-accent/10;
 }
 
 .progress-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: rgb(var(--border) / 0.2);
-  z-index: 1000;
+  @apply fixed bottom-0 left-0 w-full h-[3px] bg-border/10 z-[1000] backdrop-blur-[4px];
 }
 
 .progress {
-  height: 100%;
-  background: linear-gradient(90deg, rgb(var(--accent)), #9333ea);
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 8px rgb(var(--accent) / 0.4);
+  @apply h-full bg-gradient-to-r from-accent/60 to-accent transition-[width] duration-[600ms] ease-[cubic-bezier(0.25,1,0.5,1)] relative;
+  box-shadow: 0 0 12px rgb(var(--accent) / 0.5);
+}
+
+.progress::after {
+  content: '';
+  @apply absolute top-0 right-0 w-[2px] h-full bg-white opacity-80;
+  box-shadow: 0 0 8px white;
 }
 
 /* 概览模式样式 */
 .overview-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(var(--surface) / 0.8);
-  backdrop-filter: blur(20px);
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
+  @apply fixed inset-0 bg-surface/80 backdrop-blur-[20px] z-[2000] flex flex-col p-10;
 }
 
 .overview-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
+  @apply max-w-[1400px] mx-auto w-full h-full flex flex-col gap-8;
 }
 
 .overview-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @apply flex justify-between items-center;
 }
 
 .overview-title {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  @apply flex flex-col gap-1;
 }
 
 .title-gradient {
-  font-size: 28px;
-  font-weight: 800;
-  background: linear-gradient(
+  @apply text-[28px] font-extrabold bg-clip-text text-transparent tracking-tighter;
+  background-image: linear-gradient(
     135deg,
     rgb(var(--text-primary)),
     rgb(var(--accent))
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.02em;
 }
 
 .slide-count {
-  font-size: 14px;
-  color: rgb(var(--text-muted));
-  font-weight: 500;
+  @apply text-sm text-text-muted font-medium;
 }
 
 .close-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid rgb(var(--border) / 0.6);
-  background: rgb(var(--surface));
-  color: rgb(var(--text-primary));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  @apply w-10 h-10 rounded-full border border-border/60 bg-surface text-text-primary flex items-center justify-center cursor-pointer transition-all duration-200;
 }
 
 .close-btn:hover {
-  background: rgb(var(--surface-muted));
-  transform: rotate(90deg);
+  @apply bg-surface-muted rotate-90;
 }
 
 .overview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 24px;
-  overflow-y: auto;
-  padding: 4px;
-  flex: 1;
+  @apply grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-6 overflow-y-auto p-1 flex-1;
 }
 
 .overview-item {
-  cursor: pointer;
-  perspective: 1000px;
+  @apply cursor-pointer [perspective:1000px];
 }
 
 .overview-item-inner {
-  position: relative;
-  background: rgb(var(--surface));
-  border-radius: 12px;
-  border: 1px solid rgb(var(--border) / 0.6);
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.03);
+  @apply relative bg-surface rounded-xl border border-border/60 overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.34,1.56,0.64,1)] shadow-[0_4px_12px_rgba(0,0,0,0.03)];
 }
 
 .overview-item:hover .overview-item-inner {
-  transform: translateY(-8px) scale(1.02);
-  border-color: rgb(var(--accent) / 0.4);
-  box-shadow:
-    0 20px 25px -5px rgb(0 0 0 / 0.1),
-    0 8px 10px -6px rgb(0 0 0 / 0.05);
+  @apply -translate-y-2 scale-[1.02] border-accent/40 shadow-[0_20px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.05)];
 }
 
 .overview-item.active .overview-item-inner {
-  border-color: rgb(var(--accent));
-  border-width: 2px;
-  box-shadow: 0 0 0 4px rgb(var(--accent) / 0.1);
+  @apply border-accent border-2 shadow-[0_0_0_4px_rgba(var(--accent)/0.1)];
 }
 
 .overview-preview-wrapper {
-  aspect-ratio: 16/9;
-  width: 100%;
-  overflow: hidden;
-  background: rgb(var(--surface-muted) / 0.3);
+  @apply aspect-video w-full overflow-hidden bg-surface-muted/30;
 }
 
 .overview-preview {
-  width: 100vw;
-  height: 100vh;
-  transform: scale(calc(240 / 1920)); /* 根据网格最小宽度缩放，1920为基准宽度 */
-  transform-origin: top left;
-  pointer-events: none;
+  @apply w-screen h-screen origin-top-left pointer-events-none;
+  transform: scale(calc(240 / 1920));
 }
 
 /* 适配不同宽度的缩放 */
@@ -769,55 +627,43 @@ watch(currentSlide, (newVal, oldVal) => {
 }
 
 .overview-info {
-  padding: 10px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(var(--surface));
+  @apply p-[10px_14px] flex justify-between items-center bg-surface;
 }
 
 .overview-number {
-  font-size: 12px;
-  font-weight: 700;
-  color: rgb(var(--text-muted));
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  @apply text-[12px] font-bold text-text-muted font-mono;
 }
 
 .active-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgb(var(--accent));
+  @apply w-2 h-2 rounded-full bg-accent;
   box-shadow: 0 0 8px rgb(var(--accent) / 0.6);
 }
 
 /* 动画 */
 .fade-scale-enter-active,
 .fade-scale-leave-active {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  @apply transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)];
 }
 
 .fade-scale-enter-from,
 .fade-scale-leave-to {
-  opacity: 0;
-  transform: scale(1.05);
+  @apply opacity-0 scale-[1.05];
 }
 
 .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+  @apply w-[6px];
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+  @apply bg-transparent;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgb(var(--border));
-  border-radius: 10px;
+  @apply bg-border rounded-[10px];
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--text-muted) / 0.4);
+  @apply bg-text-muted/40;
 }
 
 /* 代码块滚动条美化 */
@@ -827,32 +673,28 @@ watch(currentSlide, (newVal, oldVal) => {
 }
 
 :deep(pre)::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
+  @apply h-2 w-2;
 }
 
 :deep(pre)::-webkit-scrollbar-track {
-  background: rgb(var(--border) / 0.25);
-  border-radius: 9999px;
+  @apply bg-border/25 rounded-full;
 }
 
 :deep(pre)::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, rgb(var(--accent)), #9333ea);
-  border-radius: 9999px;
+  @apply bg-gradient-to-r from-accent to-[#9333ea] rounded-full;
 }
 
 :deep(pre)::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, rgb(var(--accent) / 0.8), #7e22ce);
+  @apply from-accent/80 to-[#7e22ce];
 }
 
 @media (max-width: 768px) {
   .overview-overlay {
-    padding: 20px;
+    @apply p-5;
   }
 
   .overview-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 16px;
+    @apply grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-4;
   }
 
   .overview-preview {
@@ -860,8 +702,7 @@ watch(currentSlide, (newVal, oldVal) => {
   }
 
   .controls {
-    bottom: 20px;
-    padding: 8px 12px;
+    @apply bottom-5 px-3;
   }
 }
 </style>
