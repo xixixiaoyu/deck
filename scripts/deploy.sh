@@ -67,4 +67,5 @@ fi
 # fi
 
 echo -e "${BLUE}>>> 3. 部署完成!${NC}"
-echo -e "访问地址: http://${SERVER_IP}"
+echo -e "访问地址: http://${SERVER_IP}/deck"
+echo -e "正式地址: http://jiansi.xyz/deck"
