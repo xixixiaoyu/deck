@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 interface ToolInfo {
   name: string
   tag: string
@@ -15,7 +14,6 @@ interface ToolInfo {
   desc: string
   features: string[]
 }
-
 const tools: ToolInfo[] = [
   {
     name: 'Cline',
@@ -69,7 +67,6 @@ const tools: ToolInfo[] = [
     ],
   },
 ]
-
 const comparisonRows = [
   {
     dim: '起源',
@@ -100,26 +97,23 @@ const comparisonRows = [
     kilo: '所有人首选',
   },
 ]
-
 const colorMap: Record<string, string> = {
   cline: 'bg-blue-100 border-blue-300 text-blue-800',
   roo: 'bg-green-100 border-green-300 text-green-800',
   kilo: 'bg-purple-100 border-purple-300 text-purple-800',
 }
 </script>
-
 <template>
   <Section>
     <Card padding="md">
       <div class="mb-4 text-center">
-        <HeadingGradient :level="2" size="3xl" palette="indigo-fuchsia-emerald">
+        <HeadingGradient :level="2" size="3xl">
           开源 Agent 三剑客
         </HeadingGradient>
         <p class="mt-2 text-slate-600 text-base">
           Cline、Roo Code、Kilo Code - 2026年自主编码Agent对比
         </p>
       </div>
-
       <!-- 三列工具介绍 -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-4">
         <div
@@ -152,7 +146,6 @@ const colorMap: Record<string, string> = {
           </div>
         </div>
       </div>
-
       <!-- 对比表格 -->
       <div class="mb-4">
         <h3 class="text-lg font-bold text-slate-800 mb-3 text-center">
@@ -214,7 +207,6 @@ const colorMap: Record<string, string> = {
           </table>
         </div>
       </div>
-
       <!-- 核心结论 -->
       <div
         class="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-green-50 to-purple-50 border border-slate-200"

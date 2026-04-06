@@ -8,28 +8,20 @@ import {
   CheckCircleIcon,
   ExclamationTriangleIcon,
 } from '@heroicons/vue/24/solid'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
       <div class="relative z-10 px-6 py-4 md:py-8 w-full max-w-7xl">
         <div class="text-center mb-8">
-          <HeadingGradient
-            :level="2"
-            size="5xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="2" size="5xl" class="leading-tight">
             训练评估与验证
           </HeadingGradient>
           <p class="mt-4 text-lg text-slate-600 max-w-4xl mx-auto">
             如何判断模型"学会了"？关注训练过程中的关键指标和验证状态。
           </p>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <!-- Left Column: Metrics -->
           <div class="space-y-6">
@@ -39,7 +31,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <ChartBarIcon class="w-7 h-7 text-indigo-600" />
               关键指标 (Metrics)
             </h3>
-
             <div
               class="bg-indigo-50/50 rounded-xl p-5 border border-indigo-100"
             >
@@ -59,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </li>
               </ul>
             </div>
-
             <div class="bg-amber-50/50 rounded-xl p-5 border border-amber-100">
               <h4 class="font-bold text-amber-700 mb-2">
                 2. 验证集 (Validation Set)
@@ -79,7 +69,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </li>
               </ul>
             </div>
-
             <div
               class="bg-fuchsia-50/50 rounded-xl p-5 border border-fuchsia-100"
             >
@@ -102,7 +91,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </ul>
             </div>
           </div>
-
           <!-- Right Column: Verification Status -->
           <div class="space-y-6">
             <h3
@@ -111,7 +99,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <ScaleIcon class="w-7 h-7 text-emerald-600" />
               验证状态 (Verification)
             </h3>
-
             <div class="space-y-4">
               <!-- Success -->
               <div
@@ -136,7 +123,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                   <TrainingCurveChart type="success" />
                 </div>
               </div>
-
               <!-- Overfitting -->
               <div
                 class="flex flex-col gap-4 p-4 rounded-xl bg-amber-50 border border-amber-100 transition-all hover:shadow-md"

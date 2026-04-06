@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 interface Category {
   id: string
   title: string
@@ -12,7 +11,6 @@ interface Category {
   color: string
   icon: string
 }
-
 const categories: Category[] = [
   {
     id: 'ai-native-ide',
@@ -47,7 +45,6 @@ const categories: Category[] = [
     icon: '🇨🇳',
   },
 ]
-
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   indigo: {
     bg: 'bg-indigo-50',
@@ -71,19 +68,17 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   },
 }
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-8 text-center">
-        <HeadingGradient :level="2" size="4xl" palette="indigo-fuchsia-emerald">
+        <HeadingGradient :level="2" size="4xl">
           四大类工具概览
         </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
           根据形态和定位，主流AI编程工具分为四大类别
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div
           v-for="(category, index) in categories"
@@ -126,7 +121,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           </div>
         </div>
       </div>
-
       <div class="mt-8 p-5 rounded-xl bg-slate-50 border border-slate-200">
         <div class="flex items-center gap-3 mb-3">
           <svg

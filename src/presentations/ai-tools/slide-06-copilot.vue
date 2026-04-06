@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: '智能补全',
@@ -22,14 +21,12 @@ const features = [
     description: 'Mobile、CLI、Spark全覆盖',
   },
 ]
-
 const highlights = [
   { label: '市场份额', value: '37%', color: 'fuchsia' },
   { label: '定价', value: '$10/月起', color: 'indigo' },
   { label: '定位', value: '默认选择', color: 'emerald' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -49,11 +46,7 @@ const highlights = [
             </svg>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               GitHub Copilot
             </HeadingGradient>
             <p class="text-slate-500 text-sm">Microsoft + OpenAI</p>
@@ -63,7 +56,6 @@ const highlights = [
           市场份额约37%，仍是"默认选择"，GitHub生态无缝集成
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -97,7 +89,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -145,7 +136,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-gray-50 to-slate-100 border border-gray-200"
           >
@@ -169,7 +159,6 @@ const highlights = [
             </h4>
             <p class="text-sm text-slate-600">自定义Agent、MCP治理、IP保护</p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">GitHub生态、团队协作、初学者</p>

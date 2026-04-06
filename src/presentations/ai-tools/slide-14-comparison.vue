@@ -3,14 +3,12 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 interface ComparisonRow {
   scenario: string
   tool: string
   reason: string
   color: string
 }
-
 const comparisonData: ComparisonRow[] = [
   {
     scenario: '日常全栈/重构',
@@ -55,7 +53,6 @@ const comparisonData: ComparisonRow[] = [
     color: 'cyan',
   },
 ]
-
 const colorMap: Record<string, string> = {
   indigo: 'bg-indigo-50 border-indigo-200 text-indigo-700',
   fuchsia: 'bg-fuchsia-50 border-fuchsia-200 text-fuchsia-700',
@@ -66,17 +63,13 @@ const colorMap: Record<string, string> = {
   cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
 }
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl" palette="indigo-fuchsia-emerald">
-          快速对比建议
-        </HeadingGradient>
+        <HeadingGradient :level="2" size="4xl"> 快速对比建议 </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">2026年实用选型指南</p>
       </div>
-
       <div class="overflow-x-auto">
         <table class="w-full">
           <thead>
@@ -124,7 +117,6 @@ const colorMap: Record<string, string> = {
           </tbody>
         </table>
       </div>
-
       <div
         class="mt-6 p-5 rounded-xl bg-gradient-to-r from-indigo-50 via-fuchsia-50 to-emerald-50 border border-slate-200"
       >

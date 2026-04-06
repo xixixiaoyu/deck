@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'Context Engine',
@@ -25,14 +24,12 @@ const features = [
     description: 'SOC2合规、SSO集成、审计日志、私有化部署选项',
   },
 ]
-
 const highlights = [
   { label: 'SWE-Bench Pro', value: '51.80%', color: 'rose' },
   { label: 'PR胜率', value: '+12.8%', color: 'pink' },
   { label: '定价', value: '$20-200+/月', color: 'red' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -44,11 +41,7 @@ const highlights = [
             <span class="text-white text-xl font-bold">A</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               Augment Code
             </HeadingGradient>
             <p class="text-slate-500 text-sm">企业级 · 上下文记忆引擎</p>
@@ -58,7 +51,6 @@ const highlights = [
           企业级"上下文记忆引擎"驱动的AI软件Agent——专为大型复杂代码库而生，像"永不失忆的资深架构师"
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -92,7 +84,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -136,7 +127,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200"
           >
@@ -163,7 +153,6 @@ const highlights = [
               PR胜过人类代码（正确性+12.8%、完整性+14.8%）
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">

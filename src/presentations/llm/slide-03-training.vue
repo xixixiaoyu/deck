@@ -4,7 +4,6 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
@@ -44,22 +43,15 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div class="relative z-10 px-6 py-4 md:py-8 w-full">
         <div class="text-center">
-          <HeadingGradient
-            :level="1"
-            size="6xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="1" size="6xl" class="leading-tight">
             大模型训练过程
           </HeadingGradient>
           <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-5xl mx-auto">
             大模型训练分为三个关键阶段，从基础语言学习到对齐人类价值观。
           </p>
         </div>
-
         <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
           <div class="bg-white/50 rounded-lg p-5">
             <h3 class="text-lg font-semibold text-slate-800">

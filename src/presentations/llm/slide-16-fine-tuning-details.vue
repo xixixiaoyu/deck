@@ -3,9 +3,7 @@ import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
 import { BeakerIcon, CpuChipIcon } from '@heroicons/vue/24/outline'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const methods = [
   {
     title: '全量微调',
@@ -28,7 +26,6 @@ const methods = [
     icon: BeakerIcon,
   },
 ]
-
 const steps = [
   {
     step: '01',
@@ -52,25 +49,18 @@ const steps = [
   },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
       <div class="relative z-10 px-6 py-4 md:py-8 w-full max-w-6xl">
         <div class="text-center mb-10">
-          <HeadingGradient
-            :level="2"
-            size="5xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="2" size="5xl" class="leading-tight">
             大模型微调
           </HeadingGradient>
           <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-4xl mx-auto">
             将通用模型训练成领域专家，通过特定数据调整权重，掌握垂直领域知识与技能
           </p>
         </div>
-
         <!-- Methods Comparison -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div
@@ -102,7 +92,6 @@ const steps = [
             </div>
           </div>
         </div>
-
         <!-- Workflow -->
         <div class="relative">
           <div

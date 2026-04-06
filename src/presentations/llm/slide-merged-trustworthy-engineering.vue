@@ -12,9 +12,7 @@ import {
   SignalIcon,
 } from '@heroicons/vue/24/solid'
 import { onMounted, ref } from 'vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 // --- 实时监控数据 ---
 const latency = ref(120)
 const rpm = ref(450)
@@ -35,14 +33,12 @@ const logs = ref<
     color: 'text-green-400',
   },
 ])
-
 // 实时数据更新
 onMounted(() => {
   setInterval(() => {
     latency.value = 100 + Math.random() * 40
     rpm.value = 400 + Math.floor(Math.random() * 100)
     errorRate.value = Math.random() * 0.5
-
     // 日志流更新
     const newLogTypes = [
       {
@@ -63,7 +59,6 @@ onMounted(() => {
     ]
     const randomLog =
       newLogTypes[Math.floor(Math.random() * newLogTypes.length)]
-
     if (Math.random() > 0.3) {
       const now = new Date()
       const timeStr = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`
@@ -73,7 +68,6 @@ onMounted(() => {
   }, 2000)
 })
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center h-full">
@@ -82,19 +76,13 @@ onMounted(() => {
       >
         <!-- Header -->
         <div class="text-center mb-8 shrink-0">
-          <HeadingGradient
-            :level="2"
-            size="5xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="2" size="5xl" class="leading-tight">
             可信赖工程与实践
           </HeadingGradient>
           <p class="mt-3 text-lg text-slate-600 max-w-4xl mx-auto">
             从治理框架到生产环境的全链路保障
           </p>
         </div>
-
         <!-- Main Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 flex-grow min-h-0">
           <!-- Column 1: 治理框架 -->
@@ -132,7 +120,6 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-
             <!-- 2. Reliability (可靠性) -->
             <div
               class="bg-blue-50/50 rounded-2xl p-5 border border-blue-100 shadow-sm"
@@ -158,7 +145,6 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-
             <!-- 3. LLMOps Workflow -->
             <div
               class="bg-purple-50/50 rounded-2xl p-5 border border-purple-100 shadow-sm"
@@ -185,7 +171,6 @@ onMounted(() => {
               </div>
             </div>
           </div>
-
           <!-- Column 2: 生产监控 -->
           <div
             class="bg-slate-900 rounded-3xl p-6 text-slate-200 shadow-2xl flex flex-col gap-5 font-mono relative overflow-hidden border border-slate-800"
@@ -197,7 +182,6 @@ onMounted(() => {
             <div
               class="absolute -bottom-10 -right-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"
             ></div>
-
             <div
               class="flex items-center justify-between border-b border-slate-700 pb-4 z-10"
             >
@@ -209,7 +193,6 @@ onMounted(() => {
               </div>
               <span class="text-xs text-slate-500">us-east-1</span>
             </div>
-
             <!-- Metrics Grid -->
             <div class="grid grid-cols-2 gap-4 z-10">
               <div
@@ -236,7 +219,6 @@ onMounted(() => {
                   ></div>
                 </div>
               </div>
-
               <div
                 class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50"
               >
@@ -260,7 +242,6 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-
             <!-- 日志流 -->
             <div
               class="flex-grow bg-black/40 rounded-xl p-3 overflow-hidden text-xs space-y-1.5 border border-slate-700/30 z-10 font-mono"
@@ -274,7 +255,6 @@ onMounted(() => {
                 <span>{{ log.type }}: {{ log.msg }}</span>
               </div>
             </div>
-
             <div
               class="flex items-center gap-4 text-xs text-slate-400 bg-slate-800/30 p-3 rounded-lg z-10"
             >

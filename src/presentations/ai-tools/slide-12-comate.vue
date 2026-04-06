@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'SPEC规范驱动',
@@ -22,14 +21,12 @@ const features = [
     description: '合规性保障，适合金融/政务场景',
   },
 ]
-
 const highlights = [
   { label: '定价', value: '个人免费', color: 'emerald' },
   { label: 'IDC评估', value: '9项8满分', color: 'indigo' },
   { label: '定位', value: '企业级严谨', color: 'fuchsia' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,11 +38,7 @@ const highlights = [
             <span class="text-white text-xl">📝</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               文心快码（Comate）
             </HeadingGradient>
             <p class="text-slate-500 text-sm">百度 · SPEC规范驱动</p>
@@ -55,7 +48,6 @@ const highlights = [
           企业级严谨开发工具，IDC评估9项8满分，适合金融/政务场景
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +81,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +128,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200"
           >
@@ -161,7 +151,6 @@ const highlights = [
             </h4>
             <p class="text-sm text-slate-600">SPEC规范驱动，极大抑制幻觉</p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">企业级、金融/政务严谨场景</p>

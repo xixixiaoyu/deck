@@ -4,7 +4,6 @@ import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
@@ -44,7 +43,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div class="relative z-10 px-6 py-4 md:py-8">
         <div class="text-center">
           <div class="mb-6">
@@ -61,7 +59,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <p class="mt-5 text-lg md:text-xl text-slate-700 max-w-3xl mx-auto">
             保持好奇，持续迭代，你会领先一步
           </p>
-
           <div class="mt-10 flex flex-wrap justify-center gap-4">
             <div
               class="px-6 py-3 rounded-xl bg-white/60 border border-slate-200 backdrop-blur-sm"
@@ -74,7 +71,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </p>
             </div>
           </div>
-
           <div class="mt-8 text-sm text-slate-500">
             数据来源：Faros.ai、Tech
             Insider、Zapier、IDC、Anthropic官方、Cursor官网、GitHub等

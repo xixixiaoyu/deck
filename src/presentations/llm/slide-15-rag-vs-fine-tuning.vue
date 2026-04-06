@@ -2,9 +2,7 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const comparisonItems = [
   {
     dimension: '知识来源',
@@ -33,25 +31,18 @@ const comparisonItems = [
   },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
       <div class="relative z-10 px-6 py-4 md:py-8 w-full">
         <div class="text-center mb-10">
-          <HeadingGradient
-            :level="2"
-            size="5xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="2" size="5xl" class="leading-tight">
             RAG vs Fine-Tuning
           </HeadingGradient>
           <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-4xl mx-auto">
             如何选择？RAG 给模型配备参考书，Fine-Tuning 让模型掌握新技能
           </p>
         </div>
-
         <div
           class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm bg-white/50 backdrop-blur-sm"
         >
@@ -86,7 +77,6 @@ const comparisonItems = [
             </tbody>
           </table>
         </div>
-
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="p-4 rounded-lg bg-indigo-50/50 border border-indigo-100">
             <h4 class="font-bold text-indigo-700 mb-2">选择 RAG 当...</h4>

@@ -4,7 +4,6 @@ import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center">
@@ -44,7 +43,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div class="relative z-10 px-6 py-4 md:py-8">
         <div class="text-center">
           <HeadingGradient

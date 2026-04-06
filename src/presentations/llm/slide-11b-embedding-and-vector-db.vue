@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -38,7 +36,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -47,7 +44,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="2"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="font-bold tracking-tight leading-tight"
           >
             Embedding 与向量数据库
@@ -56,7 +52,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             RAG 技术核心：将文本转换为可计算的向量
           </p>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <!-- 左侧：Embedding 概念 -->
           <div
@@ -83,11 +78,9 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 什么是 Embedding?
               </h3>
             </div>
-
             <p class="text-slate-600 leading-relaxed text-lg">
               将文本转换为<strong>数值向量</strong>，让计算机理解语义关系
             </p>
-
             <div
               class="bg-slate-800 rounded-xl p-5 font-mono text-sm text-blue-200 shadow-inner"
             >
@@ -102,7 +95,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 <span>[0.15, -0.42, 0.85, ...]</span>
               </div>
             </div>
-
             <div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100">
               <h4 class="font-bold text-indigo-900 mb-2">💡 核心特性</h4>
               <p class="text-sm text-indigo-800">
@@ -110,7 +102,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </p>
             </div>
           </div>
-
           <!-- 右侧：向量数据库 -->
           <div
             class="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-white/50 shadow-lg flex flex-col gap-6"
@@ -136,11 +127,9 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 向量数据库 (Vector DB)
               </h3>
             </div>
-
             <p class="text-slate-600 leading-relaxed text-lg">
               专门存储和检索向量的数据库，支持<strong>相似性搜索</strong>
             </p>
-
             <div class="grid grid-cols-2 gap-4">
               <div
                 class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm text-center"
@@ -157,7 +146,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 <div class="text-xs text-slate-500">海量数据毫秒级响应</div>
               </div>
             </div>
-
             <div class="mt-auto">
               <h4
                 class="font-bold text-slate-700 mb-3 text-sm uppercase tracking-wider"
@@ -185,7 +173,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
           </div>
         </div>
-
         <!-- 底部示例 -->
         <div
           class="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-white/30"

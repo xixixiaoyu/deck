@@ -4,7 +4,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 interface TimelineStage {
   year: string
   title: string
@@ -12,7 +11,6 @@ interface TimelineStage {
   color: string
   features: string[]
 }
-
 const timeline = ref<TimelineStage[]>([
   {
     year: '2020-2022',
@@ -36,38 +34,33 @@ const timeline = ref<TimelineStage[]>([
     features: ['Agent 自主执行', '测试闭环', '全流程自动化'],
   },
 ])
-
 const colorMap: Record<string, string> = {
   indigo: 'bg-indigo-500',
   fuchsia: 'bg-fuchsia-500',
   emerald: 'bg-emerald-500',
 }
-
 const textColorMap: Record<string, string> = {
   indigo: 'text-indigo-600',
   fuchsia: 'text-fuchsia-600',
   emerald: 'text-emerald-600',
 }
-
 const bgLightMap: Record<string, string> = {
   indigo: 'bg-indigo-50',
   fuchsia: 'bg-fuchsia-50',
   emerald: 'bg-emerald-50',
 }
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-8 text-center">
-        <HeadingGradient :level="2" size="4xl" palette="indigo-fuchsia-emerald">
+        <HeadingGradient :level="2" size="4xl">
           AI 编程工具的演进历程
         </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
           从"代码补全"到"AI搭档"的跨越式发展
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div
           v-for="(stage, index) in timeline"
@@ -80,13 +73,10 @@ const bgLightMap: Record<string, string> = {
               stage.year
             }}</span>
           </div>
-
           <h3 :class="[textColorMap[stage.color], 'text-2xl font-bold mb-2']">
             {{ stage.title }}
           </h3>
-
           <p class="text-slate-600 mb-4">{{ stage.description }}</p>
-
           <div class="space-y-2">
             <div
               v-for="(feature, fIndex) in stage.features"
@@ -103,7 +93,6 @@ const bgLightMap: Record<string, string> = {
           </div>
         </div>
       </div>
-
       <div
         class="mt-8 p-6 rounded-xl bg-gradient-to-r from-indigo-50 via-fuchsia-50 to-emerald-50 border border-slate-200/60"
       >

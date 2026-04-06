@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'Cascade Agent',
@@ -22,14 +21,12 @@ const features = [
     description: '支持70+编程语言，免费层强大',
   },
 ]
-
 const highlights = [
   { label: '定价范围', value: '免费-$60/月', color: 'emerald' },
   { label: '定位', value: 'Agentic最强', color: 'fuchsia' },
   { label: '排名', value: '常居榜首', color: 'indigo' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,13 +38,7 @@ const highlights = [
             <span class="text-white text-xl">🌊</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
-              Windsurf
-            </HeadingGradient>
+            <HeadingGradient :level="2" size="3xl"> Windsurf </HeadingGradient>
             <p class="text-slate-500 text-sm">原Codeium · 独立AI IDE</p>
           </div>
         </div>
@@ -55,7 +46,6 @@ const highlights = [
           Agentic工作流最强工具，2026年常居功率排名榜首，免费层吸引力大
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +79,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200"
           >
@@ -163,7 +151,6 @@ const highlights = [
               Arena Mode 并行模型对比，让开发者选择最佳方案
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">

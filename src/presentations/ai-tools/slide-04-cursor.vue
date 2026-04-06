@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'Tab (Supermaven)',
@@ -22,14 +21,12 @@ const features = [
     description: 'OpenAI、Anthropic、Gemini、xAI等 + 插件市场',
   },
 ]
-
 const highlights = [
   { label: '市场份额', value: '18%', color: 'indigo' },
   { label: '定价', value: '$20/月', color: 'fuchsia' },
   { label: '评价', value: 'AI原生IDE标杆', color: 'emerald' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,13 +38,7 @@ const highlights = [
             <span class="text-white text-xl font-bold">C</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
-              Cursor
-            </HeadingGradient>
+            <HeadingGradient :level="2" size="3xl"> Cursor </HeadingGradient>
             <p class="text-slate-500 text-sm">Anysphere · VS Code fork</p>
           </div>
         </div>
@@ -55,7 +46,6 @@ const highlights = [
           AI原生IDE标杆，市场份额约18%，被誉为"切换即生产力跃升"的最佳选择
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +79,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200"
           >
@@ -163,7 +151,6 @@ const highlights = [
               新界面3.0、Mission Control网格预览
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">全栈开发、重构、大型代码库</p>

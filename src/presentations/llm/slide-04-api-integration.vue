@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -61,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             API 接入指南
@@ -70,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             三步完成大模型 API 集成
           </p>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <!-- 左侧：步骤说明 -->
           <div class="space-y-6">
@@ -95,7 +90,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </span>
               </p>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm hover:shadow-md transition-shadow"
             >
@@ -123,7 +117,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </li>
               </ul>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm hover:shadow-md transition-shadow"
             >
@@ -147,7 +140,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </p>
             </div>
           </div>
-
           <!-- 右侧：代码示例 -->
           <div
             class="relative bg-slate-900 rounded-xl overflow-hidden shadow-xl border border-slate-700 flex flex-col"
@@ -169,12 +161,10 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 class="whitespace-pre-wrap break-words"
               ><code class="language-python"><span class="text-purple-400">import</span> <span class="text-slate-200">os</span>
 <span class="text-purple-400">from</span> <span class="text-slate-200">openai</span> <span class="text-purple-400">import</span> <span class="text-slate-200">OpenAI</span>
-
 <span class="text-slate-500"># 初始化客户端</span>
 <span class="text-slate-200">client</span> <span class="text-blue-400">=</span> <span class="text-yellow-200">OpenAI</span><span class="text-slate-300">(</span>
     <span class="text-slate-200">api_key</span><span class="text-blue-400">=</span><span class="text-slate-200">os</span><span class="text-slate-300">.</span><span class="text-blue-300">environ</span><span class="text-slate-300">.</span><span class="text-blue-300">get</span><span class="text-slate-300">(</span><span class="text-green-400">"OPENAI_API_KEY"</span><span class="text-slate-300">)</span>
 <span class="text-slate-300">)</span>
-
 <span class="text-slate-500"># 发起请求</span>
 <span class="text-slate-200">response</span> <span class="text-blue-400">=</span> <span class="text-slate-200">client</span><span class="text-slate-300">.</span><span class="text-slate-200">chat</span><span class="text-slate-300">.</span><span class="text-slate-200">completions</span><span class="text-slate-300">.</span><span class="text-blue-300">create</span><span class="text-slate-300">(</span>
     <span class="text-slate-200">model</span><span class="text-blue-400">=</span><span class="text-green-400">"gpt-4"</span><span class="text-slate-300">,</span>
@@ -182,7 +172,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
         <span class="text-slate-300">{</span><span class="text-green-400">"role"</span><span class="text-slate-300">:</span> <span class="text-green-400">"user"</span><span class="text-slate-300">,</span> <span class="text-green-400">"content"</span><span class="text-slate-300">:</span> <span class="text-green-400">"解释什么是 API"</span><span class="text-slate-300">}</span>
     <span class="text-slate-300">]</span>
 <span class="text-slate-300">)</span>
-
 <span class="text-slate-500"># 输出结果</span>
 <span class="text-blue-300">print</span><span class="text-slate-300">(</span><span class="text-slate-200">response</span><span class="text-slate-300">.</span><span class="text-slate-200">choices</span><span class="text-slate-300">[</span><span class="text-orange-400">0</span><span class="text-slate-300">].</span><span class="text-slate-200">message</span><span class="text-slate-300">.</span><span class="text-slate-200">content</span><span class="text-slate-300">)</span></code></pre>
             </div>

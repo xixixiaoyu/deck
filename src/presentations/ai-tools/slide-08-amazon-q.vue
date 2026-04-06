@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'AWS云原生集成',
@@ -22,14 +21,12 @@ const features = [
     description: '端到端云迁移方案',
   },
 ]
-
 const highlights = [
   { label: '定价', value: '$19/月起', color: 'amber' },
   { label: '定位', value: 'AWS原生', color: 'indigo' },
   { label: '适用', value: 'AWS重度用户', color: 'emerald' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,11 +38,7 @@ const highlights = [
             <span class="text-white text-xl">☁️</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               Amazon Q Developer
             </HeadingGradient>
             <p class="text-slate-500 text-sm">原CodeWhisperer · AWS原生</p>
@@ -55,7 +48,6 @@ const highlights = [
           AWS重度用户的首选，云原生深度集成，支持云迁移项目
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +81,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -135,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200"
           >
@@ -161,7 +151,6 @@ const highlights = [
               AWS云原生深度集成，遗留系统现代化
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">AWS重度用户、云迁移项目</p>

@@ -12,7 +12,6 @@ import {
   ServerStackIcon,
 } from '@heroicons/vue/24/outline'
 import { ref } from 'vue'
-
 // Tabs configuration
 const tabs = [
   { id: 'selection', name: '选型与经济学', icon: ScaleIcon },
@@ -20,7 +19,6 @@ const tabs = [
   { id: 'edge', name: '端侧与小模型', icon: DevicePhoneMobileIcon },
 ]
 const activeTab = ref('selection')
-
 // --- 部署策略数据 ---
 const deploymentStrategies = [
   {
@@ -59,7 +57,6 @@ const deploymentStrategies = [
   },
 ]
 const selectedDeploymentStrategy = ref(deploymentStrategies[0])
-
 // --- 端侧优势 ---
 const edgeAdvantages = [
   {
@@ -83,7 +80,6 @@ const edgeAdvantages = [
     icon: '✈️',
   },
 ]
-
 // --- 小模型列表 ---
 const edgeModels = [
   { name: 'Llama 3 8B', org: 'Meta', params: '8B', feat: '开源标杆' },
@@ -93,7 +89,6 @@ const edgeModels = [
   { name: 'Mistral 7B', org: 'Mistral AI', params: '7B', feat: '高性能' },
 ]
 </script>
-
 <template>
   <Section>
     <Card
@@ -110,7 +105,6 @@ const edgeModels = [
             <HeadingGradient
               :level="2"
               size="3xl"
-              palette="indigo-fuchsia-emerald"
               class="leading-tight font-bold tracking-tight"
             >
               LLM 落地策略
@@ -119,7 +113,6 @@ const edgeModels = [
               模型选型、部署优化到端侧落地
             </p>
           </div>
-
           <!-- Tabs Navigation -->
           <div class="flex bg-slate-100 p-1 rounded-xl self-start md:self-auto">
             <button
@@ -139,7 +132,6 @@ const edgeModels = [
           </div>
         </div>
       </div>
-
       <!-- Main Content Area -->
       <div class="flex-1 overflow-hidden relative p-8">
         <Transition name="fade" mode="out-in">
@@ -157,7 +149,6 @@ const edgeModels = [
                   <ScaleIcon class="w-5 h-5 text-indigo-500" />
                   开源 vs 闭源
                 </h3>
-
                 <!-- Closed Source -->
                 <div
                   class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm"
@@ -189,7 +180,6 @@ const edgeModels = [
                     </li>
                   </ul>
                 </div>
-
                 <!-- Open Source -->
                 <div
                   class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm"
@@ -227,7 +217,6 @@ const edgeModels = [
                   </ul>
                 </div>
               </div>
-
               <!-- Right: Economics -->
               <div class="flex flex-col gap-4">
                 <h3
@@ -236,7 +225,6 @@ const edgeModels = [
                   <ChartBarIcon class="w-5 h-5 text-emerald-500" />
                   成本优化与权衡
                 </h3>
-
                 <!-- The Triangle -->
                 <div
                   class="bg-white rounded-xl p-6 border border-slate-200 flex-1 flex flex-col items-center justify-center relative overflow-hidden min-h-[220px]"
@@ -291,7 +279,6 @@ const edgeModels = [
                     </div>
                   </div>
                 </div>
-
                 <!-- Cost Saving Tips -->
                 <div
                   class="bg-emerald-50/50 rounded-xl p-6 border border-emerald-100"
@@ -346,7 +333,6 @@ const edgeModels = [
               </div>
             </div>
           </div>
-
           <!-- Tab 2: Deployment & Acceleration -->
           <div
             v-else-if="activeTab === 'deployment'"
@@ -396,7 +382,6 @@ const edgeModels = [
                   </div>
                 </button>
               </div>
-
               <!-- Right: Detail Visualization -->
               <div
                 class="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-lg p-8 flex flex-col relative overflow-hidden"
@@ -404,7 +389,6 @@ const edgeModels = [
                 <div
                   class="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-slate-50 to-slate-100 rounded-bl-full -z-0 opacity-50"
                 ></div>
-
                 <transition name="fade" mode="out-in">
                   <div
                     :key="selectedDeploymentStrategy.title"
@@ -420,7 +404,6 @@ const edgeModels = [
                         {{ selectedDeploymentStrategy.title }}
                       </h3>
                     </div>
-
                     <div class="flex-grow space-y-4">
                       <div
                         v-for="(
@@ -438,7 +421,6 @@ const edgeModels = [
                           {{ detail }}
                         </p>
                       </div>
-
                       <!-- Dynamic Visualizations -->
                       <div
                         class="mt-auto p-4 bg-slate-900 rounded-lg text-slate-300 font-mono text-xs shadow-inner overflow-hidden relative"
@@ -448,7 +430,6 @@ const edgeModels = [
                           <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
                           <div class="w-2 h-2 rounded-full bg-green-500"></div>
                         </div>
-
                         <div
                           v-if="
                             selectedDeploymentStrategy.title.includes('量化')
@@ -486,7 +467,6 @@ const edgeModels = [
                             </div>
                           </div>
                         </div>
-
                         <div
                           v-else-if="
                             selectedDeploymentStrategy.title.includes('推理')
@@ -521,7 +501,6 @@ const edgeModels = [
                             </div>
                           </div>
                         </div>
-
                         <div v-else>
                           <p class="text-emerald-400">
                             $ vllm serve llama-3-8b
@@ -540,7 +519,6 @@ const edgeModels = [
               </div>
             </div>
           </div>
-
           <!-- Tab 3: Edge & Small Models -->
           <div
             v-else-if="activeTab === 'edge'"
@@ -573,7 +551,6 @@ const edgeModels = [
                     </div>
                   </div>
                 </div>
-
                 <div
                   class="bg-white rounded-xl p-6 border border-slate-100 shadow-sm"
                 >
@@ -600,7 +577,6 @@ const edgeModels = [
                   </div>
                 </div>
               </div>
-
               <!-- Right: Hall of Fame -->
               <div
                 class="bg-slate-900 rounded-2xl p-8 text-slate-200 shadow-xl flex flex-col relative overflow-hidden"
@@ -611,14 +587,12 @@ const edgeModels = [
                 <div
                   class="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/20 rounded-full blur-3xl -ml-10 -mb-10"
                 ></div>
-
                 <h3
                   class="text-xl font-bold text-white mb-4 flex items-center gap-2 relative z-10"
                 >
                   <span class="text-purple-400">🚀</span>
                   主流小模型
                 </h3>
-
                 <div
                   class="flex flex-col gap-3 relative z-10 overflow-y-auto pr-1 custom-scrollbar flex-1"
                 >
@@ -658,7 +632,6 @@ const edgeModels = [
     </Card>
   </Section>
 </template>
-
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
@@ -666,13 +639,11 @@ const edgeModels = [
     opacity 0.2s ease,
     transform 0.2s ease;
 }
-
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
   transform: translateY(5px);
 }
-
 .custom-scrollbar::-webkit-scrollbar {
   width: 3px;
 }

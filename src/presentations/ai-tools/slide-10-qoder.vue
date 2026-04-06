@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'Agentic IDE + CLI 双形态',
@@ -25,20 +24,17 @@ const features = [
       '上下文工程（Context Engineering），被开发者称为"让Cursor显得过时"的工具',
   },
 ]
-
 const highlights = [
   { label: '发布时间', value: '2025年底', color: 'indigo' },
   { label: '定位', value: 'Cursor最强竞品', color: 'fuchsia' },
   { label: '评价', value: '2026最值得试', color: 'emerald' },
 ]
-
 const whyImportant = [
   'Product Hunt 评分 5.0，YouTube/Medium多篇评测称其为"2026最值得试的Cursor替代品"',
   '在中文社区（如知乎、CSDN 2026盘点）已多次与Cursor、Trae并列为"Agentic新势力"',
   '定位与Windsurf/Claude Code高度重合，但强调"真实软件开发"而非单纯原型',
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -50,19 +46,12 @@ const whyImportant = [
             <span class="text-white text-xl font-bold">Q</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
-              Qoder
-            </HeadingGradient>
+            <HeadingGradient :level="2" size="3xl"> Qoder </HeadingGradient>
             <p class="text-gray-600 dark:text-gray-300 text-lg">
               新一代Agentic Coding Platform（智能体编程平台）
             </p>
           </div>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <h3
@@ -85,7 +74,6 @@ const whyImportant = [
               </li>
             </ul>
           </div>
-
           <div>
             <h3
               class="text-xl font-semibold mb-4 text-gray-900 dark:text-white"
@@ -124,7 +112,6 @@ const whyImportant = [
                 </div>
               </div>
             </div>
-
             <h3
               class="text-xl font-semibold mb-4 text-gray-900 dark:text-white"
             >

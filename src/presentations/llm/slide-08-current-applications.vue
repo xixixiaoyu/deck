@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-6 h-full justify-center"
       >
@@ -61,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             LLM 最佳应用场景
@@ -70,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             已在这些领域展现出超越传统的生产力
           </p>
         </div>
-
         <!-- 应用场景网格 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <!-- Coding -->
@@ -87,7 +82,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <span class="text-xs text-slate-400">GitHub Copilot, Cursor</span>
             </p>
           </div>
-
           <!-- Content Creation -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -102,7 +96,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <span class="text-xs text-slate-400">Jasper, ChatGPT 写作</span>
             </p>
           </div>
-
           <!-- Smart Search -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -117,7 +110,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <span class="text-xs text-slate-400">Perplexity, RAG 系统</span>
             </p>
           </div>
-
           <!-- Translation -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -132,7 +124,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <span class="text-xs text-slate-400">DeepL AI, 自动会议纪要</span>
             </p>
           </div>
-
           <!-- Data Analysis -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -147,7 +138,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               <span class="text-xs text-slate-400">Text-to-SQL 工具</span>
             </p>
           </div>
-
           <!-- Customer Support -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"

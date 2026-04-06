@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-6 h-full justify-center"
       >
@@ -61,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             API 参数详解
@@ -70,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             掌握关键参数，精准控制模型输出
           </p>
         </div>
-
         <!-- 参数网格 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <!-- Model -->
@@ -107,7 +102,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Messages -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -142,7 +136,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               字段
             </p>
           </div>
-
           <!-- Temperature -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -176,7 +169,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </span>
             </p>
           </div>
-
           <!-- Max Tokens -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -207,7 +199,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               限制生成内容的最大 Token 数量，防止回复过长或消耗过多
             </p>
           </div>
-
           <!-- Top P -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -240,7 +231,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </span>
             </p>
           </div>
-
           <!-- Top K -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -271,7 +261,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </span>
             </p>
           </div>
-
           <!-- Stream -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -298,7 +287,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               流式输出 (true/false)，实时返回结果，实现"打字机"效果，减少等待感
             </p>
           </div>
-
           <!-- Thinking -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -338,7 +326,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </span>
             </p>
           </div>
-
           <!-- Seed -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"

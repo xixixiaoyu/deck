@@ -2,10 +2,8 @@
 import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -45,7 +43,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-6 h-full justify-center"
       >
@@ -54,7 +51,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             未来前沿应用场景
@@ -63,7 +59,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             从数字世界走向物理世界，从工具走向伙伴
           </p>
         </div>
-
         <!-- 未来场景布局 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
           <!-- 左侧：Agents & Multimodal -->
@@ -86,7 +81,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 >
               </p>
             </div>
-
             <div
               class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm flex-1"
             >
@@ -104,7 +98,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </p>
             </div>
           </div>
-
           <!-- 右侧：Embodied AI & Science -->
           <div class="flex flex-col gap-4">
             <div
@@ -124,7 +117,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 >
               </p>
             </div>
-
             <div
               class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm flex-1"
             >

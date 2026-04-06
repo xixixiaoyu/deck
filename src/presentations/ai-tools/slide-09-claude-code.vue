@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: '终端原生Agent',
@@ -22,14 +21,12 @@ const features = [
     description: '推理领先，SWE-bench高分',
   },
 ]
-
 const highlights = [
   { label: '定价', value: '$20/月起', color: 'emerald' },
   { label: '定位', value: '深度思考', color: 'indigo' },
   { label: '评价', value: '开发者最爱', color: 'fuchsia' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,11 +38,7 @@ const highlights = [
             <span class="text-white text-xl">🤖</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               Claude Code
             </HeadingGradient>
             <p class="text-slate-500 text-sm">Anthropic · Terminal原生</p>
@@ -55,7 +48,6 @@ const highlights = [
           2026年爆款，常被开发者评为"最爱工具"，适合大型复杂项目
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +81,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +128,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200"
           >
@@ -163,7 +153,6 @@ const highlights = [
               Opus 4.6模型推理领先，SWE-bench高分
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">

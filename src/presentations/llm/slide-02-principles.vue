@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -46,7 +44,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -55,7 +52,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             大模型核心原理
@@ -64,7 +60,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             四大机制让机器理解语言
           </p>
         </div>
-
         <!-- 核心机制 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div
@@ -79,7 +74,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               计算词与词之间的<strong>关联权重</strong>，让模型理解上下文关系。就像我们知道"它"指代什么，模型也能捕捉长距离依赖。
             </p>
           </div>
-
           <div
             class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm hover:shadow-md transition-shadow"
           >
@@ -92,7 +86,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               对注意力提取的特征进行<strong>非线性变换</strong>，将简单的词关联转化为深层语义理解。相当于模型的"思考"过程。
             </p>
           </div>
-
           <div
             class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm hover:shadow-md transition-shadow"
           >
@@ -105,7 +98,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               核心是<strong>预测下一个词</strong>。模型学习海量文本的统计规律，为每个可能的词分配概率，选择最合适的词来组成句子。
             </p>
           </div>
-
           <div
             class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm hover:shadow-md transition-shadow"
           >
@@ -119,7 +111,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </p>
           </div>
         </div>
-
         <!-- 哲学思考：中文房间 -->
         <div
           class="bg-slate-50/80 backdrop-blur-md rounded-xl p-6 border border-slate-200 shadow-inner"

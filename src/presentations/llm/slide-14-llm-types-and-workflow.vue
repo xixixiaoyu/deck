@@ -7,10 +7,8 @@ import {
   CpuChipIcon,
   LightBulbIcon,
 } from '@heroicons/vue/24/outline'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -56,7 +54,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-6 h-full"
       >
@@ -65,7 +62,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="2"
             size="4xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             问答流程与模型类型
@@ -74,7 +70,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             从处理机制到模型演进：理解大模型如何思考与回答
           </p>
         </div>
-
         <!-- Part 1: QA Workflow -->
         <div
           class="bg-white/50 backdrop-blur-sm rounded-xl p-5 border border-white/40 shadow-sm"
@@ -98,7 +93,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-4 h-4 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 2 -->
             <div
               class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-indigo-100 w-full md:w-auto flex-1"
@@ -109,7 +103,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-4 h-4 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 3 -->
             <div
               class="flex flex-col items-center gap-2 p-3 bg-indigo-50 rounded-lg border border-indigo-200 w-full md:w-auto flex-1 shadow-sm"
@@ -122,7 +115,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-4 h-4 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 4 -->
             <div
               class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-indigo-100 w-full md:w-auto flex-1"
@@ -134,7 +126,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
           </div>
         </div>
-
         <!-- Part 2: General vs Reasoning LLM -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
           <!-- General LLM -->
@@ -179,7 +170,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </li>
             </ul>
           </div>
-
           <!-- Reasoning LLM -->
           <div
             class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm flex flex-col"

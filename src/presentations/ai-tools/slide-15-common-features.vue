@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 interface Feature {
   id: number
   name: string
@@ -12,7 +11,6 @@ interface Feature {
   examples: string
   color: string
 }
-
 const features: Feature[] = [
   {
     id: 1,
@@ -71,7 +69,6 @@ const features: Feature[] = [
     color: 'cyan',
   },
 ]
-
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   indigo: {
     bg: 'bg-indigo-50',
@@ -102,19 +99,17 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   cyan: { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
 }
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl" palette="indigo-fuchsia-emerald">
+        <HeadingGradient :level="2" size="4xl">
           7大共有核心功能
         </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
           2026年主流AI编程工具的"标配能力"
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div
           v-for="(feature, index) in features"
@@ -162,7 +157,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           </div>
         </div>
       </div>
-
       <div class="mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200">
         <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
           <svg

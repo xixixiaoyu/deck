@@ -16,10 +16,8 @@ import {
   TrophyIcon,
   UserGroupIcon,
 } from '@heroicons/vue/24/solid'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center h-full">
@@ -28,19 +26,13 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
       >
         <!-- Header -->
         <div class="text-center mb-8 shrink-0">
-          <HeadingGradient
-            :level="2"
-            size="4xl"
-            palette="indigo-fuchsia-emerald"
-            class="leading-tight"
-          >
+          <HeadingGradient :level="2" size="4xl" class="leading-tight">
             RAG 评估体系
           </HeadingGradient>
           <p class="mt-2 text-lg text-slate-600 max-w-4xl mx-auto">
             检索与生成双维度评估，RAGAS 框架构建质量闭环
           </p>
         </div>
-
         <!-- Main Content Grid -->
         <div class="grid grid-rows-[auto_1fr] gap-6 flex-grow min-h-0">
           <!-- Row 1: Dimensions & Metrics (RAGAS) -->
@@ -86,7 +78,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </div>
               </div>
             </div>
-
             <!-- Generation Side -->
             <div
               class="bg-violet-50/60 rounded-2xl p-5 border border-violet-100 flex flex-col"
@@ -125,7 +116,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </div>
             </div>
           </div>
-
           <!-- Row 2: Methodology (The "How") -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Method 1 -->
@@ -161,7 +151,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </ul>
               </div>
             </div>
-
             <!-- Method 2 -->
             <div
               class="bg-indigo-50/50 rounded-2xl p-5 border border-indigo-100 relative overflow-hidden"
@@ -201,7 +190,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </ul>
               </div>
             </div>
-
             <!-- Method 3 -->
             <div
               class="bg-emerald-50/50 rounded-2xl p-5 border border-emerald-100 relative overflow-hidden"
@@ -236,7 +224,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </div>
             </div>
           </div>
-
           <!-- Bottom: Feedback Loop -->
           <div
             class="bg-slate-50 rounded-xl p-3 border border-slate-200 flex items-center justify-center gap-3"

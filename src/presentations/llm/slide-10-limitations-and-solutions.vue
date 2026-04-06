@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -61,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             大模型的局限与解决方案
@@ -70,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             认知边界，善用工具，提升 AI 效能
           </p>
         </div>
-
         <!-- 核心内容区 -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           <!-- 左侧：核心局限 -->
@@ -83,7 +78,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             >
               <span class="text-red-500">⚠️</span> 核心局限
             </h2>
-
             <ul class="space-y-4 flex-1">
               <li class="flex gap-3">
                 <span class="text-2xl shrink-0">🤥</span>
@@ -123,7 +117,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </li>
             </ul>
           </div>
-
           <!-- 右侧：最佳解法 -->
           <div
             class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-green-100 shadow-sm flex flex-col gap-4 relative overflow-hidden"
@@ -134,7 +127,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             >
               <span class="text-green-600">💡</span> 解决方案
             </h2>
-
             <ul class="space-y-4 flex-1">
               <li class="flex gap-3">
                 <span class="text-2xl shrink-0">📚</span>

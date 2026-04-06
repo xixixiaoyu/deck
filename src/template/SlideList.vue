@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<{ isActive?: boolean; isPreview?: boolean }>()
@@ -154,11 +155,7 @@ const gridCols = computed(() => {
     class="container mx-auto max-w-6xl px-6 md:px-8 lg:px-12 py-12 lg:py-16"
   >
     <div class="mb-8">
-      <h2
-        class="inline-block text-4xl md:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-accent/90 to-accent/70"
-      >
-        通用列表模板
-      </h2>
+      <HeadingGradient :level="2" size="5xl"> 通用列表模板 </HeadingGradient>
       <p class="mt-2 text-slate-600">
         支持多种列表类型，点击按钮切换不同展示方式。
       </p>
@@ -184,11 +181,9 @@ const gridCols = computed(() => {
 
     <!-- 当前类型的标题和描述 -->
     <div class="mb-6">
-      <h2
-        class="inline-block text-3xl md:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-accent/90 to-accent/70"
-      >
+      <HeadingGradient :level="2" size="4xl">
         {{ currentInfo.title }}
-      </h2>
+      </HeadingGradient>
       <p class="mt-2 text-slate-600">{{ currentInfo.description }}</p>
     </div>
 

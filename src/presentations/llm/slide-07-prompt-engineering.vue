@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-6 h-full justify-center"
       >
@@ -61,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             Prompt 工程核心技巧
@@ -70,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             掌握 BROKE 原则，释放 AI 潜能
           </p>
         </div>
-
         <!-- 参数网格 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <!-- Tip 1: Background/Role -->
@@ -91,7 +86,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Tip 2: Role/Objectives -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -110,7 +104,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Tip 3: Key Results/Format -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -129,7 +122,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Tip 4: Evolve/Examples -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -148,7 +140,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Tip 5: Chain of Thought -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
@@ -167,7 +158,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               >
             </p>
           </div>
-
           <!-- Tip 6: Constraints -->
           <div
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"

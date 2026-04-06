@@ -2,10 +2,8 @@
 import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -45,7 +43,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-4xl mx-auto flex flex-col gap-10 items-center justify-center h-full text-center"
       >
@@ -60,7 +57,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </HeadingGradient>
           <p class="text-3xl font-light text-slate-700">Q & A</p>
         </div>
-
         <div
           class="bg-white/50 backdrop-blur-md rounded-2xl p-8 border border-white/40 shadow-lg max-w-2xl w-full"
         >

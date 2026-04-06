@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -60,7 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           />
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-6xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -69,7 +66,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             Token：大模型的“原子”
@@ -78,7 +74,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             理解 Token 是掌握模型输入输出、成本控制与能力边界的关键
           </p>
         </div>
-
         <!-- 内容区域 -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           <!-- 左侧：概念与换算 -->
@@ -117,7 +112,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 模型训练和推理时，都将文本切分为 Token 序列进行处理。
               </p>
             </div>
-
             <!-- 换算参考 -->
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm flex-1"
@@ -174,7 +168,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </div>
             </div>
           </div>
-
           <!-- 右侧：可视化与重要性 -->
           <div class="flex flex-col gap-6">
             <!-- Token 切分可视化 -->
@@ -219,7 +212,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </div>
               </div>
             </div>
-
             <!-- 为什么重要 -->
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-white/50 shadow-sm flex-1"

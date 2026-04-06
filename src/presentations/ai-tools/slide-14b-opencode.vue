@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: 'Plan + Build 双模式',
@@ -26,14 +25,12 @@ const features = [
       '不存储任何代码/上下文，支持LSP自动加载、多会话并行、undo/redo',
   },
 ]
-
 const highlights = [
   { label: 'GitHub Stars', value: '120K+', color: 'orange' },
   { label: '月活用户', value: '5M+', color: 'amber' },
   { label: '贡献者', value: '800+', color: 'red' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -45,13 +42,7 @@ const highlights = [
             <span class="text-white text-xl font-bold">O</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
-              OpenCode
-            </HeadingGradient>
+            <HeadingGradient :level="2" size="3xl"> OpenCode </HeadingGradient>
             <p class="text-slate-500 text-sm">开源 · 隐私至上 · 终端优先</p>
           </div>
         </div>
@@ -59,7 +50,6 @@ const highlights = [
           开源、隐私至上、终端优先的"瑞士军刀"AI编码Agent——让你在终端、IDE或桌面App里像指挥"AI实习生"一样工作
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -93,7 +83,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200"
           >
@@ -164,7 +152,6 @@ const highlights = [
               CLI无缝衔接
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">

@@ -2,10 +2,8 @@
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 import Section from '@/shared/ui/Section.vue'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -52,7 +50,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-5xl mx-auto flex flex-col gap-8 h-full justify-center"
       >
@@ -60,13 +57,11 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="5xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             课程回顾与总结
           </HeadingGradient>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="space-y-6">
             <div
@@ -82,7 +77,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 机制和训练流程（Pre-training/SFT/RLHF）是 LLM 应用开发的基础。
               </p>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm transition hover:shadow-md"
             >
@@ -96,7 +90,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 和高级检索策略解决模型幻觉问题。
               </p>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm transition hover:shadow-md"
             >
@@ -111,7 +104,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </p>
             </div>
           </div>
-
           <div class="space-y-6">
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm transition hover:shadow-md"
@@ -126,7 +118,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 具备规划、工具使用和环境交互能力。
               </p>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm transition hover:shadow-md"
             >
@@ -140,7 +131,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 注入防御和数据隐私保护是构建企业级应用的关键环节。
               </p>
             </div>
-
             <div
               class="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm transition hover:shadow-md"
             >

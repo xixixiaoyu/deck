@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: '双引擎',
@@ -22,14 +21,12 @@ const features = [
     description: '符合国内企业合规要求',
   },
 ]
-
 const highlights = [
   { label: '定位', value: '腾讯生态', color: 'indigo' },
   { label: '引擎', value: '混元+DeepSeek', color: 'emerald' },
   { label: '适用', value: '团队协作', color: 'fuchsia' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,11 +38,7 @@ const highlights = [
             <span class="text-white text-xl">💬</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
+            <HeadingGradient :level="2" size="3xl">
               腾讯云代码助手（CodeBuddy）
             </HeadingGradient>
             <p class="text-slate-500 text-sm">腾讯 · 微信生态深度集成</p>
@@ -53,7 +46,6 @@ const highlights = [
         </div>
         <p class="text-slate-600">腾讯生态深度集成，适合微信/小程序开发场景</p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -87,7 +79,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -135,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200"
           >
@@ -161,7 +151,6 @@ const highlights = [
               微信/小程序深度集成，腾讯生态无缝衔接
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">

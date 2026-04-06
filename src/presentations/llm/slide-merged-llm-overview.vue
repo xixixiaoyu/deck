@@ -8,10 +8,8 @@ import {
   EyeIcon,
   LightBulbIcon,
 } from '@heroicons/vue/24/outline'
-
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 </script>
-
 <template>
   <Section>
     <Card padding="xl" class="grid place-items-center relative overflow-hidden">
@@ -57,7 +55,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </g>
         </svg>
       </div>
-
       <div
         class="relative z-10 w-full max-w-7xl mx-auto flex flex-col gap-5 h-full"
       >
@@ -66,7 +63,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="2"
             size="4xl"
-            palette="indigo-fuchsia-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             大模型全景：流程、类型与多模态
@@ -75,7 +71,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             Unified View: Workflow, Model Types & Multimodality
           </p>
         </div>
-
         <!-- Part 1: QA Workflow -->
         <div
           class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-lg"
@@ -102,7 +97,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-5 h-5 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 2 -->
             <div
               class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-indigo-100 w-full md:w-auto flex-1 justify-center shadow-sm"
@@ -116,7 +110,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-5 h-5 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 3 -->
             <div
               class="flex flex-col items-center gap-2 p-4 bg-indigo-50 rounded-xl border border-indigo-200 w-full md:w-auto flex-1 shadow-md justify-center"
@@ -130,7 +123,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <ArrowRightIcon
               class="w-5 h-5 text-slate-400 rotate-90 md:rotate-0"
             />
-
             <!-- Step 4 -->
             <div
               class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-indigo-100 w-full md:w-auto flex-1 justify-center shadow-sm"
@@ -143,7 +135,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
           </div>
         </div>
-
         <!-- Part 2: The Three Pillars -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 flex-1 min-h-0">
           <!-- General LLM -->
@@ -181,7 +172,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </div>
             </div>
           </div>
-
           <!-- Reasoning LLM -->
           <div
             class="bg-purple-50/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-lg flex flex-col"
@@ -217,7 +207,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               </div>
             </div>
           </div>
-
           <!-- Multimodal LMM -->
           <div
             class="bg-emerald-50/60 backdrop-blur-sm rounded-2xl p-6 border border-emerald-100 shadow-lg flex flex-col"

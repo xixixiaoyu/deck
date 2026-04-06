@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const features = [
   {
     title: '隐私至上',
@@ -22,14 +21,12 @@ const features = [
     description: '多步重构+测试生成',
   },
 ]
-
 const highlights = [
   { label: '定价', value: '$12-39/月', color: 'indigo' },
   { label: '定位', value: '隐私优先', color: 'fuchsia' },
   { label: '适用', value: '强监管行业', color: 'emerald' },
 ]
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
@@ -41,13 +38,7 @@ const highlights = [
             <span class="text-white text-xl">🔒</span>
           </div>
           <div>
-            <HeadingGradient
-              :level="2"
-              size="3xl"
-              palette="indigo-fuchsia-emerald"
-            >
-              Tabnine
-            </HeadingGradient>
+            <HeadingGradient :level="2" size="3xl"> Tabnine </HeadingGradient>
             <p class="text-slate-500 text-sm">隐私至上 · 企业级</p>
           </div>
         </div>
@@ -55,7 +46,6 @@ const highlights = [
           金融、医疗等强监管行业的首选，隐私保护与合规性领先
         </p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <h3
@@ -89,7 +79,6 @@ const highlights = [
             </div>
           </div>
         </div>
-
         <div>
           <h3
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
@@ -137,7 +126,6 @@ const highlights = [
               <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
             </div>
           </div>
-
           <div
             class="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-200"
           >
@@ -163,7 +151,6 @@ const highlights = [
               永不训练你的代码，完全自托管选项
             </p>
           </div>
-
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
             <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
             <p class="text-sm text-slate-600">金融、医疗等强监管行业</p>

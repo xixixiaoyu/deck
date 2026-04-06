@@ -3,7 +3,6 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-
 const recommendations = [
   {
     title: '最佳组合',
@@ -25,7 +24,6 @@ const recommendations = [
     color: 'purple',
   },
 ]
-
 const futureTrends = [
   {
     title: '多Agent协作',
@@ -43,7 +41,6 @@ const futureTrends = [
     color: 'emerald',
   },
 ]
-
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   indigo: {
     bg: 'bg-indigo-50',
@@ -72,17 +69,13 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
   },
 }
 </script>
-
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl" palette="indigo-fuchsia-emerald">
-          前瞻建议
-        </HeadingGradient>
+        <HeadingGradient :level="2" size="4xl"> 前瞻建议 </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">如何最大化利用AI编程工具</p>
       </div>
-
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div
           v-for="(rec, index) in recommendations"
@@ -104,7 +97,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           </p>
         </div>
       </div>
-
       <div
         class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 via-fuchsia-50 to-emerald-50 border border-slate-200"
       >
@@ -141,7 +133,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           </div>
         </div>
       </div>
-
       <div class="mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200">
         <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
           <svg

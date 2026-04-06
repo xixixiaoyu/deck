@@ -16,11 +16,11 @@ const tag = computed(() => `h${props.level ?? 2}`)
 
 const sizeClass = computed(() => {
   const map: Record<Size, string> = {
-    '3xl': 'text-3xl',
-    '4xl': 'text-4xl',
-    '5xl': 'text-5xl',
-    '6xl': 'text-6xl',
-    '7xl': 'text-7xl',
+    '3xl': 'text-2xl md:text-3xl',
+    '4xl': 'text-3xl md:text-4xl',
+    '5xl': 'text-4xl md:text-5xl',
+    '6xl': 'text-5xl md:text-6xl',
+    '7xl': 'text-6xl md:text-7xl',
   }
   return map[props.size ?? '5xl']
 })
@@ -29,7 +29,7 @@ const paletteClass = computed(() => {
   const p = props.palette ?? 'accent'
   if (p === 'indigo-fuchsia-emerald')
     return 'bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-emerald-500'
-  return 'bg-gradient-to-r from-accent/90 to-accent/70'
+  return 'bg-gradient-to-r from-accent/90 via-accent/80 to-accent/70'
 })
 </script>
 
@@ -37,7 +37,7 @@ const paletteClass = computed(() => {
   <component
     :is="tag"
     :class="[
-      'font-black tracking-tight text-transparent bg-clip-text',
+      'font-extrabold tracking-tight text-transparent bg-clip-text',
       sizeClass,
       paletteClass,
       props.class,
