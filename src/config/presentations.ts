@@ -22,11 +22,31 @@ export interface Category {
 
 export const categoriesConfig: Category[] = [
   {
+    id: 'ai-tools',
+    name: 'AI工具',
+    description: 'AI编程工具全景与最佳实践',
+    icon: 'code',
+    expanded: true,
+    color: 'indigo',
+    presentations: [
+      {
+        id: 'ai-tools-panorama',
+        title: '主流AI编程工具全景',
+        description: '2026年4月主流AI编程工具全景整理，从代码补全到Agentic时代',
+        route: '/ai-tools',
+        tags: ['AI', '编程工具', 'Cursor', 'Copilot', 'Claude'],
+        difficulty: 'intermediate',
+        duration: '30分钟',
+        lastUpdated: '2026-04-06',
+      },
+    ],
+  },
+  {
     id: 'llm',
     name: '大模型',
     description: '大型语言模型相关演示文稿',
     icon: 'brain',
-    expanded: true,
+    expanded: false,
     color: 'teal',
     presentations: [
       {
@@ -63,7 +83,18 @@ export const categoriesConfig: Category[] = [
   },
 ]
 
-export const tagsList = ['大模型', 'AI', '深度学习', '设计', '模板', 'UI']
+export const tagsList = [
+  'AI',
+  '编程工具',
+  'Cursor',
+  'Copilot',
+  'Claude',
+  '大模型',
+  '深度学习',
+  '设计',
+  '模板',
+  'UI',
+]
 
 export const difficulties = ['beginner', 'intermediate', 'advanced'] as const
 export type Difficulty = (typeof difficulties)[number]

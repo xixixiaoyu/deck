@@ -15,6 +15,10 @@ const router = createRouter({
       path: '/llm',
       component: () => import('@/presentations/llm/index.vue'),
     },
+    {
+      path: '/ai-tools',
+      component: () => import('@/presentations/ai-tools/index.vue'),
+    },
   ],
 })
 
