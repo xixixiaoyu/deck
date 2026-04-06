@@ -38,7 +38,8 @@ const Category1Divider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Category 01',
       title: 'AI 原生 IDE / 工作台',
-      description: '独立编辑器或全链路平台，AI 深度嵌入，Agent 驱动。',
+      description:
+        '大多基于 VS Code 生态深度重构（Fork），将 AI 注入编辑器底层 API，兼顾生态兼容性与原生 Agent 体验。',
     })
   },
 })

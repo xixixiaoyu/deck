@@ -15,7 +15,7 @@ const categories: Category[] = [
   {
     id: 'ai-native-ide',
     title: 'AI 原生 IDE',
-    description: '独立编辑器或全链路工作台，AI 深度嵌入，Agent 驱动',
+    description: '深度魔改（Fork）自 VS Code，将 AI 注入内核 API',
     tools: [
       'Cursor',
       'Windsurf',
@@ -136,7 +136,8 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
         </div>
         <p class="text-slate-600 text-sm leading-relaxed">
           <strong class="text-blue-600">AI 原生 IDE</strong>
-          适合追求极致 Agent 体验与深度集成，利用独立编辑器构建闭环；
+          通过 Fork VS Code 内核获得插件生态，同时在底层重构 AI 逻辑，实现 Agent
+          级体验；
           <strong class="text-cyan-600">IDE 扩展</strong>
           适合存量项目与团队协作，在熟悉的环境中获得 AI 赋能；
           <strong class="text-emerald-600">Terminal CLI</strong>
