@@ -419,37 +419,40 @@ watch(currentSlide, (newVal, oldVal) => {
 
 .controls {
   position: fixed;
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 12px 24px;
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgb(var(--border) / 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 12px rgb(var(--text-primary) / 0.06);
   z-index: 1000;
 }
 
 .control-btn {
-  width: 44px;
-  height: 44px;
+  width: 28px;
+  height: 28px;
   border: none;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 18px;
+  background: transparent;
+  color: rgb(var(--text-muted));
+  font-size: 14px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .control-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.2);
-  transform: scale(1.1);
+  background: rgb(var(--accent) / 0.1);
+  color: rgb(var(--accent));
+  transform: scale(1.05);
 }
 
 .control-btn:disabled {
@@ -458,20 +461,30 @@ watch(currentSlide, (newVal, oldVal) => {
 }
 
 .slide-info {
-  color: white;
-  font-weight: 600;
-  min-width: 80px;
+  color: rgb(var(--text-muted));
+  font-weight: 500;
+  min-width: 60px;
   text-align: center;
-  font-size: 14px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
 }
 
 .page-edit {
   display: inline-block;
-  min-width: 36px;
-  padding: 4px 6px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #0f172a;
+  min-width: 28px;
+  padding: 2px 4px;
+  border-radius: 6px;
+  background: rgb(var(--surface-muted));
+  color: rgb(var(--text-primary));
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-edit:focus {
+  outline: none;
+  border-color: rgb(var(--accent) / 0.5);
 }
 
 .progress-bar {
