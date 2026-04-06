@@ -15,20 +15,6 @@ export interface Theme {
 
 export const themes: Theme[] = [
   {
-    id: 'dark',
-    name: '深色主题',
-    icon: 'moon',
-    colors: {
-      surface: '17 24 39',
-      'surface-muted': '30 41 59',
-      'text-primary': '226 232 240',
-      'text-muted': '148 163 184',
-      accent: '14 165 233', // Sky-500: 清爽纯粹的蓝，无紫色倾向
-      border: '71 85 105',
-      highlight: '253 224 71',
-    },
-  },
-  {
     id: 'light',
     name: '浅色主题',
     icon: 'sun',
@@ -40,6 +26,20 @@ export const themes: Theme[] = [
       accent: '2 132 199', // Sky-600: 在浅色背景下保证易读性的纯正蓝
       border: '226 232 240',
       highlight: '251 191 36',
+    },
+  },
+  {
+    id: 'dark',
+    name: '深色主题',
+    icon: 'moon',
+    colors: {
+      surface: '17 24 39',
+      'surface-muted': '30 41 59',
+      'text-primary': '226 232 240',
+      'text-muted': '148 163 184',
+      accent: '14 165 233', // Sky-500: 清爽纯粹的蓝，无紫色倾向
+      border: '71 85 105',
+      highlight: '253 224 71',
     },
   },
   {

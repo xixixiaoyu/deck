@@ -112,11 +112,18 @@ export function useSearchAndFilter() {
   }
 }
 
+// 全局主题状态
+const globalCurrentTheme = ref<Theme>(themes[0])
+let isInitialized = false
+
 // 主题管理
 export function useTheme() {
-  const currentTheme = ref<Theme>(themes[0])
+  const currentTheme = globalCurrentTheme
 
   onMounted(() => {
+    if (isInitialized) return
+    isInitialized = true
+
     const savedThemeId = getSavedTheme()
     if (savedThemeId) {
       const theme = getThemeById(savedThemeId)
@@ -125,17 +132,10 @@ export function useTheme() {
         applyTheme(theme)
       }
     } else {
-      // 检查系统主题偏好
-      const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)'
-      ).matches
-      const defaultTheme = prefersDark
-        ? themes.find(t => t.id === 'dark')
-        : themes.find(t => t.id === 'light')
-      if (defaultTheme) {
-        currentTheme.value = defaultTheme
-        applyTheme(defaultTheme)
-      }
+      // 默认使用浅色模式，忽略系统主题偏好
+      const defaultTheme = themes.find(t => t.id === 'light') || themes[0]
+      currentTheme.value = defaultTheme
+      applyTheme(defaultTheme)
     }
   })
 
