@@ -5,16 +5,16 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'Composer + 后台 8 个并行 Agent 自主多文件编辑与重构',
+    title: 'Composer 2 进化',
+    description: '基于 Kimi K2.5 + RL 强化学习，支持 100+ 步长周期任务处理',
   },
   {
     title: '工作流改变',
-    description: '从“手动补全”跃升为“异步委托”，程序员只需描述需求',
+    description: '从“手动补全”跃升为“异步委托”，支持 16+ 并行 Agent 协作',
   },
   {
     title: 'SWE-bench 性能',
-    description: '约 50%+ 水平，自主规划、编辑、测试闭环',
+    description: '73.7% (Multilingual) 顶级水平，跨语言 Bug 修复闭环',
   },
   {
     title: '优缺点小结',
@@ -23,7 +23,7 @@ const features = [
 ]
 const highlights = [
   { label: '付费模式', value: 'Pro $20/月', color: 'blue' },
-  { label: '选型建议', value: '追求极致 IDE 体验', color: 'cyan' },
+  { label: '核心引擎', value: 'Composer 2', color: 'cyan' },
   { label: '心流体验', value: '异步委托 · 零中断', color: 'emerald' },
 ]
 </script>
@@ -45,8 +45,8 @@ const highlights = [
           </div>
         </div>
         <p class="text-slate-600">
-          VS Code 重度用户、追求极致 IDE 体验的个人/中小团队闭眼入。多模型 Agent
-          驱动的完整 IDE。
+          VS Code 重度用户首选。基于 Composer 2 (Kimi K2.5) 模型，在
+          Terminal-Bench 2.0 (61.7%) 与 SWE-bench (73.7%) 表现极佳。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -149,7 +149,7 @@ const highlights = [
               2026年更新
             </h4>
             <p class="text-sm text-slate-600">
-              新界面3.0、Mission Control网格预览
+              Composer 2 核心进化、新界面 3.0、Mission Control 网格预览
             </p>
           </div>
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">

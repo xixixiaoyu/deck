@@ -13,7 +13,7 @@ const comparisonData: ComparisonRow[] = [
   {
     scenario: '极致体验/Agent 驱动',
     tool: 'Cursor / Claude Code',
-    reason: 'Composer / 80.8% SWE-bench',
+    reason: 'Composer 2 / 73.7% ~ 80.8% SWE',
     color: 'blue',
   },
   {
