@@ -49,7 +49,8 @@ echo -e "${BLUE}>>> 2. 准备同步到服务器: $SERVER_IP ...${NC}"
 # -v: 显示详情
 # -z: 传输时压缩
 # --delete: 删除服务器上多余的文件 (确保目录完全同步)
-rsync -avz --delete dist/ "${SERVER_USER}@${SERVER_IP}:${SERVER_PATH}"
+# -e "ssh -o StrictHostKeyChecking=no": 自动接受 SSH 主机密钥
+rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ "${SERVER_USER}@${SERVER_IP}:${SERVER_PATH}"
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}同步成功!${NC}"
@@ -61,8 +62,8 @@ fi
 # 4. 可选: 同步 Nginx 配置 (默认注释，需手动开启并配置 NGINX_PATH)
 # if [[ -n "$NGINX_PATH" ]]; then
 #     echo -e "${BLUE}>>> 正在同步 Nginx 配置...${NC}"
-#     scp scripts/nginx.conf "${SERVER_USER}@${SERVER_IP}:${NGINX_PATH}"
-#     ssh "${SERVER_USER}@${SERVER_IP}" "sudo nginx -s reload"
+#     scp -o StrictHostKeyChecking=no scripts/nginx.conf "${SERVER_USER}@${SERVER_IP}:${NGINX_PATH}"
+#     ssh -o StrictHostKeyChecking=no "${SERVER_USER}@${SERVER_IP}" "sudo nginx -s reload"
 #     echo -e "${GREEN}Nginx 配置已重载!${NC}"
 # fi
 
