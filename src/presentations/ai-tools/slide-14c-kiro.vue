@@ -6,26 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'Spec 规范驱动 + 4 层架构，意图结构化',
+    description: 'Vibe（快）与 Spec（结构）双模式，先出规格文档再执行',
   },
   {
     title: '工作流改变',
-    description: '先规格文档确认，再 Agent 执行迭代',
+    description: '强制“先思考再写”，程序员获得清晰文档链条，审计性强',
   },
   {
-    title: 'Agent Hooks + Autopilot',
-    description:
-      '文件保存等事件触发AI自动文档/测试/优化；Autopilot模式自主完成大型任务',
+    title: '4 层架构 Agent',
+    description: 'Spec 规范驱动，意图结构化，适合复杂架构或合规场景',
   },
   {
-    title: 'Steering 文件',
-    description: '项目级自定义Agent行为、编码规范，实现团队标准化',
+    title: '优缺点小结',
+    description: '可追溯性一流；但 Spec 模式生成速度稍慢于纯速度工具',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '订阅 $19+/月', color: 'cyan' },
-  { label: '选型建议', value: 'AWS 用户/规范团队', color: 'teal' },
-  { label: '平台', value: 'IDE+CLI', color: 'blue' },
+  { label: '付费模式', value: 'Pro $20/月起', color: 'cyan' },
+  { label: '选型建议', value: 'AWS 用户/受管行业', color: 'teal' },
+  { label: '审计', value: 'Traceability 极强', color: 'blue' },
 ]
 </script>
 <template>
@@ -40,12 +39,14 @@ const highlights = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Kiro </HeadingGradient>
-            <p class="text-slate-500 text-sm">AWS · Agentic IDE + CLI</p>
+            <p class="text-slate-500 text-sm">
+              AWS 系 · Spec 规范驱动 Agent IDE
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          AWS 用户、追求结构化规范的团队闭眼入。Spec 规范驱动 + 4
-          层架构，意图结构化。
+          AWS 用户、追求结构化规范的团队/受监管行业闭眼入。Vibe 与 Spec
+          双模式切换，极致的可追溯性。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

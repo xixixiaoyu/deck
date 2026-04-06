@@ -6,26 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'OpenAI CLI/桌面 Agent，云端沙盒执行',
+    description: '多模态 + 定时任务 + 批量处理，ChatGPT 生态无缝',
   },
   {
     title: '工作流改变',
-    description: '多多模态 + 定时任务，自主批量处理',
+    description: 'AI 可自主运行长期/重复任务，程序员像“指挥官”下达战略指令',
   },
   {
-    title: '多Agent并行工作流',
-    description:
-      '一个任务拆成多个Agent同时跑（Worktrees + 云环境），几周工作几天内完成',
+    title: '云端沙盒执行',
+    description: 'OpenAI CLI/桌面 Agent，隔离环境中读写文件与跑测试',
   },
   {
-    title: '云沙箱 + 本地混合',
-    description: '隔离云环境中预加载仓库，能读写文件、跑测试、执行命令',
+    title: '优缺点小结',
+    description: '生态最成熟；但依赖 OpenAI 模型，定价随之波动',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'ChatGPT 计划内', color: 'emerald' },
+  { label: '付费模式', value: '$20/月起', color: 'emerald' },
   { label: '选型建议', value: 'OpenAI 生态用户', color: 'teal' },
-  { label: '采用率', value: '60%+', color: 'green' },
+  { label: '集成', value: 'ChatGPT Plus 内含', color: 'green' },
 ]
 </script>
 <template>
@@ -40,12 +39,12 @@ const highlights = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Codex </HeadingGradient>
-            <p class="text-slate-500 text-sm">OpenAI · Agentic编码平台</p>
+            <p class="text-slate-500 text-sm">OpenAI · CLI/桌面 Agent 平台</p>
           </div>
         </div>
         <p class="text-slate-600">
-          OpenAI 生态用户、后端批量任务开发者闭眼入。主打多 Agent 并行 +
-          长时程任务 + 云沙箱执行。
+          OpenAI
+          生态用户、后端批量/定时任务开发者闭眼入。主打云端沙盒执行与长期任务自动化。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -56,10 +56,10 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             palette="sky-cyan-emerald"
             class="leading-tight"
           >
-            主流AI编程工具全景
+            2026 年 AI 编码工具深度调研报告
           </HeadingGradient>
           <p class="mt-5 text-lg md:text-2xl text-slate-700 max-w-4xl mx-auto">
-            从代码补全到 Agentic 时代，AI 已成为你的编程搭档
+            全景扫描 · 细节下钻 · 风险核查 · 权威校验
           </p>
           <div class="mt-8 flex flex-wrap justify-center gap-3">
             <span

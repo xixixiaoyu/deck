@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: '能动型 IDE，Flows + Cascade 主动预测修复',
+    description: 'Cascade Agent 能提前 10 步思考、自动修复与部署',
   },
   {
     title: '工作流改变',
-    description: 'AI 预览部署，心流式无打断开发',
+    description: '从“打断式补全”变成“心流式共创”，原型速度升 5-10 倍',
   },
   {
-    title: 'Plan Mode',
-    description: '智能任务规划 + Flow状态实时协作',
+    title: 'Flow + Cascade',
+    description: 'AI 像“贴身搭档”提前预览修改，主动预测式开发',
   },
   {
-    title: '多语言支持',
-    description: '支持70+编程语言，免费层强大',
+    title: '优缺点小结',
+    description: '性价比之王；但调试支持稍弱，收购后路线图需关注',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $15/月', color: 'emerald' },
-  { label: '选型建议', value: '追求心流开发', color: 'cyan' },
-  { label: '定位', value: 'Agentic最强', color: 'blue' },
+  { label: '付费模式', value: 'Pro $15-20/月', color: 'emerald' },
+  { label: '选型建议', value: '预算敏感 · 追求心流', color: 'cyan' },
+  { label: '免费额度', value: '慷慨额度 + 无限 Tab', color: 'blue' },
 ]
 </script>
 <template>
@@ -39,11 +39,13 @@ const highlights = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Windsurf </HeadingGradient>
-            <p class="text-slate-500 text-sm">原Codeium · 独立AI IDE</p>
+            <p class="text-slate-500 text-sm">
+              Cognition (原Codeium) · AI 先天 IDE
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          预算敏感、追求心流开发的个人开发者闭眼入。Agentic工作流领先工具。
+          预算敏感、追求心流开发的个人开发者或初创团队闭眼入。专注主动预测式开发。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

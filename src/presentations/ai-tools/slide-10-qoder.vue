@@ -6,32 +6,30 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'Quest 模式 Agentic 平台，Repo Wiki 项目知识图',
+    description: 'Quest 模式 Agentic 平台，10 万文件知识图 + 多专家团并行',
   },
   {
     title: '工作流改变',
-    description: '自然语言需求自动规划生成完整项目',
+    description: '输入一句需求，AI 自己调研、拆任务、写代码、测试',
   },
   {
-    title: 'Agentic IDE + CLI 双形态',
-    description:
-      '深度代码库理解 + 自主Agent（Quest Mode任务委托、Agentic Chat协作编程）',
+    title: 'Quest 模式委托',
+    description: '程序员从“执行者”变成“需求定义者”，专攻大型工程',
   },
   {
-    title: '全球最新大模型',
-    description:
-      '上下文工程（Context Engineering），被开发者称为"让Cursor显得过时"的工具',
+    title: '优缺点小结',
+    description: '国产性价比高，Windows 终端准确率领先；国际模型切换稍弱',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '积分制(低成本)', color: 'blue' },
-  { label: '选型建议', value: '企业级大项目', color: 'cyan' },
-  { label: '评价', value: '2026最值得试', color: 'emerald' },
+  { label: '付费模式', value: '首购 $2/月起', color: 'blue' },
+  { label: '选型建议', value: '企业级大型项目', color: 'cyan' },
+  { label: '知识图谱', value: '10万文件深度理解', color: 'emerald' },
 ]
 const whyImportant = [
   '自然语言需求自动规划生成完整项目，适合原型构建与企业级大型项目。',
   'Repo Wiki 项目知识图，深度理解复杂业务逻辑。',
-  '在 2026 年盘点中被视为 Agentic 编程平台的新标杆。',
+  '国产性价比极高，Pro 版约 $20/月，Windows 适配优秀。',
 ]
 </script>
 <template>
@@ -47,10 +45,13 @@ const whyImportant = [
           <div>
             <HeadingGradient :level="2" size="3xl"> Qoder </HeadingGradient>
             <p class="text-gray-600 dark:text-gray-300 text-lg">
-              企业级大型项目、原型构建开发者闭眼入
+              阿里 · Quest 模式 Agentic 平台
             </p>
           </div>
         </div>
+        <p class="text-slate-600 mb-6">
+          企业级大型项目、原型构建、遗留系统改造开发者闭眼入。专为大型工程设计的项目知识图谱。
+        </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
             <h3

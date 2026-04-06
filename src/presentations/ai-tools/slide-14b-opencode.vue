@@ -6,26 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: '开源 CLI 代理，75+ 模型灵活 + 本地支持',
+    description: '完全开源、可自托管、Plan & Build 双模式，零厂商锁定',
   },
   {
     title: '工作流改变',
-    description: '终端 Plan & Build 双模式自主执行',
+    description: '终端内自主 Plan → 执行，自定义工具链，像“私人 AI 工程师”',
   },
   {
-    title: '75+ 模型任意选',
-    description:
-      '内置 + Models.dev 支持（Claude、GPT、Gemini、本地 Ollama 等）',
+    title: '75+ 模型支持',
+    description: '支持主流 API + 本地运行（如 Ollama），极客首选',
   },
   {
-    title: '隐私第一',
-    description: '不存储任何代码/上下文，支持多会话并行、undo/redo',
+    title: '优缺点小结',
+    description: '零成本灵活、隐私至上；但需自行管理 API Key 与环境',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '开源免费', color: 'emerald' },
-  { label: '选型建议', value: '追求自定义极客', color: 'blue' },
-  { label: '定位', value: '终端优先', color: 'orange' },
+  { label: '付费模式', value: '工具完全免费', color: 'emerald' },
+  { label: '选型建议', value: '成本敏感 · 极客', color: 'blue' },
+  { label: '部署', value: '支持本地运行', color: 'orange' },
 ]
 </script>
 <template>
@@ -39,13 +38,13 @@ const highlights = [
             <span class="text-white text-xl font-bold">O</span>
           </div>
           <div>
-            <HeadingGradient :level="2" size="3xl"> OpenCode </HeadingGradient>
-            <p class="text-slate-500 text-sm">开源 · 隐私至上 · 终端优先</p>
+            <HeadingGradient :level="2" size="3xl"> Opencode </HeadingGradient>
+            <p class="text-slate-500 text-sm">开源 CLI 代理 · 支持 75+ 模型</p>
           </div>
         </div>
         <p class="text-slate-600">
-          成本敏感、追求自定义的极客开发者闭眼入。终端 Plan & Build
-          双模式自主执行，支持 75+ 模型。
+          成本敏感、追求自定义/本地化的极客开发者闭眼入。终端内自主规划与执行，完全掌控
+          AI 工作流。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'CLI Agentic，Subagents 并行拆解长时任务',
+    description: 'SWE-bench 80.8% 顶级推理，1M 上下文 + Opus 4.6 模型',
   },
   {
     title: '工作流改变',
-    description: '终端自主执行，人类仅关键节点干预',
+    description: '从“人写代码”变成“人只在关键节点干预”，程序员像“项目经理”',
   },
   {
-    title: 'Auto Mode',
-    description: '安全自动执行 + 记忆（跨会话记住项目模式）',
+    title: '终端原生 Agent',
+    description: 'Subagents 并行拆解长时任务，自主执行命令与迭代调试',
   },
   {
-    title: 'Opus 4.6模型',
-    description: '推理领先，SWE-bench高分',
+    title: '优缺点小结',
+    description: '推理最强；但 CLI 对 GUI 爱好者有成本，Token 消耗易超预期',
   },
 ]
 const highlights = [
   { label: '付费模式', value: 'Pro $20/月', color: 'emerald' },
-  { label: '选型建议', value: '资深开发者', color: 'blue' },
-  { label: '评价', value: '开发者最爱', color: 'cyan' },
+  { label: '选型建议', value: '资深开发者 · 重构之王', color: 'blue' },
+  { label: '重度计划', value: 'Max $100-200/月', color: 'cyan' },
 ]
 </script>
 <template>
@@ -41,11 +41,13 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               Claude Code
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">Anthropic · Terminal原生</p>
+            <p class="text-slate-500 text-sm">
+              Anthropic · 终端原生 Agentic CLI
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          资深开发者、复杂代码库重构者闭眼入。终端自主执行，高效拆解长时任务。
+          资深开发者、大型代码库重构/高风险任务者闭眼入。复杂代码库重构之王，顶级推理能力。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

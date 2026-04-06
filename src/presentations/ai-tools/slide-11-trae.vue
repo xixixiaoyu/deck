@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: '多模型聚合 + 中文优化，SOLO 模式闭环',
+    description: '图像/设计稿直出代码 + SOLO 闭环 Agent，基础版永久免费',
   },
   {
     title: '工作流改变',
-    description: '图像转代码 + 全流程自动化',
+    description: '从“敲键盘”变成“指挥 AI 闭环”，中文语义理解极准',
   },
   {
-    title: 'Builder模式',
-    description: '自然语言一键生成完整项目框架+环境+测试',
+    title: 'UI 重度友好',
+    description: '前端/设计转代码几乎零代码，Figma/设计稿直接转换',
   },
   {
-    title: '设计稿直出代码',
-    description: 'Figma/设计稿直接转换为代码',
+    title: '优缺点小结',
+    description: '上手快、免费门槛低；超大型代码库上下文深度略逊',
   },
 ]
 const highlights = [
   { label: '付费模式', value: '基础永久免费', color: 'emerald' },
-  { label: '选型建议', value: '国内开发者', color: 'blue' },
-  { label: '效率', value: '提升50%', color: 'cyan' },
+  { label: '选型建议', value: '国内开发者 · UI重度', color: 'blue' },
+  { label: '低价Pro', value: '约 $10/月', color: 'cyan' },
 ]
 </script>
 <template>
@@ -40,13 +40,13 @@ const highlights = [
           <div>
             <HeadingGradient :level="2" size="3xl"> Trae </HeadingGradient>
             <p class="text-slate-500 text-sm">
-              字节跳动 · 字节跳动 AI 原生 IDE
+              字节跳动 · 多模型聚合 + 中文优化 AI IDE
             </p>
           </div>
         </div>
         <p class="text-slate-600">
-          国内开发者、预算有限初创团队闭眼入。图像转代码 +
-          全流程自动化，中文体验极佳。
+          国内开发者、预算有限初创团队、UI 重度用户闭眼入。图像转代码 + SOLO
+          闭环 Agent，中文体验极佳。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

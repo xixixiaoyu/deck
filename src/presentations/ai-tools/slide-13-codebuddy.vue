@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: '全流程一体化，腾讯云生态 + 等保安全',
+    description: '自然语言 → 编码 → 构建 → 部署一键闭环 + 等保三级安全',
   },
   {
     title: '工作流改变',
-    description: '自然语言到部署一键闭环',
+    description: '从“写代码”到“管全链路”，程序员像产品经理一键落地应用',
   },
   {
-    title: '微信/小程序集成',
-    description: '深度集成微信生态，小程序开发优化',
+    title: '微信/腾讯云生态',
+    description: '深度集成腾讯云/微信生态，小程序开发与部署深度优化',
   },
   {
-    title: '全链路生成',
-    description: '代码生成+审查一体化',
+    title: '优缺点小结',
+    description: '安全与生态极强；但国际模型支持需切换',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '免费 + 积分', color: 'emerald' },
-  { label: '选型建议', value: '腾讯云/微信生态', color: 'blue' },
-  { label: '适用', value: '团队协作', color: 'cyan' },
+  { label: '付费模式', value: '约 $10/月起', color: 'emerald' },
+  { label: '选型建议', value: '腾讯云/微信用户', color: 'blue' },
+  { label: '安全等级', value: '等保三级安全', color: 'cyan' },
 ]
 </script>
 <template>
@@ -41,11 +41,11 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               腾讯云代码助手（CodeBuddy）
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">腾讯 · 微信生态深度集成</p>
+            <p class="text-slate-500 text-sm">腾讯 · 全流程一体化 AI 工作台</p>
           </div>
         </div>
         <p class="text-slate-600">
-          腾讯云/微信生态用户、企业级合规开发闭眼入。等保安全，自然语言到部署一键闭环。
+          腾讯云/微信生态用户、企业级合规开发闭眼入。深度集成云原生应用全链路，安全合规领先。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

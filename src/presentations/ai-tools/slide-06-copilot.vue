@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'GitHub 生态深度集成，PR 审查自动化',
+    description: 'GitHub 原生生态 + PR 自动审查、多模型可选，协作零摩擦',
   },
   {
     title: '工作流改变',
-    description: 'IDE 插件无缝补全 + Agent 辅助',
+    description: '补全 + Chat + Agent 无缝嵌入，AI 成为“隐形搭档”',
   },
   {
-    title: '代码审查',
-    description: 'PR自动反馈 + 多模型支持（Claude/GPT/Gemini）',
+    title: '优缺点小结',
+    description: '价格最低、生态最稳；但 Agent 能力略逊于纯 Agent 工具',
   },
   {
-    title: 'GitHub深度集成',
-    description: 'Mobile、CLI、Spark全覆盖',
+    title: '选型建议',
+    description: 'GitHub 重度用户、团队协作开发者闭眼入',
   },
 ]
 const highlights = [
   { label: '付费模式', value: 'Pro $10/月', color: 'cyan' },
-  { label: '选型建议', value: 'GitHub重度用户', color: 'blue' },
-  { label: '定位', value: '默认选择', color: 'emerald' },
+  { label: '性价比', value: '市场最高性价比', color: 'blue' },
+  { label: '生态', value: 'GitHub 无缝集成', color: 'emerald' },
 ]
 </script>
 <template>
@@ -49,12 +49,14 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               GitHub Copilot
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">Microsoft + OpenAI</p>
+            <p class="text-slate-500 text-sm">
+              Microsoft + OpenAI · 最成熟 IDE 插件
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          GitHub 重度用户、团队协作开发者闭眼入。GitHub生态无缝集成，PR
-          审查自动化。
+          GitHub 重度用户、团队协作开发者闭眼入。GitHub
+          原生生态深度集成，程序员的“隐形搭档”。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

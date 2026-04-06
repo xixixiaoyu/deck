@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'Context Engine 大型代码库理解，SWE-bench 冠军',
+    description: '400K+ 文件语义索引 + 多 Agent 并行，SWE-bench 冠军',
   },
   {
     title: '工作流改变',
-    description: '多 Agent 云端并行，自动 PR 修复',
+    description: 'AI 真正“懂”整个代码库，程序员从“查找上下文”解放为“专注架构”',
   },
   {
-    title: '全平台 Agent',
-    description: 'VS Code/JetBrains IDE + CLI（shell集成） + GitHub代码审查',
+    title: '自动 PR 修复',
+    description: '企业级代码库理解平台，自动修复能力最强',
   },
   {
-    title: '企业级安全',
-    description: 'SOC2合规、SSO集成、审计日志、私有化部署选项',
+    title: '优缺点小结',
+    description: '企业级上下文最强；但初次索引耗时较长',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '约 $20/月', color: 'rose' },
+  { label: '付费模式', value: 'Indie $20/月', color: 'rose' },
   { label: '选型建议', value: '大型复杂项目', color: 'pink' },
-  { label: 'SWE-Bench Pro', value: '51.80%', color: 'red' },
+  { label: '团队版', value: '$60/用户/月起', color: 'red' },
 ]
 </script>
 <template>
@@ -41,12 +41,13 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               Augment Code
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">企业级 · 上下文记忆引擎</p>
+            <p class="text-slate-500 text-sm">
+              Context Engine · 大型代码库理解平台
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          大型复杂项目、团队协作开发者闭眼入。SWE-bench
-          冠军，专为大型复杂代码库而生。
+          大型复杂项目、遗留系统现代化、团队协作开发者闭眼入。专为单体/分布式代码库设计的语义索引引擎。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

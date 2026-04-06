@@ -5,40 +5,51 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const recommendations = [
   {
-    title: '最佳组合',
-    description: 'Cursor（日常）+ Claude Code（复杂任务）+ Trae（中文/免费）',
-    icon: '🎯',
-    color: 'blue',
-  },
-  {
-    title: '选型小贴士',
-    description:
-      '预算有限优先 Trae / antigravity / Opencode；追求规范选 Comate / Kiro；大型项目选 Augment / Qoder；生态绑定选 Copilot / Codebuddy。',
-    icon: '💡',
+    title: '预算有限',
+    description: '优先 Trae / antigravity / Opencode / Windsurf',
+    icon: '💰',
     color: 'emerald',
   },
   {
-    title: '核心提醒',
-    description: 'AI再强，仍需你把控架构与业务逻辑——工具是"放大器"，不是替代品',
-    icon: '⚠️',
+    title: '追求规范/合规',
+    description: 'Comate / Kiro / Augment',
+    icon: '📏',
+    color: 'blue',
+  },
+  {
+    title: '大型项目/企业',
+    description: 'Qoder / Codebuddy / Augment',
+    icon: '🏢',
+    color: 'cyan',
+  },
+  {
+    title: '生态绑定',
+    description: 'Copilot / Codebuddy / Codex',
+    icon: '�',
     color: 'amber',
+  },
+  {
+    title: '极致体验',
+    description: 'Cursor / Claude Code',
+    icon: '🚀',
+    color: 'rose',
   },
 ]
 const futureTrends = [
   {
-    title: '多Agent协作',
-    description: '多个AI Agent协同完成复杂任务',
+    title: '多 Agent 协作',
+    description: '从“人写代码”到“人管 Agent”的范式转移',
     color: 'blue',
   },
   {
-    title: '记忆持久化',
-    description: '跨会话记住项目模式和开发者偏好',
-    color: 'cyan',
+    title: 'Vibe Coding',
+    description: '自然语言直接构建，零代码闭环交付',
+    color: 'emerald',
   },
   {
-    title: 'Vibe Coding',
-    description: '自然语言直接出App，零代码开发',
-    color: 'emerald',
+    title: '记忆持久化',
+    description: '跨会话深度理解开发者偏好与业务上下文',
+    color: 'cyan',
   },
 ]
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
@@ -62,32 +73,39 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     border: 'border-amber-200',
     text: 'text-amber-600',
   },
+  rose: {
+    bg: 'bg-rose-50',
+    border: 'border-rose-200',
+    text: 'text-rose-600',
+  },
 }
 </script>
 <template>
   <Section>
     <Card padding="lg">
       <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl"> 前瞻建议 </HeadingGradient>
-        <p class="mt-3 text-slate-600 text-lg">如何最大化利用AI编程工具</p>
+        <HeadingGradient :level="2" size="4xl"> 分享小贴士 </HeadingGradient>
+        <p class="mt-3 text-slate-600 text-lg">
+          如何根据不同场景选型 AI 编程工具
+        </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
         <div
           v-for="(rec, index) in recommendations"
           :key="index"
-          class="p-5 rounded-xl border bg-white/60 backdrop-blur-sm"
+          class="p-4 rounded-xl border bg-white/60 backdrop-blur-sm flex flex-col items-center text-center"
           :class="[colorMap[rec.color].border]"
         >
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-2xl">{{ rec.icon }}</span>
-            <h3
-              class="font-semibold text-lg"
-              :class="[colorMap[rec.color].text]"
-            >
-              {{ rec.title }}
-            </h3>
+          <div class="mb-3">
+            <span class="text-3xl">{{ rec.icon }}</span>
           </div>
-          <p class="text-sm text-slate-600 leading-relaxed">
+          <h3
+            class="font-semibold text-base mb-2"
+            :class="[colorMap[rec.color].text]"
+          >
+            {{ rec.title }}
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
             {{ rec.description }}
           </p>
         </div>

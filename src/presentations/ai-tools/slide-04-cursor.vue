@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'AI 原生 VS Code 分支，Agent 后台自主多文件编辑',
+    description: 'Composer + 后台 8 个并行 Agent 自主多文件编辑与重构',
   },
   {
     title: '工作流改变',
-    description: '从补全跃升为异步 Agent 执行复杂任务',
+    description: '从“手动补全”跃升为“异步委托”，程序员只需描述需求',
   },
   {
-    title: '完整代码库索引',
-    description: '语义搜索 + 背景Agent（云端/自托管）',
+    title: 'SWE-bench 性能',
+    description: '约 50%+ 水平，自主规划、编辑、测试闭环',
   },
   {
-    title: '多模型灵活切换',
-    description: 'OpenAI、Anthropic、Gemini、xAI等 + 插件市场',
+    title: '优缺点小结',
+    description: '生态无缝、极致体验；但重度使用有软限，初学者有门槛',
   },
 ]
 const highlights = [
   { label: '付费模式', value: 'Pro $20/月', color: 'blue' },
-  { label: '选型建议', value: '追求极致 Agent', color: 'cyan' },
-  { label: '评价', value: 'AI原生IDE标杆', color: 'emerald' },
+  { label: '选型建议', value: '追求极致 IDE 体验', color: 'cyan' },
+  { label: '心流体验', value: '异步委托 · 零中断', color: 'emerald' },
 ]
 </script>
 <template>
@@ -39,12 +39,14 @@ const highlights = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Cursor </HeadingGradient>
-            <p class="text-slate-500 text-sm">Anysphere · VS Code fork</p>
+            <p class="text-slate-500 text-sm">
+              Anysphere · AI 原生 VS Code 分支
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          VS Code 重度用户，追求极致 Agent
-          体验者闭眼入。AI原生IDE标杆，市场份额领先。
+          VS Code 重度用户、追求极致 IDE 体验的个人/中小团队闭眼入。多模型 Agent
+          驱动的完整 IDE。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

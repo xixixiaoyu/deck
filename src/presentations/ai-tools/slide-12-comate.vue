@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'SPEC 规范驱动，白盒 Doc→Tasks→Code',
+    description: '先强制生成规范文档 → Tasks → Code，极大降低幻觉与返工',
   },
   {
     title: '工作流改变',
-    description: '先规范确认再生成，拒绝幻觉返工',
+    description: '“代码审查前置”，先确认规格再执行，提升质量与可维护性',
   },
   {
-    title: '多智能体矩阵',
-    description: 'Plan/Architect/Zulu协作式开发',
+    title: 'SPEC 规范驱动',
+    description: '白盒化开发过程，适合注重工程标准与合规的项目',
   },
   {
-    title: '企业级安全',
-    description: '合规性保障，适合金融/政务场景',
+    title: '优缺点小结',
+    description: '幻觉少、可追溯性强；但生成速度稍慢于纯速度派工具',
   },
 ]
 const highlights = [
   { label: '付费模式', value: '个人核心免费', color: 'emerald' },
   { label: '选型建议', value: '注重规范/安全', color: 'blue' },
-  { label: '定位', value: '企业级严谨', color: 'cyan' },
+  { label: '适用场景', value: '企业/合规项目', color: 'cyan' },
 ]
 </script>
 <template>
@@ -41,11 +41,14 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               文心快码（Comate）
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">百度 · SPEC规范驱动</p>
+            <p class="text-slate-500 text-sm">
+              百度 · SPEC 规范驱动的白盒 AI 编程
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          注重规范、安全的工程团队/学生闭眼入。SPEC 规范驱动，极大抑制幻觉。
+          注重规范、安全、工程化的团队/学生/合规项目闭眼入。SPEC
+          规范驱动，质量与可维护性显著提升。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

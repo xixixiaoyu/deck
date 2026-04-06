@@ -31,7 +31,7 @@ const timeline = ref<TimelineStage[]>([
     title: 'Agentic 时代',
     description: '自主规划、跨文件重构、端到端交付',
     color: 'emerald',
-    features: ['Agent 自主执行', '测试闭环', '全流程自动化'],
+    features: ['Agent 自主多文件编辑', '测试闭环', '全流程自动化'],
   },
 ])
 const colorMap: Record<string, string> = {
@@ -58,7 +58,7 @@ const bgLightMap: Record<string, string> = {
           AI 编程工具的演进历程
         </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
-          从"代码补全"到"AI搭档"的跨越式发展
+          从“代码补全”到“AI 搭档”的跨越式发展
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

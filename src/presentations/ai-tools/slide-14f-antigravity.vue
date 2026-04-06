@@ -6,25 +6,25 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
     title: '核心差异点',
-    description: 'Agent 优先 Mission Control，浏览器自动化任务',
+    description: '免费获取 Claude Opus 4.6 + Gemini 3 等顶级模型',
   },
   {
     title: '工作流改变',
-    description: '视觉化管理多 Agent 异步工程任务',
-  },
-  {
-    title: 'Mission Control',
-    description: '可视化任务面板，实时追踪多个 Agent 的执行进度与状态',
+    description: 'Mission Control 面板管理异步 Agent，程序员像“乐团指挥”',
   },
   {
     title: '浏览器自动化',
-    description: '深度集成浏览器，可自动执行 Web 端的测试、部署与交互任务',
+    description: 'Agent 优先的 Mission Control，网页任务自动化能力极强',
+  },
+  {
+    title: '优缺点小结',
+    description: '免费门槛最低；预览期权限与稳定性仍需观察',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $20/月', color: 'emerald' },
-  { label: '选型建议', value: '预算紧/个人开发者', color: 'teal' },
-  { label: '定位', value: 'Agent 优先', color: 'blue' },
+  { label: '付费模式', value: '预览期完全免费', color: 'emerald' },
+  { label: '选型建议', value: '预算紧/原型爱好者', color: 'teal' },
+  { label: '模型', value: '顶级模型白嫖', color: 'blue' },
 ]
 </script>
 <template>
@@ -41,12 +41,14 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               antigravity
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">Mission Control · 浏览器自动化</p>
+            <p class="text-slate-500 text-sm">
+              Mission Control · 浏览器自动化 IDE
+            </p>
           </div>
         </div>
         <p class="text-slate-600">
-          预算紧、白嫖顶级模型的个人开发者闭眼入。视觉化管理多 Agent
-          异步工程任务。
+          预算紧、白嫖顶级模型的个人开发者或原型爱好者闭眼入。可视化 Mission
+          Control 管理异步 Agent。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
