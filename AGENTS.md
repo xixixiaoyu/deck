@@ -67,10 +67,18 @@
 - **性能优化**: 大规模 ECharts 或 Three.js 实例必须在 `onUnmounted` 中显式销毁。
 - **可访问性 (A11y)**: 确保所有交互均支持键盘盲操。
 
-### 3. 开发流程
+### 3. 自动化验证 (Automated Verification)
+
+- **代码质量**: 必须通过 ESLint (`pnpm lint:check`) 且无任何错误。
+- **视觉风格**: 必须符合 Prettier (`pnpm format:check`) 规范，确保团队协作风格高度统一。
+- **类型安全**: 核心逻辑变更后，必须运行全量类型检查 (`pnpm type-check`)。
+- **提交约束**: 项目配置了 Git Hooks，任何不符合 Lint 或格式要求的提交都将被拒绝。
+
+### 4. 开发流程
 
 - **新增幻灯片**: 在相应目录下创建 `.vue`，遵循模板解耦原则。
 - **注册内容**: 更新 [presentations.ts](file:///Users/yunmu/Desktop/ppt/src/config/presentations.ts) 以确保首页可见。
+- **自检闭环**: 提交代码前，建议手动运行 `pnpm lint:format` 进行一键式修复与优化。
 - **同步文档**: 若更新了核心模板或架构，需同步调整 [AGENTS.md](file:///Users/yunmu/Desktop/ppt/AGENTS.md) 以确保 AI 上下文的准确性。
 
 ---
