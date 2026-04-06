@@ -29,7 +29,7 @@ const paletteClass = computed(() => {
   const p = props.palette ?? 'accent'
   if (p === 'indigo-fuchsia-emerald')
     return 'bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-emerald-500'
-  return 'bg-gradient-to-r from-accent/90 via-accent/80 to-accent/70'
+  return 'bg-gradient-to-r from-accent via-accent/90 to-accent/80'
 })
 </script>
 
@@ -37,7 +37,7 @@ const paletteClass = computed(() => {
   <component
     :is="tag"
     :class="[
-      'font-extrabold tracking-tight text-transparent bg-clip-text',
+      'font-black tracking-tight text-transparent bg-clip-text leading-tight',
       sizeClass,
       paletteClass,
       props.class,
