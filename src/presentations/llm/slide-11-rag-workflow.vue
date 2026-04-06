@@ -104,7 +104,7 @@ const highlightedPromptExample = computed(() =>
             :class="
               activeTab === 'offline'
                 ? 'bg-gradient-to-br from-emerald-400 to-teal-500'
-                : 'bg-gradient-to-br from-blue-400 to-indigo-500'
+                : 'bg-gradient-to-br from-blue-400 to-blue-500'
             "
           >
             {{ index + 1 }}
@@ -122,7 +122,7 @@ const highlightedPromptExample = computed(() =>
           :class="
             activeTab === 'offline'
               ? 'bg-gradient-to-r from-emerald-400/30 to-teal-500/30'
-              : 'bg-gradient-to-r from-blue-400/30 to-indigo-500/30'
+              : 'bg-gradient-to-r from-blue-400/30 to-blue-500/30'
           "
         ></div>
         <div

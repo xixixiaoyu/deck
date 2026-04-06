@@ -68,7 +68,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <h3
               class="text-lg font-bold text-slate-800 flex items-center gap-2"
             >
-              <span class="text-indigo-500">01.</span> 自注意力机制
+              <span class="text-blue-500">01.</span> 自注意力机制
             </h3>
             <p class="mt-3 text-slate-600 leading-relaxed text-sm">
               计算词与词之间的<strong>关联权重</strong>，让模型理解上下文关系。就像我们知道"它"指代什么，模型也能捕捉长距离依赖。
@@ -80,7 +80,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <h3
               class="text-lg font-bold text-slate-800 flex items-center gap-2"
             >
-              <span class="text-fuchsia-500">02.</span> 前馈神经网络
+              <span class="text-cyan-500">02.</span> 前馈神经网络
             </h3>
             <p class="mt-3 text-slate-600 leading-relaxed text-sm">
               对注意力提取的特征进行<strong>非线性变换</strong>，将简单的词关联转化为深层语义理解。相当于模型的"思考"过程。

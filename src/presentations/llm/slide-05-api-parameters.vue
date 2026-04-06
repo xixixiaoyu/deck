@@ -73,7 +73,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
           >
             <div class="flex items-center gap-2 mb-2">
-              <div class="p-1.5 rounded-lg bg-indigo-100 text-indigo-600">
+              <div class="p-1.5 rounded-lg bg-blue-100 text-blue-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -107,7 +107,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
           >
             <div class="flex items-center gap-2 mb-2">
-              <div class="p-1.5 rounded-lg bg-fuchsia-100 text-fuchsia-600">
+              <div class="p-1.5 rounded-lg bg-cyan-100 text-cyan-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -292,7 +292,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             class="bg-white/70 backdrop-blur-sm rounded-xl p-5 border border-white/50 shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
           >
             <div class="flex items-center gap-2 mb-2">
-              <div class="p-1.5 rounded-lg bg-violet-100 text-violet-600">
+              <div class="p-1.5 rounded-lg bg-sky-100 text-sky-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

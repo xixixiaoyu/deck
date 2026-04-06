@@ -14,7 +14,7 @@ const { currentTheme, themes, setTheme } = useTheme()
 const themeIcons = {
   dark: MoonIcon,
   light: SunIcon,
-  purple: SparklesIcon,
+  blue: SparklesIcon,
   blue: CubeIcon,
   green: FireIcon,
 }

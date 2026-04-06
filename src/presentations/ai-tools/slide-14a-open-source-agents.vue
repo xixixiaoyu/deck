@@ -52,11 +52,11 @@ const tools: ToolInfo[] = [
   {
     name: 'Kilo Code',
     tag: '集大成',
-    tagClass: 'bg-purple-200 text-purple-800',
-    dotClass: 'bg-purple-500',
-    bgClass: 'bg-gradient-to-br from-purple-50 to-purple-100',
-    borderClass: 'border-purple-200',
-    textClass: 'text-purple-700',
+    tagClass: 'bg-blue-200 text-blue-800',
+    dotClass: 'bg-blue-500',
+    bgClass: 'bg-gradient-to-br from-blue-50 to-blue-100',
+    borderClass: 'border-blue-200',
+    textClass: 'text-blue-700',
     desc: '当前"最热门开源Agent"，融合Cline稳定+Roo Code多模式的"集大成者"',
     features: [
       '5+智能模式',
@@ -100,7 +100,7 @@ const comparisonRows = [
 const colorMap: Record<string, string> = {
   cline: 'bg-blue-100 border-blue-300 text-blue-800',
   roo: 'bg-green-100 border-green-300 text-green-800',
-  kilo: 'bg-purple-100 border-purple-300 text-purple-800',
+  kilo: 'bg-blue-100 border-blue-300 text-blue-800',
 }
 </script>
 <template>
@@ -209,7 +209,7 @@ const colorMap: Record<string, string> = {
       </div>
       <!-- 核心结论 -->
       <div
-        class="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-green-50 to-purple-50 border border-slate-200"
+        class="p-4 rounded-xl bg-gradient-to-r from-blue-50 via-green-50 to-blue-50 border border-slate-200"
       >
         <h4
           class="font-semibold text-slate-800 mb-2 flex items-center gap-2 text-sm"
@@ -241,7 +241,7 @@ const colorMap: Record<string, string> = {
             <strong>Roo Code</strong>
           </div>
           <div>
-            <strong class="text-purple-600">最强开源Agent</strong> →
+            <strong class="text-blue-600">最强开源Agent</strong> →
             <strong>Kilo Code</strong>
           </div>
         </div>

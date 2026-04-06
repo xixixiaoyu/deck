@@ -147,25 +147,25 @@ onMounted(() => {
             </div>
             <!-- 3. LLMOps Workflow -->
             <div
-              class="bg-purple-50/50 rounded-2xl p-5 border border-purple-100 shadow-sm"
+              class="bg-blue-50/50 rounded-2xl p-5 border border-blue-100 shadow-sm"
             >
               <div class="flex items-center gap-3 mb-3">
-                <div class="p-2 bg-purple-100 rounded-lg">
-                  <CommandLineIcon class="w-5 h-5 text-purple-600" />
+                <div class="p-2 bg-blue-100 rounded-lg">
+                  <CommandLineIcon class="w-5 h-5 text-blue-600" />
                 </div>
-                <h3 class="text-lg font-bold text-purple-900">流程与评估</h3>
+                <h3 class="text-lg font-bold text-blue-900">流程与评估</h3>
               </div>
               <div class="flex flex-wrap gap-2">
                 <span
-                  class="px-2 py-1 bg-white border border-purple-100 text-purple-700 text-xs rounded-md font-medium"
+                  class="px-2 py-1 bg-white border border-blue-100 text-blue-700 text-xs rounded-md font-medium"
                   >Dataset Management</span
                 >
                 <span
-                  class="px-2 py-1 bg-white border border-purple-100 text-purple-700 text-xs rounded-md font-medium"
+                  class="px-2 py-1 bg-white border border-blue-100 text-blue-700 text-xs rounded-md font-medium"
                   >Regression Testing</span
                 >
                 <span
-                  class="px-2 py-1 bg-white border border-purple-100 text-purple-700 text-xs rounded-md font-medium"
+                  class="px-2 py-1 bg-white border border-blue-100 text-blue-700 text-xs rounded-md font-medium"
                   >A/B Testing</span
                 >
               </div>
@@ -177,7 +177,7 @@ onMounted(() => {
           >
             <!-- Background decorative elements -->
             <div
-              class="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500"
+              class="absolute top-0 right-0 w-full h-1 bg-gradient-to-r from-blue-500 via-blue-500 to-emerald-500"
             ></div>
             <div
               class="absolute -bottom-10 -right-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"

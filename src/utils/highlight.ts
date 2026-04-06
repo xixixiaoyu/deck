@@ -30,7 +30,7 @@ const baseWordChar = /[A-Za-z0-9_]/
 const renderToken = (tok: string, lang: string) => {
   const t = escapeHtml(tok)
   if (keywords.has(tok))
-    return `<span class='text-indigo-300 font-semibold'>${t}</span>`
+    return `<span class='text-blue-300 font-semibold'>${t}</span>`
   if (/^\d+(?:\.\d+)?$/.test(tok))
     return `<span class='text-amber-300'>${t}</span>`
 
@@ -126,7 +126,7 @@ export const highlight = (input: string, lang: string) => {
         }
         const delim = ch
         state = ch === "'" ? 'stringSingle' : 'stringDouble'
-        out += `<span class='text-fuchsia-300'>${escapeHtml(delim)}`
+        out += `<span class='text-cyan-300'>${escapeHtml(delim)}`
         i++
         while (i < n) {
           const c = input[i]

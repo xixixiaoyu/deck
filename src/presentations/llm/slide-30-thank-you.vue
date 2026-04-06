@@ -50,7 +50,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="7xl"
-            palette="indigo-fuchsia-emerald"
+            palette="sky-cyan-emerald"
             class="leading-tight font-bold tracking-tight"
           >
             Thank You

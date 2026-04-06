@@ -86,7 +86,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 class="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2"
               >
                 <div
-                  class="w-8 h-8 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600"
+                  class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -148,18 +148,14 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 >
                   <span class="font-semibold text-slate-700">1,000 Tokens</span>
                   <span class="text-slate-400">≈</span>
-                  <span class="font-semibold text-indigo-600"
-                    >750 英文单词</span
-                  >
+                  <span class="font-semibold text-blue-600">750 英文单词</span>
                 </div>
                 <div
                   class="flex items-center justify-between p-3 bg-slate-50/50 rounded-lg border border-slate-100"
                 >
                   <span class="font-semibold text-slate-700">1,000 Tokens</span>
                   <span class="text-slate-400">≈</span>
-                  <span class="font-semibold text-indigo-600"
-                    >400~500 汉字</span
-                  >
+                  <span class="font-semibold text-blue-600">400~500 汉字</span>
                 </div>
                 <p class="text-xs text-slate-500 mt-2">
                   *注：不同模型的 Tokenizer 实现不同，中文通常比英文占用更多
@@ -188,12 +184,12 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                   <div class="text-xs text-slate-500">Tokens (IDs)</div>
                   <div class="flex flex-wrap gap-2">
                     <span
-                      class="px-2 py-1 bg-indigo-500/30 border border-indigo-500/50 rounded text-sm font-mono"
+                      class="px-2 py-1 bg-blue-500/30 border border-blue-500/50 rounded text-sm font-mono"
                       title="Hello"
                       >Hello (15496)</span
                     >
                     <span
-                      class="px-2 py-1 bg-fuchsia-500/30 border border-fuchsia-500/50 rounded text-sm font-mono"
+                      class="px-2 py-1 bg-cyan-500/30 border border-cyan-500/50 rounded text-sm font-mono"
                       title=","
                       >, (11)</span
                     >

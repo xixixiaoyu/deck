@@ -38,7 +38,7 @@ function getDifficultyColor(difficulty?: string) {
 function getCategoryColor(categoryId: string) {
   const colors: Record<string, string> = {
     llm: 'from-teal-500 to-teal-400',
-    templates: 'from-purple-500 to-purple-400',
+    templates: 'from-blue-500 to-blue-400',
     'data-visualization': 'from-blue-500 to-blue-400',
     'web-development': 'from-green-500 to-green-400',
   }

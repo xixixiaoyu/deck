@@ -3,7 +3,7 @@ import { computed } from 'vue'
 
 type Level = 1 | 2 | 3 | 4
 type Size = '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
-type Palette = 'accent' | 'indigo-fuchsia-emerald'
+type Palette = 'accent' | 'sky-cyan-emerald'
 
 const props = defineProps<{
   level?: Level
@@ -27,8 +27,8 @@ const sizeClass = computed(() => {
 
 const paletteClass = computed(() => {
   const p = props.palette ?? 'accent'
-  if (p === 'indigo-fuchsia-emerald')
-    return 'bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-emerald-500'
+  if (p === 'sky-cyan-emerald')
+    return 'bg-gradient-to-r from-sky-500 via-cyan-500 to-emerald-500'
   return 'bg-gradient-to-r from-accent via-accent/90 to-accent/80'
 })
 </script>

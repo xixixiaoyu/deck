@@ -23,7 +23,7 @@ const features = [
 ]
 const highlights = [
   { label: '定价', value: '$19/月起', color: 'amber' },
-  { label: '定位', value: 'AWS原生', color: 'indigo' },
+  { label: '定位', value: 'AWS原生', color: 'blue' },
   { label: '适用', value: 'AWS重度用户', color: 'emerald' },
 ]
 </script>
@@ -106,7 +106,7 @@ const highlights = [
               :key="index"
               class="text-center p-4 rounded-xl border"
               :class="[
-                item.color === 'indigo' ? 'bg-indigo-50 border-indigo-200' : '',
+                item.color === 'blue' ? 'bg-blue-50 border-blue-200' : '',
                 item.color === 'amber' ? 'bg-amber-50 border-amber-200' : '',
                 item.color === 'emerald'
                   ? 'bg-emerald-50 border-emerald-200'
@@ -116,7 +116,7 @@ const highlights = [
               <div
                 class="text-xl font-bold"
                 :class="[
-                  item.color === 'indigo' ? 'text-indigo-600' : '',
+                  item.color === 'blue' ? 'text-blue-600' : '',
                   item.color === 'amber' ? 'text-amber-600' : '',
                   item.color === 'emerald' ? 'text-emerald-600' : '',
                 ]"

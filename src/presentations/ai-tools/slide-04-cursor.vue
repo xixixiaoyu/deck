@@ -22,8 +22,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '市场份额', value: '18%', color: 'indigo' },
-  { label: '定价', value: '$20/月', color: 'fuchsia' },
+  { label: '市场份额', value: '18%', color: 'blue' },
+  { label: '定价', value: '$20/月', color: 'cyan' },
   { label: '评价', value: 'AI原生IDE标杆', color: 'emerald' },
 ]
 </script>
@@ -33,7 +33,7 @@ const highlights = [
       <div class="mb-6">
         <div class="flex items-center gap-3 mb-4">
           <div
-            class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center"
+            class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center"
           >
             <span class="text-white text-xl font-bold">C</span>
           </div>
@@ -52,7 +52,7 @@ const highlights = [
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
           >
             <svg
-              class="w-5 h-5 text-indigo-500"
+              class="w-5 h-5 text-blue-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -84,7 +84,7 @@ const highlights = [
             class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
           >
             <svg
-              class="w-5 h-5 text-fuchsia-500"
+              class="w-5 h-5 text-cyan-500"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -104,10 +104,8 @@ const highlights = [
               :key="index"
               class="text-center p-4 rounded-xl border"
               :class="[
-                item.color === 'indigo' ? 'bg-indigo-50 border-indigo-200' : '',
-                item.color === 'fuchsia'
-                  ? 'bg-fuchsia-50 border-fuchsia-200'
-                  : '',
+                item.color === 'blue' ? 'bg-blue-50 border-blue-200' : '',
+                item.color === 'cyan' ? 'bg-cyan-50 border-cyan-200' : '',
                 item.color === 'emerald'
                   ? 'bg-emerald-50 border-emerald-200'
                   : '',
@@ -116,8 +114,8 @@ const highlights = [
               <div
                 class="text-2xl font-bold"
                 :class="[
-                  item.color === 'indigo' ? 'text-indigo-600' : '',
-                  item.color === 'fuchsia' ? 'text-fuchsia-600' : '',
+                  item.color === 'blue' ? 'text-blue-600' : '',
+                  item.color === 'cyan' ? 'text-cyan-600' : '',
                   item.color === 'emerald' ? 'text-emerald-600' : '',
                 ]"
               >
@@ -127,13 +125,13 @@ const highlights = [
             </div>
           </div>
           <div
-            class="p-4 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200"
+            class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-50 border border-blue-200"
           >
             <h4
               class="font-semibold text-slate-800 mb-2 flex items-center gap-2"
             >
               <svg
-                class="w-4 h-4 text-indigo-500"
+                class="w-4 h-4 text-blue-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

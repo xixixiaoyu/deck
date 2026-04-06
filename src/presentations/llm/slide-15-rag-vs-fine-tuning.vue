@@ -52,8 +52,8 @@ const comparisonItems = [
             >
               <tr>
                 <th class="px-6 py-4">维度</th>
-                <th class="px-6 py-4 text-indigo-600">RAG (检索增强生成)</th>
-                <th class="px-6 py-4 text-fuchsia-600">Fine-Tuning (微调)</th>
+                <th class="px-6 py-4 text-blue-600">RAG (检索增强生成)</th>
+                <th class="px-6 py-4 text-cyan-600">Fine-Tuning (微调)</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
@@ -78,20 +78,16 @@ const comparisonItems = [
           </table>
         </div>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="p-4 rounded-lg bg-indigo-50/50 border border-indigo-100">
-            <h4 class="font-bold text-indigo-700 mb-2">选择 RAG 当...</h4>
+          <div class="p-4 rounded-lg bg-blue-50/50 border border-blue-100">
+            <h4 class="font-bold text-blue-700 mb-2">选择 RAG 当...</h4>
             <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm">
               <li>需要基于事实的准确回答</li>
               <li>数据频繁更新</li>
               <li>需要引用来源</li>
             </ul>
           </div>
-          <div
-            class="p-4 rounded-lg bg-fuchsia-50/50 border border-fuchsia-100"
-          >
-            <h4 class="font-bold text-fuchsia-700 mb-2">
-              选择 Fine-Tuning 当...
-            </h4>
+          <div class="p-4 rounded-lg bg-cyan-50/50 border border-cyan-100">
+            <h4 class="font-bold text-cyan-700 mb-2">选择 Fine-Tuning 当...</h4>
             <ul class="list-disc list-inside text-slate-600 space-y-1 text-sm">
               <li>需要特定语言风格</li>
               <li>需要特定输出格式</li>

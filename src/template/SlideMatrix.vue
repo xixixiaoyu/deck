@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 
-type MatrixColor = 'emerald' | 'indigo' | 'amber' | 'slate'
+type MatrixColor = 'emerald' | 'blue' | 'amber' | 'slate'
 
 interface MatrixItem {
   title: string
@@ -21,7 +21,7 @@ const matrixData: MatrixItem[] = [
     title: '潜力蓝海',
     description: '新兴市场或创新技术，具有长远发展价值。',
     icon: '🌊',
-    color: 'indigo',
+    color: 'blue',
   },
   {
     title: '存量维持',
@@ -40,7 +40,7 @@ const matrixData: MatrixItem[] = [
 const colorClasses: Record<MatrixColor, string> = {
   emerald:
     'bg-emerald-50 text-emerald-700 border-emerald-200 shadow-emerald-100',
-  indigo: 'bg-indigo-50 text-indigo-700 border-indigo-200 shadow-indigo-100',
+  blue: 'bg-blue-50 text-blue-700 border-blue-200 shadow-blue-100',
   amber: 'bg-amber-50 text-amber-700 border-amber-200 shadow-amber-100',
   slate: 'bg-slate-50 text-slate-700 border-slate-200 shadow-slate-100',
 }

@@ -97,7 +97,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 class="text-lg font-bold text-slate-800 flex items-center gap-3"
               >
                 <span
-                  class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-100 text-indigo-600 text-sm"
+                  class="flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600 text-sm"
                   >2</span
                 >
                 选择调用方式
@@ -124,7 +124,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 class="text-lg font-bold text-slate-800 flex items-center gap-3"
               >
                 <span
-                  class="flex items-center justify-center w-8 h-8 rounded-full bg-violet-100 text-violet-600 text-sm"
+                  class="flex items-center justify-center w-8 h-8 rounded-full bg-sky-100 text-sky-600 text-sm"
                   >3</span
                 >
                 环境配置
@@ -159,8 +159,8 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             >
               <pre
                 class="whitespace-pre-wrap break-words"
-              ><code class="language-python"><span class="text-purple-400">import</span> <span class="text-slate-200">os</span>
-<span class="text-purple-400">from</span> <span class="text-slate-200">openai</span> <span class="text-purple-400">import</span> <span class="text-slate-200">OpenAI</span>
+              ><code class="language-python"><span class="text-blue-400">import</span> <span class="text-slate-200">os</span>
+<span class="text-blue-400">from</span> <span class="text-slate-200">openai</span> <span class="text-blue-400">import</span> <span class="text-slate-200">OpenAI</span>
 <span class="text-slate-500"># 初始化客户端</span>
 <span class="text-slate-200">client</span> <span class="text-blue-400">=</span> <span class="text-yellow-200">OpenAI</span><span class="text-slate-300">(</span>
     <span class="text-slate-200">api_key</span><span class="text-blue-400">=</span><span class="text-slate-200">os</span><span class="text-slate-300">.</span><span class="text-blue-300">environ</span><span class="text-slate-300">.</span><span class="text-blue-300">get</span><span class="text-slate-300">(</span><span class="text-green-400">"OPENAI_API_KEY"</span><span class="text-slate-300">)</span>

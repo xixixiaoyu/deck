@@ -14,13 +14,13 @@ const comparisonData: ComparisonRow[] = [
     scenario: '日常全栈/重构',
     tool: 'Cursor',
     reason: 'Agent最强、IDE体验极致',
-    color: 'indigo',
+    color: 'blue',
   },
   {
     scenario: 'GitHub重度/团队',
     tool: 'GitHub Copilot',
     reason: '生态无缝+PR自动化',
-    color: 'fuchsia',
+    color: 'cyan',
   },
   {
     scenario: '复杂推理/大代码库',
@@ -38,7 +38,7 @@ const comparisonData: ComparisonRow[] = [
     scenario: '隐私/企业合规',
     tool: 'Tabnine',
     reason: '自托管+上下文引擎',
-    color: 'purple',
+    color: 'blue',
   },
   {
     scenario: '中文/免费0-1项目',
@@ -54,11 +54,11 @@ const comparisonData: ComparisonRow[] = [
   },
 ]
 const colorMap: Record<string, string> = {
-  indigo: 'bg-indigo-50 border-indigo-200 text-indigo-700',
-  fuchsia: 'bg-fuchsia-50 border-fuchsia-200 text-fuchsia-700',
+  blue: 'bg-blue-50 border-blue-200 text-blue-700',
+  cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
   emerald: 'bg-emerald-50 border-emerald-200 text-emerald-700',
   amber: 'bg-amber-50 border-amber-200 text-amber-700',
-  purple: 'bg-purple-50 border-purple-200 text-purple-700',
+  blue: 'bg-blue-50 border-blue-200 text-blue-700',
   rose: 'bg-rose-50 border-rose-200 text-rose-700',
   cyan: 'bg-cyan-50 border-cyan-200 text-cyan-700',
 }
@@ -118,11 +118,11 @@ const colorMap: Record<string, string> = {
         </table>
       </div>
       <div
-        class="mt-6 p-5 rounded-xl bg-gradient-to-r from-indigo-50 via-fuchsia-50 to-emerald-50 border border-slate-200"
+        class="mt-6 p-5 rounded-xl bg-gradient-to-r from-blue-50 via-cyan-50 to-emerald-50 border border-slate-200"
       >
         <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
           <svg
-            class="w-5 h-5 text-indigo-500"
+            class="w-5 h-5 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -138,8 +138,8 @@ const colorMap: Record<string, string> = {
         </h4>
         <p class="text-sm text-slate-600 leading-relaxed">
           根据团队规模、预算、隐私要求和技术栈选择合适的工具。
-          <strong class="text-indigo-600">AI原生IDE</strong> 适合追求极致体验；
-          <strong class="text-fuchsia-600">IDE扩展</strong>
+          <strong class="text-blue-600">AI原生IDE</strong> 适合追求极致体验；
+          <strong class="text-cyan-600">IDE扩展</strong>
           适合无缝融入现有工作流；
           <strong class="text-emerald-600">Terminal CLI</strong>
           适合复杂推理场景。

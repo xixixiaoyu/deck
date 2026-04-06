@@ -77,7 +77,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <h3
             class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2"
           >
-            <CpuChipIcon class="w-5 h-5 text-indigo-500" />
+            <CpuChipIcon class="w-5 h-5 text-blue-500" />
             大模型问答工作流程
           </h3>
           <div
@@ -85,7 +85,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           >
             <!-- Step 1 -->
             <div
-              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-indigo-100 w-full md:w-auto flex-1"
+              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-blue-100 w-full md:w-auto flex-1"
             >
               <span class="font-bold text-slate-700">用户提问</span>
               <span class="text-xs text-slate-500">User Query</span>
@@ -95,7 +95,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 2 -->
             <div
-              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-indigo-100 w-full md:w-auto flex-1"
+              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-blue-100 w-full md:w-auto flex-1"
             >
               <span class="font-bold text-slate-700">分词处理</span>
               <span class="text-xs text-slate-500">Tokenization</span>
@@ -105,10 +105,10 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 3 -->
             <div
-              class="flex flex-col items-center gap-2 p-3 bg-indigo-50 rounded-lg border border-indigo-200 w-full md:w-auto flex-1 shadow-sm"
+              class="flex flex-col items-center gap-2 p-3 bg-blue-50 rounded-lg border border-blue-200 w-full md:w-auto flex-1 shadow-sm"
             >
-              <span class="font-bold text-indigo-700">模型推理</span>
-              <span class="text-xs text-indigo-600"
+              <span class="font-bold text-blue-700">模型推理</span>
+              <span class="text-xs text-blue-600"
                 >Inference (Next Token Prediction)</span
               >
             </div>
@@ -117,7 +117,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 4 -->
             <div
-              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-indigo-100 w-full md:w-auto flex-1"
+              class="flex flex-col items-center gap-2 p-3 bg-white/60 rounded-lg border border-blue-100 w-full md:w-auto flex-1"
             >
               <span class="font-bold text-slate-700">生成回答</span>
               <span class="text-xs text-slate-500"
@@ -177,7 +177,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <div
               class="flex items-center gap-3 mb-3 border-b border-slate-100 pb-3"
             >
-              <div class="p-2 bg-purple-100 rounded-lg text-purple-600">
+              <div class="p-2 bg-blue-100 rounded-lg text-blue-600">
                 <CpuChipIcon class="w-6 h-6" />
               </div>
               <div>
@@ -189,14 +189,14 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
             <ul class="space-y-3 text-sm text-slate-700 flex-1">
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span
                   ><strong>核心特点：</strong>
                   擅长复杂逻辑，能够进行深度思考，但响应较慢。</span
                 >
               </li>
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span
                   ><strong>工作机制：</strong> 引入<strong
                     >思维链 (Chain of Thought)</strong
@@ -204,7 +204,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 >
               </li>
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span
                   ><strong>适用场景：</strong>
                   复杂数学、逻辑谜题、科学研究、深度编程任务。</span

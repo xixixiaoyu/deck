@@ -78,7 +78,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <h3
             class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-3"
           >
-            <CpuChipIcon class="w-6 h-6 text-indigo-500" />
+            <CpuChipIcon class="w-6 h-6 text-blue-500" />
             问答工作流程 (QA Workflow)
           </h3>
           <div
@@ -86,7 +86,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           >
             <!-- Step 1 -->
             <div
-              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-indigo-100 w-full md:w-auto flex-1 justify-center shadow-sm"
+              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-blue-100 w-full md:w-auto flex-1 justify-center shadow-sm"
             >
               <span class="font-bold text-slate-700 text-base">用户提问</span>
               <span class="text-xs text-slate-500">Query</span>
@@ -99,7 +99,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 2 -->
             <div
-              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-indigo-100 w-full md:w-auto flex-1 justify-center shadow-sm"
+              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-blue-100 w-full md:w-auto flex-1 justify-center shadow-sm"
             >
               <span class="font-bold text-slate-700 text-base">分词处理</span>
               <span class="text-xs text-slate-500">Tokenization</span>
@@ -112,11 +112,11 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 3 -->
             <div
-              class="flex flex-col items-center gap-2 p-4 bg-indigo-50 rounded-xl border border-indigo-200 w-full md:w-auto flex-1 shadow-md justify-center"
+              class="flex flex-col items-center gap-2 p-4 bg-blue-50 rounded-xl border border-blue-200 w-full md:w-auto flex-1 shadow-md justify-center"
             >
-              <span class="font-bold text-indigo-700 text-base">模型推理</span>
-              <span class="text-xs text-indigo-600">Next Token Prediction</span>
-              <p class="text-xs text-indigo-600 text-center mt-1">
+              <span class="font-bold text-blue-700 text-base">模型推理</span>
+              <span class="text-xs text-blue-600">Next Token Prediction</span>
+              <p class="text-xs text-blue-600 text-center mt-1">
                 逐个预测下一个 Token
               </p>
             </div>
@@ -125,7 +125,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             />
             <!-- Step 4 -->
             <div
-              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-indigo-100 w-full md:w-auto flex-1 justify-center shadow-sm"
+              class="flex flex-col items-center gap-2 p-4 bg-white/70 rounded-xl border border-blue-100 w-full md:w-auto flex-1 justify-center shadow-sm"
             >
               <span class="font-bold text-slate-700 text-base">生成回答</span>
               <span class="text-xs text-slate-500">Output</span>
@@ -174,12 +174,12 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </div>
           <!-- Reasoning LLM -->
           <div
-            class="bg-purple-50/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-100 shadow-lg flex flex-col"
+            class="bg-blue-50/60 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg flex flex-col"
           >
             <div
-              class="flex items-center gap-3 mb-4 border-b border-purple-100 pb-3"
+              class="flex items-center gap-3 mb-4 border-b border-blue-100 pb-3"
             >
-              <div class="p-2 bg-purple-100 rounded-xl text-purple-600">
+              <div class="p-2 bg-blue-100 rounded-xl text-blue-600">
                 <CpuChipIcon class="w-6 h-6" />
               </div>
               <div>
@@ -189,20 +189,20 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
             <ul class="space-y-3 text-sm text-slate-700 flex-1">
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span><strong>特点：</strong> 深度思考，逻辑强，响应较慢</span>
               </li>
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span><strong>机制：</strong> 思维链 (CoT)，隐式推理纠错</span>
               </li>
               <li class="flex gap-2">
-                <span class="text-purple-500 font-bold">•</span>
+                <span class="text-blue-500 font-bold">•</span>
                 <span><strong>场景：</strong> 数学、代码、复杂逻辑谜题</span>
               </li>
             </ul>
-            <div class="mt-4 pt-3 border-t border-purple-100/50">
-              <div class="text-sm font-mono text-purple-800 opacity-80">
+            <div class="mt-4 pt-3 border-t border-blue-100/50">
+              <div class="text-sm font-mono text-blue-800 opacity-80">
                 o1, o3, o3-mini
               </div>
             </div>

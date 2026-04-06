@@ -18,7 +18,7 @@ const features: Feature[] = [
     description: '行内/多行自动提示（Tab/Inline）',
     value: '提升输入速度30-50%',
     examples: 'Cursor的Supermaven、Copilot补全、Windsurf实时建议',
-    color: 'indigo',
+    color: 'blue',
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const features: Feature[] = [
     description: '用中文/英文描述需求 → AI即时回复代码/解释',
     value: '降低编程门槛',
     examples: '所有工具内置Chat，支持"解释这段代码""加一个用户登录功能"',
-    color: 'fuchsia',
+    color: 'cyan',
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const features: Feature[] = [
     description: '自动建议/执行多文件重构、性能优化',
     value: '维持代码健康',
     examples: '一键重构、提取函数、迁移框架（所有工具均有）',
-    color: 'purple',
+    color: 'blue',
   },
   {
     id: 6,
@@ -70,15 +70,15 @@ const features: Feature[] = [
   },
 ]
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
-  indigo: {
-    bg: 'bg-indigo-50',
-    border: 'border-indigo-200',
-    text: 'text-indigo-600',
+  blue: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-600',
   },
-  fuchsia: {
-    bg: 'bg-fuchsia-50',
-    border: 'border-fuchsia-200',
-    text: 'text-fuchsia-600',
+  cyan: {
+    bg: 'bg-cyan-50',
+    border: 'border-cyan-200',
+    text: 'text-cyan-600',
   },
   emerald: {
     bg: 'bg-emerald-50',
@@ -90,10 +90,10 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     border: 'border-amber-200',
     text: 'text-amber-600',
   },
-  purple: {
-    bg: 'bg-purple-50',
-    border: 'border-purple-200',
-    text: 'text-purple-600',
+  blue: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-600',
   },
   rose: { bg: 'bg-rose-50', border: 'border-rose-200', text: 'text-rose-600' },
   cyan: { bg: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-600' },
@@ -160,7 +160,7 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
       <div class="mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200">
         <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
           <svg
-            class="w-5 h-5 text-indigo-500"
+            class="w-5 h-5 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -178,11 +178,11 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-slate-600"
         >
           <div>
-            <strong class="text-indigo-600">技术收敛</strong
+            <strong class="text-blue-600">技术收敛</strong
             >：大模型上下文窗口突破200K+ token，RAG与Agent框架成熟
           </div>
           <div>
-            <strong class="text-fuchsia-600">开发者需求</strong
+            <strong class="text-cyan-600">开发者需求</strong
             >：80%+开发者最痛的是"重复劳动 + 上下文丢失"
           </div>
           <div>

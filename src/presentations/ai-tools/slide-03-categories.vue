@@ -17,7 +17,7 @@ const categories: Category[] = [
     title: 'AI原生IDE',
     description: '独立编辑器，AI深度嵌入每一环节',
     tools: ['Cursor', 'Windsurf'],
-    color: 'indigo',
+    color: 'blue',
     icon: '🚀',
   },
   {
@@ -25,7 +25,7 @@ const categories: Category[] = [
     title: 'IDE扩展/助手',
     description: '无缝嵌入现有工作流，最易上手',
     tools: ['GitHub Copilot', 'Tabnine', 'Amazon Q'],
-    color: 'fuchsia',
+    color: 'cyan',
     icon: '🔌',
   },
   {
@@ -46,15 +46,15 @@ const categories: Category[] = [
   },
 ]
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
-  indigo: {
-    bg: 'bg-indigo-50',
-    border: 'border-indigo-200',
-    text: 'text-indigo-700',
+  blue: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-700',
   },
-  fuchsia: {
-    bg: 'bg-fuchsia-50',
-    border: 'border-fuchsia-200',
-    text: 'text-fuchsia-700',
+  cyan: {
+    bg: 'bg-cyan-50',
+    border: 'border-cyan-200',
+    text: 'text-cyan-700',
   },
   emerald: {
     bg: 'bg-emerald-50',
@@ -139,9 +139,9 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           <span class="font-semibold text-slate-800">选型提示</span>
         </div>
         <p class="text-slate-600 text-sm leading-relaxed">
-          <strong class="text-indigo-600">AI原生IDE</strong>
+          <strong class="text-blue-600">AI原生IDE</strong>
           适合追求极致体验的开发者；
-          <strong class="text-fuchsia-600">IDE扩展</strong>
+          <strong class="text-cyan-600">IDE扩展</strong>
           适合无缝融入现有工作流；
           <strong class="text-emerald-600">Terminal CLI</strong>
           适合复杂推理场景；

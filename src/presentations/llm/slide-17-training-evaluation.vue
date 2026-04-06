@@ -28,20 +28,18 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <h3
               class="text-2xl font-bold text-slate-800 flex items-center gap-2"
             >
-              <ChartBarIcon class="w-7 h-7 text-indigo-600" />
+              <ChartBarIcon class="w-7 h-7 text-blue-600" />
               关键指标 (Metrics)
             </h3>
-            <div
-              class="bg-indigo-50/50 rounded-xl p-5 border border-indigo-100"
-            >
-              <h4 class="font-bold text-indigo-700 mb-2">
+            <div class="bg-blue-50/50 rounded-xl p-5 border border-blue-100">
+              <h4 class="font-bold text-blue-700 mb-2">
                 1. 训练集 (Training Set)
               </h4>
-              <p class="text-xs text-indigo-600/80 mb-2">模型学习的数据集</p>
+              <p class="text-xs text-blue-600/80 mb-2">模型学习的数据集</p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <span
-                    class="font-mono text-xs bg-indigo-200 text-indigo-800 px-1.5 py-0.5 rounded mt-0.5"
+                    class="font-mono text-xs bg-blue-200 text-blue-800 px-1.5 py-0.5 rounded mt-0.5"
                     >Loss</span
                   >
                   <span class="text-slate-600 text-sm"
@@ -69,19 +67,15 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 </li>
               </ul>
             </div>
-            <div
-              class="bg-fuchsia-50/50 rounded-xl p-5 border border-fuchsia-100"
-            >
-              <h4 class="font-bold text-fuchsia-700 mb-2">
-                3. 测试集 (Test Set)
-              </h4>
-              <p class="text-xs text-fuchsia-600/80 mb-2">
+            <div class="bg-cyan-50/50 rounded-xl p-5 border border-cyan-100">
+              <h4 class="font-bold text-cyan-700 mb-2">3. 测试集 (Test Set)</h4>
+              <p class="text-xs text-cyan-600/80 mb-2">
                 训练完成后评估最终模型性能
               </p>
               <ul class="space-y-2">
                 <li class="flex items-start gap-2">
                   <span
-                    class="font-mono text-xs bg-fuchsia-200 text-fuchsia-800 px-1.5 py-0.5 rounded mt-0.5"
+                    class="font-mono text-xs bg-cyan-200 text-cyan-800 px-1.5 py-0.5 rounded mt-0.5"
                     >Benchmarks</span
                   >
                   <span class="text-slate-600 text-sm"

@@ -66,7 +66,7 @@ const features = [
   <section class="container mx-auto max-w-7xl px-6 py-12 h-full flex flex-col">
     <div class="mb-8 text-center flex-shrink-0">
       <h2
-        class="inline-block text-4xl md:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600"
+        class="inline-block text-4xl md:text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-600"
         style="letter-spacing: 0.025em; line-height: 1.2"
       >
         AI Agent 智能体架构
@@ -91,10 +91,10 @@ const features = [
         <!-- Central Brain -->
         <div
           @click="activeFeature = 'brain'"
-          class="relative z-20 w-40 h-40 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-300 hover:scale-110 ring-4 ring-offset-4"
+          class="relative z-20 w-40 h-40 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-2xl cursor-pointer transition-all duration-300 hover:scale-110 ring-4 ring-offset-4"
           :class="
             activeFeature === 'brain'
-              ? 'ring-indigo-300 scale-110'
+              ? 'ring-blue-300 scale-110'
               : 'ring-transparent'
           "
         >
@@ -256,7 +256,7 @@ const features = [
                 class="flex items-start gap-3 text-lg text-slate-700 leading-relaxed"
               >
                 <span
-                  class="mt-1.5 w-2 h-2 rounded-full bg-indigo-500 flex-shrink-0"
+                  class="mt-1.5 w-2 h-2 rounded-full bg-blue-500 flex-shrink-0"
                 ></span>
                 <span>{{ point }}</span>
               </li>

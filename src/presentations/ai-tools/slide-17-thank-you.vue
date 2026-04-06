@@ -51,7 +51,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="6xl"
-            palette="indigo-fuchsia-emerald"
+            palette="sky-cyan-emerald"
             class="leading-tight"
           >
             谢谢观看
@@ -65,7 +65,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             >
               <p class="text-sm text-slate-600">
                 如果有具体场景（语言栈、团队规模、预算、隐私要求），<br />
-                可以给你<strong class="text-indigo-600"
+                可以给你<strong class="text-blue-600"
                   >个性化推荐+实操教程</strong
                 >
               </p>

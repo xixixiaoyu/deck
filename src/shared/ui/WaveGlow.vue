@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-type Palette = 'accent' | 'indigo-fuchsia'
+type Palette = 'accent' | 'blue-cyan'
 
 const props = defineProps<{
   opacity?: number
@@ -17,7 +17,7 @@ const opa = computed(() => props.opacity ?? 0.6)
 const dur = computed(() => props.duration ?? 8)
 const paletteStops = computed(() => {
   const p = props.palette ?? 'accent'
-  if (p === 'indigo-fuchsia')
+  if (p === 'blue-cyan')
     return ['rgb(99 102 241 / 0.9)', 'rgb(236 72 153 / 0.5)']
   return ['rgb(var(--accent) / 0.9)', 'rgb(var(--accent) / 0.5)']
 })

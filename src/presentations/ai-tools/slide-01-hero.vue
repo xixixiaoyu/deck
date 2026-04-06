@@ -53,7 +53,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="7xl"
-            palette="indigo-fuchsia-emerald"
+            palette="sky-cyan-emerald"
             class="leading-tight"
           >
             主流AI编程工具全景
@@ -63,12 +63,12 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </p>
           <div class="mt-8 flex flex-wrap justify-center gap-3">
             <span
-              class="inline-flex items-center rounded-full bg-indigo-50 px-4 py-1.5 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10"
+              class="inline-flex items-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"
             >
               AI原生IDE
             </span>
             <span
-              class="inline-flex items-center rounded-full bg-fuchsia-50 px-4 py-1.5 text-sm font-medium text-fuchsia-700 ring-1 ring-inset ring-fuchsia-700/10"
+              class="inline-flex items-center rounded-full bg-cyan-50 px-4 py-1.5 text-sm font-medium text-cyan-700 ring-1 ring-inset ring-cyan-700/10"
             >
               IDE扩展
             </span>

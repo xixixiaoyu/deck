@@ -25,8 +25,8 @@ const features = [
   },
 ]
 const highlights = [
-  { label: '发布时间', value: '2025年底', color: 'indigo' },
-  { label: '定位', value: 'Cursor最强竞品', color: 'fuchsia' },
+  { label: '发布时间', value: '2025年底', color: 'blue' },
+  { label: '定位', value: 'Cursor最强竞品', color: 'cyan' },
   { label: '评价', value: '2026最值得试', color: 'emerald' },
 ]
 const whyImportant = [
@@ -86,10 +86,8 @@ const whyImportant = [
                 :key="index"
                 class="text-center p-3 rounded-lg"
                 :class="{
-                  'bg-indigo-50 dark:bg-indigo-900/20':
-                    highlight.color === 'indigo',
-                  'bg-fuchsia-50 dark:bg-fuchsia-900/20':
-                    highlight.color === 'fuchsia',
+                  'bg-blue-50 dark:bg-blue-900/20': highlight.color === 'blue',
+                  'bg-cyan-50 dark:bg-cyan-900/20': highlight.color === 'cyan',
                   'bg-emerald-50 dark:bg-emerald-900/20':
                     highlight.color === 'emerald',
                 }"
@@ -100,10 +98,10 @@ const whyImportant = [
                 <div
                   class="font-bold text-lg"
                   :class="{
-                    'text-indigo-600 dark:text-indigo-400':
-                      highlight.color === 'indigo',
-                    'text-fuchsia-600 dark:text-fuchsia-400':
-                      highlight.color === 'fuchsia',
+                    'text-blue-600 dark:text-blue-400':
+                      highlight.color === 'blue',
+                    'text-cyan-600 dark:text-cyan-400':
+                      highlight.color === 'cyan',
                     'text-emerald-600 dark:text-emerald-400':
                       highlight.color === 'emerald',
                   }"

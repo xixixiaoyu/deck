@@ -6,7 +6,7 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 
 type Max = '4xl' | '5xl' | '6xl' | '7xl'
 type Size = '3xl' | '4xl' | '5xl' | '6xl' | '7xl'
-type Palette = 'accent' | 'indigo-fuchsia-emerald'
+type Palette = 'accent' | 'blue-cyan-emerald'
 type Effect = 'aurora' | 'circles'
 
 const props = defineProps<{

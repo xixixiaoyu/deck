@@ -9,7 +9,7 @@ const recommendations = [
     description:
       'Cursor（日常）+ Claude Code（复杂任务）+ 1款本土工具（中文/免费）',
     icon: '🎯',
-    color: 'indigo',
+    color: 'blue',
   },
   {
     title: '核心提醒',
@@ -21,19 +21,19 @@ const recommendations = [
     title: '隐私优先',
     description: '隐私敏感场景优先自托管/企业版（如Tabnine、文心快码）',
     icon: '🔒',
-    color: 'purple',
+    color: 'blue',
   },
 ]
 const futureTrends = [
   {
     title: '多Agent协作',
     description: '多个AI Agent协同完成复杂任务',
-    color: 'indigo',
+    color: 'blue',
   },
   {
     title: '记忆持久化',
     description: '跨会话记住项目模式和开发者偏好',
-    color: 'fuchsia',
+    color: 'cyan',
   },
   {
     title: 'Vibe Coding',
@@ -42,15 +42,15 @@ const futureTrends = [
   },
 ]
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
-  indigo: {
-    bg: 'bg-indigo-50',
-    border: 'border-indigo-200',
-    text: 'text-indigo-600',
+  blue: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-600',
   },
-  fuchsia: {
-    bg: 'bg-fuchsia-50',
-    border: 'border-fuchsia-200',
-    text: 'text-fuchsia-600',
+  cyan: {
+    bg: 'bg-cyan-50',
+    border: 'border-cyan-200',
+    text: 'text-cyan-600',
   },
   emerald: {
     bg: 'bg-emerald-50',
@@ -62,10 +62,10 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     border: 'border-amber-200',
     text: 'text-amber-600',
   },
-  purple: {
-    bg: 'bg-purple-50',
-    border: 'border-purple-200',
-    text: 'text-purple-600',
+  blue: {
+    bg: 'bg-blue-50',
+    border: 'border-blue-200',
+    text: 'text-blue-600',
   },
 }
 </script>
@@ -98,11 +98,11 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
         </div>
       </div>
       <div
-        class="p-6 rounded-xl bg-gradient-to-r from-indigo-50 via-fuchsia-50 to-emerald-50 border border-slate-200"
+        class="p-6 rounded-xl bg-gradient-to-r from-blue-50 via-cyan-50 to-emerald-50 border border-slate-200"
       >
         <h4 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
           <svg
-            class="w-5 h-5 text-indigo-500"
+            class="w-5 h-5 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -151,8 +151,8 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           日常工作流建议
         </h4>
         <p class="text-sm text-slate-600 leading-relaxed">
-          先用<strong class="text-indigo-600">Chat + 项目上下文</strong
-          >快速理解陌生代码库， 再用<strong class="text-fuchsia-600"
+          先用<strong class="text-blue-600">Chat + 项目上下文</strong
+          >快速理解陌生代码库， 再用<strong class="text-cyan-600"
             >补全 + 重构</strong
           >高效迭代， 最后让AI生成<strong class="text-emerald-600"
             >测试闭环</strong

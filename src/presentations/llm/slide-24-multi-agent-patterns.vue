@@ -48,7 +48,7 @@ const roles = [
     title: 'Summarizer (总结者)',
     icon: '📝',
     desc: '汇总信息，消除冗余，生成最终报告',
-    color: 'bg-purple-50 border-purple-200 text-purple-800',
+    color: 'bg-blue-50 border-blue-200 text-blue-800',
   },
 ]
 </script>
@@ -167,13 +167,11 @@ const roles = [
               </div>
               <div class="flex flex-col items-center">
                 <div
-                  class="w-20 h-20 rounded-2xl bg-purple-100 border-2 border-purple-400 flex items-center justify-center text-3xl shadow-lg"
+                  class="w-20 h-20 rounded-2xl bg-blue-100 border-2 border-blue-400 flex items-center justify-center text-3xl shadow-lg"
                 >
                   🤖 B
                 </div>
-                <span class="text-sm font-bold mt-2 text-purple-700"
-                  >Write</span
-                >
+                <span class="text-sm font-bold mt-2 text-blue-700">Write</span>
               </div>
               <div class="w-12 h-0.5 bg-slate-400 relative">
                 <div
@@ -199,27 +197,27 @@ const roles = [
             >
               <div class="flex flex-col items-center relative">
                 <div
-                  class="w-24 h-24 rounded-full bg-indigo-600 text-white flex items-center justify-center text-4xl shadow-xl z-10"
+                  class="w-24 h-24 rounded-full bg-blue-600 text-white flex items-center justify-center text-4xl shadow-xl z-10"
                 >
                   👑
                 </div>
-                <span class="text-lg font-bold mt-2 text-indigo-800"
+                <span class="text-lg font-bold mt-2 text-blue-800"
                   >Manager / Planner</span
                 >
 
                 <!-- Lines to children -->
                 <div
-                  class="absolute top-1/2 left-1/2 w-[200px] h-24 border-l-2 border-r-2 border-b-0 border-indigo-300 -translate-x-1/2 translate-y-4 -z-0"
+                  class="absolute top-1/2 left-1/2 w-[200px] h-24 border-l-2 border-r-2 border-b-0 border-blue-300 -translate-x-1/2 translate-y-4 -z-0"
                 ></div>
                 <div
-                  class="absolute top-1/2 left-1/2 h-24 w-0.5 bg-indigo-300 -translate-x-1/2 translate-y-4 -z-0"
+                  class="absolute top-1/2 left-1/2 h-24 w-0.5 bg-blue-300 -translate-x-1/2 translate-y-4 -z-0"
                 ></div>
               </div>
 
               <div class="flex gap-8">
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-16 h-16 rounded-xl bg-white border-2 border-indigo-200 flex items-center justify-center text-2xl shadow-md"
+                    class="w-16 h-16 rounded-xl bg-white border-2 border-blue-200 flex items-center justify-center text-2xl shadow-md"
                   >
                     🔍
                   </div>
@@ -229,7 +227,7 @@ const roles = [
                 </div>
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-16 h-16 rounded-xl bg-white border-2 border-indigo-200 flex items-center justify-center text-2xl shadow-md"
+                    class="w-16 h-16 rounded-xl bg-white border-2 border-blue-200 flex items-center justify-center text-2xl shadow-md"
                   >
                     💻
                   </div>
@@ -239,7 +237,7 @@ const roles = [
                 </div>
                 <div class="flex flex-col items-center">
                   <div
-                    class="w-16 h-16 rounded-xl bg-white border-2 border-indigo-200 flex items-center justify-center text-2xl shadow-md"
+                    class="w-16 h-16 rounded-xl bg-white border-2 border-blue-200 flex items-center justify-center text-2xl shadow-md"
                   >
                     🎨
                   </div>

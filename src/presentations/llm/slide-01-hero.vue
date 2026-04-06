@@ -48,7 +48,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           <HeadingGradient
             :level="1"
             size="7xl"
-            palette="indigo-fuchsia-emerald"
+            palette="sky-cyan-emerald"
             class="leading-tight"
           >
             大语言模型应用开发实战
@@ -58,12 +58,12 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           </p>
           <div class="mt-8 flex justify-center gap-4">
             <span
-              class="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10"
+              class="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"
             >
               LLM 原理
             </span>
             <span
-              class="inline-flex items-center rounded-full bg-fuchsia-50 px-3 py-1 text-sm font-medium text-fuchsia-700 ring-1 ring-inset ring-fuchsia-700/10"
+              class="inline-flex items-center rounded-full bg-cyan-50 px-3 py-1 text-sm font-medium text-cyan-700 ring-1 ring-inset ring-cyan-700/10"
             >
               RAG 架构
             </span>

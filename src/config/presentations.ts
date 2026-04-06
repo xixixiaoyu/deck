@@ -27,7 +27,7 @@ export const categoriesConfig: Category[] = [
     description: 'AI编程工具全景与最佳实践',
     icon: 'code',
     expanded: true,
-    color: 'indigo',
+    color: 'blue',
     presentations: [
       {
         id: 'ai-tools-panorama',
@@ -67,7 +67,7 @@ export const categoriesConfig: Category[] = [
     description: '各种演示文稿设计模板和布局',
     icon: 'palette',
     expanded: false,
-    color: 'purple',
+    color: 'blue',
     presentations: [
       {
         id: 'design-language-template',

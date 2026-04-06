@@ -58,7 +58,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             class="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-white/50 shadow-lg flex flex-col gap-6"
           >
             <div class="flex items-center gap-4">
-              <div class="p-3 bg-indigo-100 rounded-xl text-indigo-600">
+              <div class="p-3 bg-blue-100 rounded-xl text-blue-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8"
@@ -95,9 +95,9 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 <span>[0.15, -0.42, 0.85, ...]</span>
               </div>
             </div>
-            <div class="bg-indigo-50 rounded-xl p-4 border border-indigo-100">
-              <h4 class="font-bold text-indigo-900 mb-2">💡 核心特性</h4>
-              <p class="text-sm text-indigo-800">
+            <div class="bg-blue-50 rounded-xl p-4 border border-blue-100">
+              <h4 class="font-bold text-blue-900 mb-2">💡 核心特性</h4>
+              <p class="text-sm text-blue-800">
                 语义相似的文本在向量空间中距离更近，实现"意思相近"的数学表达
               </p>
             </div>
@@ -107,7 +107,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             class="bg-white/70 backdrop-blur-md rounded-2xl p-8 border border-white/50 shadow-lg flex flex-col gap-6"
           >
             <div class="flex items-center gap-4">
-              <div class="p-3 bg-fuchsia-100 rounded-xl text-fuchsia-600">
+              <div class="p-3 bg-cyan-100 rounded-xl text-cyan-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-8 w-8"
@@ -198,7 +198,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             <div class="text-lg font-bold text-slate-400">=</div>
             <div class="flex flex-col items-center">
               <div class="text-2xl mb-1">👸</div>
-              <span class="text-sm font-bold text-fuchsia-600">Queen</span>
+              <span class="text-sm font-bold text-cyan-600">Queen</span>
             </div>
           </div>
           <p class="text-center text-sm text-slate-600 mt-4">

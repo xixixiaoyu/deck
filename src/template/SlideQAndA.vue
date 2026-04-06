@@ -6,7 +6,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
   <section class="h-full w-full grid place-items-center p-6">
     <div class="text-center max-w-3xl">
       <h2
-        class="text-5xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-400 to-sky-500"
+        class="text-5xl md:text-6xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-sky-400 to-sky-500"
       >
         问答环节
       </h2>

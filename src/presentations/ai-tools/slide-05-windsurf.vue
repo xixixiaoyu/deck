@@ -23,8 +23,8 @@ const features = [
 ]
 const highlights = [
   { label: '定价范围', value: '免费-$60/月', color: 'emerald' },
-  { label: '定位', value: 'Agentic最强', color: 'fuchsia' },
-  { label: '排名', value: '常居榜首', color: 'indigo' },
+  { label: '定位', value: 'Agentic最强', color: 'cyan' },
+  { label: '排名', value: '常居榜首', color: 'blue' },
 ]
 </script>
 <template>
@@ -104,10 +104,8 @@ const highlights = [
               :key="index"
               class="text-center p-4 rounded-xl border"
               :class="[
-                item.color === 'indigo' ? 'bg-indigo-50 border-indigo-200' : '',
-                item.color === 'fuchsia'
-                  ? 'bg-fuchsia-50 border-fuchsia-200'
-                  : '',
+                item.color === 'blue' ? 'bg-blue-50 border-blue-200' : '',
+                item.color === 'cyan' ? 'bg-cyan-50 border-cyan-200' : '',
                 item.color === 'emerald'
                   ? 'bg-emerald-50 border-emerald-200'
                   : '',
@@ -116,8 +114,8 @@ const highlights = [
               <div
                 class="text-xl font-bold"
                 :class="[
-                  item.color === 'indigo' ? 'text-indigo-600' : '',
-                  item.color === 'fuchsia' ? 'text-fuchsia-600' : '',
+                  item.color === 'blue' ? 'text-blue-600' : '',
+                  item.color === 'cyan' ? 'text-cyan-600' : '',
                   item.color === 'emerald' ? 'text-emerald-600' : '',
                 ]"
               >

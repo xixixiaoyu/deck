@@ -41,7 +41,7 @@ const deploymentStrategies = [
       'Continuous Batching: 动态插入请求',
       'FlashAttention: 硬件感知优化',
     ],
-    color: 'bg-purple-50 border-purple-200 text-purple-800',
+    color: 'bg-blue-50 border-blue-200 text-blue-800',
   },
   {
     title: '部署框架',
@@ -122,7 +122,7 @@ const edgeModels = [
               class="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all duration-200"
               :class="
                 activeTab === tab.id
-                  ? 'bg-white text-indigo-600 shadow-sm'
+                  ? 'bg-white text-blue-600 shadow-sm'
                   : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
               "
             >
@@ -146,7 +146,7 @@ const edgeModels = [
                 <h3
                   class="text-lg font-bold text-slate-800 flex items-center gap-2"
                 >
-                  <ScaleIcon class="w-5 h-5 text-indigo-500" />
+                  <ScaleIcon class="w-5 h-5 text-blue-500" />
                   开源 vs 闭源
                 </h3>
                 <!-- Closed Source -->
@@ -234,12 +234,10 @@ const edgeModels = [
                       class="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center"
                     >
                       <span
-                        class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded text-xs"
+                        class="font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded text-xs"
                         >性能</span
                       >
-                      <div
-                        class="w-2 h-2 bg-indigo-400 rounded-full mt-1"
-                      ></div>
+                      <div class="w-2 h-2 bg-blue-400 rounded-full mt-1"></div>
                     </div>
                     <div
                       class="absolute bottom-0 left-0 flex flex-col items-center"
@@ -472,7 +470,7 @@ const edgeModels = [
                             selectedDeploymentStrategy.title.includes('推理')
                           "
                         >
-                          <p class="text-purple-400 mb-2"># vLLM 显存优化</p>
+                          <p class="text-blue-400 mb-2"># vLLM 显存优化</p>
                           <div class="flex gap-2 overflow-x-auto pb-1">
                             <div
                               class="border border-slate-600 p-1 rounded w-16 flex-shrink-0 text-center"
@@ -528,10 +526,10 @@ const edgeModels = [
               <!-- Left: Advantages -->
               <div class="flex flex-col gap-4 justify-center">
                 <div
-                  class="bg-indigo-50/50 rounded-xl p-7 border border-indigo-100"
+                  class="bg-blue-50/50 rounded-xl p-7 border border-blue-100"
                 >
                   <h3
-                    class="text-xl font-bold text-indigo-900 mb-3 flex items-center gap-2"
+                    class="text-xl font-bold text-blue-900 mb-3 flex items-center gap-2"
                   >
                     <span>📱</span> 小模型优势
                   </h3>
@@ -582,15 +580,15 @@ const edgeModels = [
                 class="bg-slate-900 rounded-2xl p-8 text-slate-200 shadow-xl flex flex-col relative overflow-hidden"
               >
                 <div
-                  class="absolute top-0 right-0 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl -mr-10 -mt-10"
+                  class="absolute top-0 right-0 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl -mr-10 -mt-10"
                 ></div>
                 <div
-                  class="absolute bottom-0 left-0 w-48 h-48 bg-indigo-500/20 rounded-full blur-3xl -ml-10 -mb-10"
+                  class="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl -ml-10 -mb-10"
                 ></div>
                 <h3
                   class="text-xl font-bold text-white mb-4 flex items-center gap-2 relative z-10"
                 >
-                  <span class="text-purple-400">🚀</span>
+                  <span class="text-blue-400">🚀</span>
                   主流小模型
                 </h3>
                 <div
@@ -614,10 +612,9 @@ const edgeModels = [
                       <div class="text-xs text-slate-400">{{ model.feat }}</div>
                     </div>
                     <div class="flex flex-col items-end">
-                      <span
-                        class="text-sm font-mono font-bold text-purple-400"
-                        >{{ model.params }}</span
-                      >
+                      <span class="text-sm font-mono font-bold text-blue-400">{{
+                        model.params
+                      }}</span>
                       <span class="text-[8px] text-slate-500 uppercase"
                         >Params</span
                       >

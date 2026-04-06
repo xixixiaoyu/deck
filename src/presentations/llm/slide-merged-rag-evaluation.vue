@@ -80,22 +80,22 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
             <!-- Generation Side -->
             <div
-              class="bg-violet-50/60 rounded-2xl p-5 border border-violet-100 flex flex-col"
+              class="bg-sky-50/60 rounded-2xl p-5 border border-sky-100 flex flex-col"
             >
               <h3
                 class="text-lg font-bold text-slate-800 flex items-center gap-2 mb-3"
               >
-                <div class="p-1.5 bg-violet-100 rounded-lg text-violet-600">
+                <div class="p-1.5 bg-sky-100 rounded-lg text-sky-600">
                   <ChatBubbleBottomCenterTextIcon class="w-5 h-5" />
                 </div>
                 生成质量 (Generation)
               </h3>
               <div class="grid grid-cols-2 gap-3 flex-grow">
                 <div
-                  class="bg-white/60 rounded-xl p-3 border border-violet-100/50"
+                  class="bg-white/60 rounded-xl p-3 border border-sky-100/50"
                 >
                   <div class="flex items-center gap-2 mb-1">
-                    <CheckBadgeIcon class="w-4 h-4 text-violet-600" />
+                    <CheckBadgeIcon class="w-4 h-4 text-sky-600" />
                     <h4 class="font-bold text-sm text-slate-800">忠实度</h4>
                   </div>
                   <p class="text-xs text-slate-600 leading-snug">
@@ -103,10 +103,10 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                   </p>
                 </div>
                 <div
-                  class="bg-white/60 rounded-xl p-3 border border-violet-100/50"
+                  class="bg-white/60 rounded-xl p-3 border border-sky-100/50"
                 >
                   <div class="flex items-center gap-2 mb-1">
-                    <BeakerIcon class="w-4 h-4 text-violet-600" />
+                    <BeakerIcon class="w-4 h-4 text-sky-600" />
                     <h4 class="font-bold text-sm text-slate-800">回答相关性</h4>
                   </div>
                   <p class="text-xs text-slate-600 leading-snug">
@@ -153,17 +153,17 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             </div>
             <!-- Method 2 -->
             <div
-              class="bg-indigo-50/50 rounded-2xl p-5 border border-indigo-100 relative overflow-hidden"
+              class="bg-blue-50/50 rounded-2xl p-5 border border-blue-100 relative overflow-hidden"
             >
               <div class="absolute top-0 right-0 p-3 opacity-10">
-                <TrophyIcon class="w-24 h-24 text-indigo-600" />
+                <TrophyIcon class="w-24 h-24 text-blue-600" />
               </div>
               <div class="relative z-10">
                 <h3
                   class="text-base font-bold text-slate-800 mb-2 flex items-center gap-2"
                 >
                   <span
-                    class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs"
+                    class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs"
                     >2</span
                   >
                   LLM 自动评估
@@ -171,11 +171,11 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                 <ul class="space-y-1.5 text-xs text-slate-700">
                   <li class="flex items-start gap-2">
                     <span
-                      class="mt-1 w-1 h-1 bg-indigo-400 rounded-full shrink-0"
+                      class="mt-1 w-1 h-1 bg-blue-400 rounded-full shrink-0"
                     ></span>
                     <span
                       >基于
-                      <span class="font-mono font-bold text-indigo-700"
+                      <span class="font-mono font-bold text-blue-700"
                         >RAGAS</span
                       >
                       框架</span
@@ -183,7 +183,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
                   </li>
                   <li class="flex items-start gap-2">
                     <span
-                      class="mt-1 w-1 h-1 bg-indigo-400 rounded-full shrink-0"
+                      class="mt-1 w-1 h-1 bg-blue-400 rounded-full shrink-0"
                     ></span>
                     <span>强模型评估弱模型，提供评分依据</span>
                   </li>

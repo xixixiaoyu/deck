@@ -23,7 +23,7 @@ export const themes: Theme[] = [
       'surface-muted': '30 41 59',
       'text-primary': '226 232 240',
       'text-muted': '148 163 184',
-      accent: '99 102 241', // Indigo-500: 更具科技感与智能感的靛蓝色
+      accent: '14 165 233', // Sky-500: 清爽纯粹的蓝，无紫色倾向
       border: '71 85 105',
       highlight: '253 224 71',
     },
@@ -37,7 +37,7 @@ export const themes: Theme[] = [
       'surface-muted': '241 245 249',
       'text-primary': '15 23 42',
       'text-muted': '71 85 105',
-      accent: '79 70 229', // Indigo-600: 在浅色背景下具备更好的易读性与专业感
+      accent: '2 132 199', // Sky-600: 在浅色背景下保证易读性的纯正蓝
       border: '226 232 240',
       highlight: '251 191 36',
     },
@@ -57,15 +57,15 @@ export const themes: Theme[] = [
     },
   },
   {
-    id: 'purple',
-    name: '紫色主题',
-    icon: 'sparkles',
+    id: 'gray',
+    name: '极简主题',
+    icon: 'circle-stack',
     colors: {
       surface: '17 24 39',
       'surface-muted': '30 41 59',
       'text-primary': '226 232 240',
       'text-muted': '148 163 184',
-      accent: '147 51 234',
+      accent: '148 163 184', // Slate-400
       border: '71 85 105',
       highlight: '251 191 36',
     },
