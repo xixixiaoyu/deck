@@ -85,9 +85,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               中国本土工具
             </span>
           </div>
-          <div class="mt-10 text-sm text-slate-500">
-            深度搜索 30 轮+ · 权威信源交叉验证 · 全球 Top 工具与本土工具并重
-          </div>
         </div>
       </div>
     </Card>
