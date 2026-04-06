@@ -27,6 +27,9 @@ import Slide14dAugment from './slide-14d-augment.vue'
 import Slide14eCodex from './slide-14e-codex.vue'
 import Slide14fAntigravity from './slide-14f-antigravity.vue'
 import Slide14Comparison from './slide-14-comparison.vue'
+import Slide14gCodingPlanIntro from './slide-14g-coding-plan-intro.vue'
+import Slide14hCodingPlanComparison from './slide-14h-coding-plan-comparison.vue'
+import Slide14iCodingPlanGuide from './slide-14i-coding-plan-guide.vue'
 import Slide15CommonFeatures from './slide-15-common-features.vue'
 import Slide16Recommendations from './slide-16-recommendations.vue'
 import Slide17ThankYou from './slide-17-thank-you.vue'
@@ -70,6 +73,16 @@ const OpenSourceDivider = defineComponent({
       chapter: 'Deep Dive',
       title: '开源 Agent 探索',
       description: 'Cline, Roo Code, Kilo Code 等极客首选工具。',
+    })
+  },
+})
+
+const CodingPlanDivider = defineComponent({
+  render() {
+    return h(SlideChapterDivider, {
+      chapter: 'Infrastructure',
+      title: 'Coding Plan 全景',
+      description: '2026 年 AI 编程场景的“基建级”订阅模式与选型建议。',
     })
   },
 })
@@ -129,6 +142,13 @@ const slides = [
   Slide14aOpenSourceAgents,
   Slide15CommonFeatures,
   Slide14Comparison,
+
+  // 6. 基础设施：Coding Plan
+  CodingPlanDivider,
+  Slide14gCodingPlanIntro,
+  Slide14hCodingPlanComparison,
+  Slide14iCodingPlanGuide,
+
   Slide16Recommendations,
   Slide17ThankYou,
 ]
