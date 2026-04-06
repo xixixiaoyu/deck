@@ -7,6 +7,7 @@ import {
   createPresentationContext,
   providePresentationContext,
 } from '@/shared/presentation/presentation-context'
+import SlideChapterDivider from '@/template/SlideChapterDivider.vue'
 
 import Slide01Hero from './slide-01-hero.vue'
 import Slide02Overview from './slide-02-overview.vue'
@@ -29,6 +30,48 @@ import Slide14Comparison from './slide-14-comparison.vue'
 import Slide15CommonFeatures from './slide-15-common-features.vue'
 import Slide16Recommendations from './slide-16-recommendations.vue'
 import Slide17ThankYou from './slide-17-thank-you.vue'
+
+import { defineComponent, h } from 'vue'
+
+const Category1Divider = defineComponent({
+  render() {
+    return h(SlideChapterDivider, {
+      chapter: 'Category 01',
+      title: 'AI 原生 IDE',
+      description: '独立编辑器，AI 深度嵌入每一环节，Agent 驱动。',
+    })
+  },
+})
+
+const Category2Divider = defineComponent({
+  render() {
+    return h(SlideChapterDivider, {
+      chapter: 'Category 02',
+      title: 'IDE 扩展/助手',
+      description: '无缝嵌入现有工作流，最易上手且生态最稳。',
+    })
+  },
+})
+
+const Category3Divider = defineComponent({
+  render() {
+    return h(SlideChapterDivider, {
+      chapter: 'Category 03',
+      title: 'Terminal/CLI Agent',
+      description: '复杂工程推理、自主执行命令、极致性能。',
+    })
+  },
+})
+
+const OpenSourceDivider = defineComponent({
+  render() {
+    return h(SlideChapterDivider, {
+      chapter: 'Deep Dive',
+      title: '开源 Agent 探索',
+      description: 'Cline, Roo Code, Kilo Code 等极客首选工具。',
+    })
+  },
+})
 
 const localeOptions = [
   {
@@ -53,25 +96,38 @@ const presentationContext = createPresentationContext({
 providePresentationContext(presentationContext)
 
 const slides = [
+  // 1. 引言与框架
   Slide01Hero,
   Slide02Overview,
   Slide03Categories,
+
+  // 2. 第一类：AI 原生 IDE
+  Category1Divider,
   Slide04Cursor,
   Slide05Windsurf,
-  Slide06Copilot,
-  Slide09ClaudeCode,
-  Slide10Qoder,
   Slide11Trae,
-  Slide12Comate,
-  Slide13CodeBuddy,
-  Slide14aOpenSourceAgents,
-  Slide14bOpencode,
   Slide14cKiro,
+  Slide10Qoder,
+
+  // 3. 第二类：IDE 扩展/助手
+  Category2Divider,
+  Slide06Copilot,
   Slide14dAugment,
   Slide14eCodex,
+  Slide12Comate,
+  Slide13CodeBuddy,
+
+  // 4. 第三类：Terminal/CLI Agent
+  Category3Divider,
+  Slide09ClaudeCode,
+  Slide14bOpencode,
   Slide14fAntigravity,
-  Slide14Comparison,
+
+  // 5. 深度探索与总结
+  OpenSourceDivider,
+  Slide14aOpenSourceAgents,
   Slide15CommonFeatures,
+  Slide14Comparison,
   Slide16Recommendations,
   Slide17ThankYou,
 ]

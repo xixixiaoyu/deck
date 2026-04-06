@@ -1,5 +1,18 @@
 <script setup lang="ts">
-defineProps<{ isActive?: boolean; isPreview?: boolean }>()
+withDefaults(
+  defineProps<{
+    isActive?: boolean
+    isPreview?: boolean
+    chapter?: string
+    title?: string
+    description?: string
+  }>(),
+  {
+    chapter: 'Chapter Section',
+    title: '章节分隔',
+    description: '用来承上启下，重置注意力与心智模型。',
+  }
+)
 </script>
 
 <template>
@@ -23,7 +36,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
         ></div>
         <span
           class="text-sm font-bold tracking-[0.2em] text-slate-400 uppercase"
-          >Chapter Section</span
+          >{{ chapter }}</span
         >
         <div
           class="h-px w-12 bg-gradient-to-l from-transparent to-slate-300"
@@ -36,7 +49,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
         <span
           class="inline-block hover:scale-105 transition-transform duration-500"
         >
-          章节分隔
+          {{ title }}
         </span>
       </h2>
 
@@ -47,7 +60,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
         <p
           class="text-xl md:text-2xl text-slate-500 font-medium max-w-2xl leading-relaxed"
         >
-          用来承上启下，重置注意力与心智模型。
+          {{ description }}
         </p>
       </div>
 
