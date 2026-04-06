@@ -37,8 +37,8 @@ const Category1Divider = defineComponent({
   render() {
     return h(SlideChapterDivider, {
       chapter: 'Category 01',
-      title: 'AI 原生 IDE',
-      description: '独立编辑器，AI 深度嵌入每一环节，Agent 驱动。',
+      title: 'AI 原生 IDE / 工作台',
+      description: '独立编辑器或全链路平台，AI 深度嵌入，Agent 驱动。',
     })
   },
 })
@@ -48,7 +48,7 @@ const Category2Divider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Category 02',
       title: 'IDE 扩展/助手',
-      description: '无缝嵌入现有工作流，最易上手且生态最稳。',
+      description: '无缝嵌入现有 VS Code/JetBrains 工作流。',
     })
   },
 })
@@ -58,7 +58,7 @@ const Category3Divider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Category 03',
       title: 'Terminal/CLI Agent',
-      description: '复杂工程推理、自主执行命令、极致性能。',
+      description: '终端原生推理、自主执行命令、极致性能。',
     })
   },
 })
@@ -101,13 +101,15 @@ const slides = [
   Slide02Overview,
   Slide03Categories,
 
-  // 2. 第一类：AI 原生 IDE
+  // 2. 第一类：AI 原生 IDE / 工作台
   Category1Divider,
   Slide04Cursor,
   Slide05Windsurf,
   Slide11Trae,
-  Slide14cKiro,
   Slide10Qoder,
+  Slide13CodeBuddy,
+  Slide14fAntigravity,
+  Slide14cKiro,
 
   // 3. 第二类：IDE 扩展/助手
   Category2Divider,
@@ -115,13 +117,11 @@ const slides = [
   Slide14dAugment,
   Slide14eCodex,
   Slide12Comate,
-  Slide13CodeBuddy,
 
   // 4. 第三类：Terminal/CLI Agent
   Category3Divider,
   Slide09ClaudeCode,
   Slide14bOpencode,
-  Slide14fAntigravity,
 
   // 5. 深度探索与总结
   OpenSourceDivider,
