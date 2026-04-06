@@ -14,8 +14,6 @@ import Slide03Categories from './slide-03-categories.vue'
 import Slide04Cursor from './slide-04-cursor.vue'
 import Slide05Windsurf from './slide-05-windsurf.vue'
 import Slide06Copilot from './slide-06-copilot.vue'
-import Slide07Tabnine from './slide-07-tabnine.vue'
-import Slide08AmazonQ from './slide-08-amazon-q.vue'
 import Slide09ClaudeCode from './slide-09-claude-code.vue'
 import Slide10Qoder from './slide-10-qoder.vue'
 import Slide11Trae from './slide-11-trae.vue'
@@ -60,8 +58,6 @@ const slides = [
   Slide04Cursor,
   Slide05Windsurf,
   Slide06Copilot,
-  Slide07Tabnine,
-  Slide08AmazonQ,
   Slide09ClaudeCode,
   Slide10Qoder,
   Slide11Trae,
