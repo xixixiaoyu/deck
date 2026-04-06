@@ -16,7 +16,7 @@ const categories: Category[] = [
     id: 'ai-native-ide',
     title: 'AI 原生 IDE',
     description: '独立编辑器，AI 深度嵌入每一环节，Agent 驱动',
-    tools: ['Cursor', 'Windsurf', 'Trae', 'Kiro'],
+    tools: ['Cursor', 'Windsurf', 'Trae', 'Kiro', 'Qoder'],
     color: 'blue',
     icon: '🚀',
   },
@@ -24,7 +24,7 @@ const categories: Category[] = [
     id: 'ide-extension',
     title: 'IDE 扩展/助手',
     description: '无缝嵌入现有工作流，最易上手且生态最稳',
-    tools: ['GitHub Copilot', 'Augment', 'Codex'],
+    tools: ['GitHub Copilot', 'Augment', 'Codex', '文心快码', '腾讯 CodeBuddy'],
     color: 'cyan',
     icon: '🔌',
   },
@@ -35,14 +35,6 @@ const categories: Category[] = [
     tools: ['Claude Code', 'Opencode', 'antigravity'],
     color: 'emerald',
     icon: '💻',
-  },
-  {
-    id: 'chinese-tools',
-    title: '国产 Agentic 平台',
-    description: '中文优化、全流程闭环、企业级合规',
-    tools: ['Qoder', '文心快码', '腾讯 CodeBuddy'],
-    color: 'amber',
-    icon: '🇨🇳',
   },
 ]
 const colorMap: Record<string, { bg: string; border: string; text: string }> = {
@@ -61,11 +53,6 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     border: 'border-emerald-200',
     text: 'text-emerald-700',
   },
-  amber: {
-    bg: 'bg-amber-50',
-    border: 'border-amber-200',
-    text: 'text-amber-700',
-  },
 }
 </script>
 <template>
@@ -73,41 +60,41 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
     <Card padding="lg">
       <div class="mb-8 text-center">
         <HeadingGradient :level="2" size="4xl">
-          四大类工具概览
+          三大类工具概览
         </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
-          根据形态和定位，主流AI编程工具分为四大类别
+          根据形态和定位，主流 AI 编程工具分为三大类别
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div
           v-for="(category, index) in categories"
           :key="index"
-          class="relative rounded-2xl p-6 border bg-white/60 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
+          class="relative rounded-2xl p-6 border bg-white/60 backdrop-blur-sm hover:shadow-lg transition-all duration-300 flex flex-col"
           :class="[colorMap[category.color].border]"
         >
-          <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center text-center gap-4 flex-1">
             <div
-              class="flex-shrink-0 w-14 h-14 rounded-xl flex items-center justify-center text-2xl"
+              class="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center text-3xl shadow-sm"
               :class="[colorMap[category.color].bg]"
             >
               {{ category.icon }}
             </div>
-            <div class="flex-1">
+            <div class="flex-1 flex flex-col">
               <h3
-                class="text-xl font-bold mb-2"
+                class="text-2xl font-bold mb-3"
                 :class="[colorMap[category.color].text]"
               >
                 {{ category.title }}
               </h3>
-              <p class="text-slate-600 text-sm mb-3">
+              <p class="text-slate-600 text-sm mb-6 leading-relaxed">
                 {{ category.description }}
               </p>
-              <div class="flex flex-wrap gap-2">
+              <div class="mt-auto flex flex-wrap justify-center gap-2">
                 <span
                   v-for="(tool, tIndex) in category.tools"
                   :key="tIndex"
-                  class="inline-flex items-center rounded-lg px-3 py-1 text-xs font-medium border"
+                  class="inline-flex items-center rounded-lg px-3 py-1.5 text-xs font-medium border transition-colors hover:bg-opacity-80"
                   :class="[
                     colorMap[category.color].bg,
                     colorMap[category.color].border,
@@ -139,14 +126,12 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
           <span class="font-semibold text-slate-800">选型提示</span>
         </div>
         <p class="text-slate-600 text-sm leading-relaxed">
-          <strong class="text-blue-600">AI原生IDE</strong>
-          适合追求极致体验的开发者；
-          <strong class="text-cyan-600">IDE扩展</strong>
-          适合无缝融入现有工作流；
+          <strong class="text-blue-600">AI 原生 IDE</strong>
+          适合追求极致 Agent 体验与深度集成，利用独立编辑器构建闭环；
+          <strong class="text-cyan-600">IDE 扩展</strong>
+          适合存量项目与团队协作，在熟悉的环境中获得 AI 赋能；
           <strong class="text-emerald-600">Terminal CLI</strong>
-          适合复杂推理场景；
-          <strong class="text-amber-600">中国本土工具</strong>
-          适合中文需求和合规场景。
+          适合资深开发者与复杂重构，通过强推理 Agent 解决长时任务。
         </p>
       </div>
     </Card>
