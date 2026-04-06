@@ -11,30 +11,31 @@ import {
 import PptContainer from '@/shared/presentation/ppt-container.vue'
 
 // 导入优化后的模板
-import Slide10Poll from './slide-10-poll.vue'
-import Slide11Timeline from './slide-11-timeline.vue'
-import Slide12Code from './slide-12-code.vue'
-import Slide13Steps from './slide-13-steps.vue'
-import Slide14BeforeAfter from './slide-14-before-after.vue'
-import Slide15ChapterDivider from './slide-15-chapter-divider.vue'
-import Slide16Team from './slide-16-team.vue'
-import Slide17Quote from './slide-17-quote.vue'
-import Slide18Media from './slide-18-media.vue'
-import Slide19QAndA from './slide-19-q-and-a.vue'
-import Slide20ThankYou from './slide-20-thank-you.vue'
-import Slide21References from './slide-21-references.vue'
-import Slide23Table from './slide-23-table.vue'
-import Slide3Outline from './slide-3-outline.vue'
-import Slide4Stats from './slide-4-stats.vue'
-import Slide5Tabs from './slide-5-tabs.vue'
-import Slide8FAQ from './slide-8-faq.vue'
-import SlideDashboard from './slide-dashboard.vue'
-import SlideEnhancedHero from './slide-enhanced-hero.vue'
-import SlideMultimediaFixed from './slide-multimedia-fixed.vue'
-import SlideQuiz from './slide-quiz.vue'
-import SlideUniversalChart from './slide-universal-chart.vue'
-import SlideUniversalCompare from './slide-universal-compare.vue'
-import SlideUniversalList from './slide-universal-list.vue'
+import SlideHero from './SlideHero.vue'
+import SlideOutline from './SlideOutline.vue'
+import SlideChapterDivider from './SlideChapterDivider.vue'
+import SlideList from './SlideList.vue'
+import SlideCompare from './SlideCompare.vue'
+import SlideStats from './SlideStats.vue'
+import SlideChart from './SlideChart.vue'
+import SlideMatrix from './SlideMatrix.vue'
+import SlideTable from './SlideTable.vue'
+import SlideCode from './SlideCode.vue'
+import SlideTimeline from './SlideTimeline.vue'
+import SlideSteps from './SlideSteps.vue'
+import SlideBeforeAfter from './SlideBeforeAfter.vue'
+import SlideMedia from './SlideMedia.vue'
+import SlideMultimedia from './SlideMultimedia.vue'
+import SlideQuote from './SlideQuote.vue'
+import SlideTeam from './SlideTeam.vue'
+import SlideFAQ from './SlideFAQ.vue'
+import SlideQAndA from './SlideQAndA.vue'
+import SlidePoll from './SlidePoll.vue'
+import SlideQuiz from './SlideQuiz.vue'
+import SlideTabs from './SlideTabs.vue'
+import SlideDashboard from './SlideDashboard.vue'
+import SlideReferences from './SlideReferences.vue'
+import SlideThankYou from './SlideThankYou.vue'
 
 const localeOptions = [
   {
@@ -58,34 +59,35 @@ const presentationContext = createPresentationContext({
 
 providePresentationContext(presentationContext)
 
-const title = computed(() => '设计语言模板')
+const title = computed(() => '设计语言模板库')
 
-// 优化后的幻灯片列表 - 减少重复，增加通用性和功能性
+// 优化后的幻灯片列表 - 按逻辑顺序排列
 const slides = [
-  SlideEnhancedHero, // 增强的 Hero 模板，包含多种变体
-  Slide3Outline, // 大纲模板
-  Slide4Stats, // 统计数据模板
-  Slide5Tabs, // 选项卡模板
-  SlideUniversalCompare, // 通用对比模板（合并了对比和定价）
-  SlideUniversalList, // 通用列表模板（合并了清单和常见模板）
-  Slide8FAQ, // FAQ 模板
-  Slide10Poll, // 投票模板
-  Slide11Timeline, // 时间线模板
-  Slide12Code, // 代码展示模板
-  Slide13Steps, // 步骤流程模板
-  Slide14BeforeAfter, // 前后对比模板
-  Slide15ChapterDivider, // 章节分隔模板
-  Slide16Team, // 团队介绍模板
-  Slide17Quote, // 引用模板
-  Slide18Media, // 媒体展示模板
-  Slide19QAndA, // Q&A 模板
-  Slide20ThankYou, // 感谢页面模板
-  Slide21References, // 参考资料模板
-  Slide23Table, // 表格模板
-  SlideUniversalChart, // 通用图表模板（合并了所有图表类型）
-  SlideDashboard, // 仪表盘模板（新增）
-  SlideQuiz, // 问答测验模板（新增）
-  SlideMultimediaFixed, // 多媒体模板（新增）
+  SlideHero,
+  SlideOutline,
+  SlideChapterDivider,
+  SlideList,
+  SlideCompare,
+  SlideStats,
+  SlideChart,
+  SlideMatrix,
+  SlideTable,
+  SlideCode,
+  SlideTimeline,
+  SlideSteps,
+  SlideBeforeAfter,
+  SlideMedia,
+  SlideMultimedia,
+  SlideQuote,
+  SlideTeam,
+  SlideFAQ,
+  SlideQAndA,
+  SlidePoll,
+  SlideQuiz,
+  SlideTabs,
+  SlideDashboard,
+  SlideReferences,
+  SlideThankYou,
 ]
 </script>
 

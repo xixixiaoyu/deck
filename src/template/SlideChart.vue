@@ -231,48 +231,82 @@ const currentChartDescription = computed(() => {
 </script>
 
 <template>
-  <section class="h-full w-full grid place-items-center p-6">
+  <section
+    class="h-full w-full relative flex items-center justify-center p-8 overflow-hidden"
+  >
+    <!-- 背景装饰 -->
     <div
-      class="w-full max-w-5xl rounded-3xl p-6 bg-white/70 border border-slate-200/30 backdrop-blur-xl shadow-xl"
-    >
-      <div class="mb-6">
-        <h2
-          class="m-0 text-2xl font-extrabold tracking-tight text-slate-800 text-center"
-        >
-          通用图表模板
-        </h2>
-        <p class="mt-2 text-center text-slate-600">
-          支持多种图表类型，点击按钮切换不同图表展示方式。
-        </p>
-      </div>
+      class="absolute inset-0 -z-10 opacity-[0.03] [background-image:linear-gradient(to_right,rgb(var(--text-primary))_1px,transparent_1px),linear-gradient(to_bottom,rgb(var(--text-primary))_1px,transparent_1px)] [background-size:40px_40px]"
+    ></div>
+    <div
+      class="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/4"
+    ></div>
 
-      <!-- 图表类型选择器 -->
-      <div class="flex flex-wrap justify-center gap-2 mb-6">
-        <button
-          v-for="type in chartTypes"
-          :key="type.id"
-          @click="activeChartType = type.id"
-          class="inline-flex items-center gap-2 px-3 py-2 rounded-full text-sm font-medium transition-all"
-          :class="
-            activeChartType === type.id
-              ? 'bg-gradient-to-r from-accent to-accent text-white shadow-lg'
-              : 'bg-white/60 border border-white/40 text-slate-700 hover:bg-white/70'
-          "
+    <div
+      class="w-full max-w-6xl flex flex-col gap-8 rounded-[2.5rem] p-10 bg-white/40 border border-white/20 backdrop-blur-2xl shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)]"
+    >
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class="space-y-2">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-accent/10 text-accent text-xs font-bold tracking-widest uppercase"
+          >
+            Data Visualization
+          </div>
+          <h2 class="text-4xl font-black tracking-tight text-slate-900">
+            数据洞察
+          </h2>
+          <p class="text-slate-500 font-medium max-w-md">
+            {{ currentChartDescription }}
+          </p>
+        </div>
+
+        <!-- 图表类型选择器 -->
+        <div
+          class="flex flex-wrap gap-1.5 p-1.5 rounded-2xl bg-slate-100/50 border border-slate-200/50 shadow-inner"
         >
-          <span>{{ type.icon }}</span>
-          <span>{{ type.name }}</span>
-        </button>
+          <button
+            v-for="type in chartTypes"
+            :key="type.id"
+            @click="activeChartType = type.id"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold transition-all"
+            :class="
+              activeChartType === type.id
+                ? 'bg-white text-slate-900 shadow-md scale-105'
+                : 'text-slate-500 hover:bg-white/50 hover:text-slate-700'
+            "
+          >
+            <span class="text-lg">{{ type.icon }}</span>
+            <span>{{ type.name }}</span>
+          </button>
+        </div>
       </div>
 
       <!-- 图表容器 -->
-      <div class="h-[60vh] w-full">
+      <div
+        class="relative h-[55vh] w-full bg-white/30 rounded-3xl border border-white/40 p-6 group"
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-3xl pointer-events-none"
+        ></div>
         <VChart :option="chartOption" autoresize />
       </div>
 
-      <!-- 图表描述 -->
-      <p class="mt-4 text-center text-slate-600 text-sm">
-        {{ currentChartDescription }}
-      </p>
+      <!-- 底部注脚 -->
+      <div
+        class="flex items-center justify-between text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase"
+      >
+        <span>© 2026 Analysis Report</span>
+        <div class="flex gap-4">
+          <span class="flex items-center gap-1.5"
+            ><span class="w-1.5 h-1.5 rounded-full bg-accent"></span> Real-time
+            Data</span
+          >
+          <span class="flex items-center gap-1.5"
+            ><span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+            Verified Source</span
+          >
+        </div>
+      </div>
     </div>
   </section>
 </template>

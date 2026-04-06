@@ -26,13 +26,13 @@
 
 ### 2. 幻灯片模板库 (Templates)
 
-30+ 种高复用组件，按功能维度解耦：
+精简后的高复用组件库，遵循 PascalCase 命名规范：
 
-- **展示类**: `Hero`, `Spotlight`, `Outline`, `ChapterDivider`.
-- **内容类**: `UniversalList`, `UniversalCompare`, `Table`, `Quote`.
-- **数据类**: `UniversalChart` (Bar, Line, Pie, Radar, Scatter, Donut).
-- **交互类**: `Poll`, `Quiz`, `Checklist`, `FAQ`.
-- **进阶类**: `Dashboard`, `MultimediaFixed`, `CodeHighlight`.
+- **展示类**: `SlideHero`, `SlideOutline`, `SlideChapterDivider`, `SlideThankYou`.
+- **内容类**: `SlideList`, `SlideCompare`, `SlideTable`, `SlideQuote`, `SlideTeam`.
+- **数据类**: `SlideChart` (Bar, Line, Pie, Radar, Scatter, Donut), `SlideStats`, `SlideMatrix`.
+- **交互类**: `SlidePoll`, `SlideQuiz`, `SlideTabs`, `SlideFAQ`, `SlideQAndA`.
+- **进阶类**: `SlideCode`, `SlideTimeline`, `SlideSteps`, `SlideBeforeAfter`, `SlideMedia`, `SlideMultimedia`, `SlideDashboard`.
 
 ### 3. 动态背景系统 (Backgrounds)
 

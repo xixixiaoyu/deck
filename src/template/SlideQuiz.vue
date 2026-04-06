@@ -149,6 +149,11 @@ const reset = () => {
   userVotes.value = [0, 0, 0, 0]
 }
 
+const handleQuizTypeChange = (quizTypeId: string) => {
+  reset()
+  activeQuizType.value = quizTypeId
+}
+
 // 计算投票总数
 const totalVotes = computed(() => userVotes.value.reduce((a, b) => a + b, 0))
 
@@ -225,10 +230,7 @@ const getOptionClass = (option: QuizOption) => {
       <button
         v-for="type in quizTypes"
         :key="type.id"
-        @click="
-          reset()
-          activeQuizType = type.id
-        "
+        @click="handleQuizTypeChange(type.id)"
         class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all"
         :class="
           activeQuizType === type.id
