@@ -41,14 +41,12 @@ const highlights = [
             <HeadingGradient :level="2" size="3xl">
               文心快码（Comate）
             </HeadingGradient>
-            <p class="text-slate-500 text-sm">
-              百度 · SPEC 规范驱动的白盒 AI 编程
-            </p>
+            <p class="text-slate-500 text-sm">百度 · 独立 AI 原生 IDE / 插件</p>
           </div>
         </div>
         <p class="text-slate-600">
           注重规范、安全、工程化的团队/学生/合规项目闭眼入。SPEC
-          规范驱动，质量与可维护性显著提升。
+          规范驱动，行业首个多模态、多智能体协同的独立 AI 原生 IDE。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

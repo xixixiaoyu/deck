@@ -110,13 +110,13 @@ const slides = [
   Slide13CodeBuddy,
   Slide14fAntigravity,
   Slide14cKiro,
+  Slide12Comate,
 
   // 3. 第二类：IDE 扩展/助手
   Category2Divider,
   Slide06Copilot,
   Slide14dAugment,
   Slide14eCodex,
-  Slide12Comate,
 
   // 4. 第三类：Terminal/CLI Agent
   Category3Divider,
