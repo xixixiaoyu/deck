@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'SWE-bench 80.8% 顶级推理，1M 上下文 + Opus 4.6 模型',
+    title: '顶级推理能力',
+    description: 'SWE-bench 80.8% 领跑，1M 上下文 + Opus 4.6 模型',
   },
   {
-    title: '工作流改变',
-    description: '从“人写代码”变成“人只在关键节点干预”，程序员像“项目经理”',
+    title: 'Agent Teams 协作',
+    description: '革命性团队模式：多 Agent 并行、自我协调、直接通信',
   },
   {
-    title: '终端原生 Agent',
-    description: 'Subagents 并行拆解长时任务，自主执行命令与迭代调试',
+    title: 'Subagents 深度执行',
+    description: '隔离 Context 处理长时任务，专家级分工（Test/Review/Explore）',
   },
   {
-    title: '优缺点小结',
-    description: '推理最强；但 CLI 对 GUI 爱好者有成本，Token 消耗易超预期',
+    title: '工作流重构',
+    description: '程序员转型“项目经理”，从亲力亲为到“指挥 Agent 团队”',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $20/月', color: 'emerald' },
-  { label: '选型建议', value: '资深开发者 · 重构之王', color: 'blue' },
-  { label: '重度计划', value: 'Max $100-200/月', color: 'cyan' },
+  { label: '协作模式', value: 'Agent Teams', color: 'emerald' },
+  { label: '选型建议', value: '大型项目 · 重构', color: 'blue' },
+  { label: '上下文', value: '1M Context', color: 'cyan' },
 ]
 </script>
 <template>
@@ -42,12 +42,14 @@ const highlights = [
               Claude Code
             </HeadingGradient>
             <p class="text-slate-500 text-sm">
-              Anthropic · 终端原生 Agentic CLI
+              Anthropic · 从补全助手到 Agent 团队的跨越
             </p>
           </div>
         </div>
         <p class="text-slate-600">
-          资深开发者、大型代码库重构/高风险任务者闭眼入。复杂代码库重构之王，顶级推理能力。
+          基于 Agent Teams
+          协作架构，将程序员从“代码搬运工”解放为“指挥官”。支持多 Agent
+          并行执行，处理百万行代码库的深度重构。
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -147,18 +149,20 @@ const highlights = [
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              核心优势
+              Agent Teams 核心优势
             </h4>
             <p class="text-sm text-slate-600">
-              Opus 4.6模型推理领先，SWE-bench高分
+              队友间直接通信，自我协调任务，并行排查多重假设
             </p>
           </div>
           <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
+            <h4 class="font-semibold text-slate-800 mb-2">协作体验</h4>
             <p class="text-sm text-slate-600">
-              大型复杂项目、需要深度思考的场景
+              Lead 负责统筹，Subagents 负责攻坚，Context 极致隔离
             </p>
-            <p class="text-xs text-slate-500 mt-2">终端重度用户的最爱</p>
+            <p class="text-xs text-slate-500 mt-2">
+              专为复杂任务而生的“AI 研发小组”
+            </p>
           </div>
         </div>
       </div>
