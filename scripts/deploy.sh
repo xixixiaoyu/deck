@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Vue PPT 自动化部署脚本
+# Jiansi Deck (简思演示) 自动化部署脚本
 # 功能：本地构建 -> SSH 同步 -> 远程部署
 # 作者：Senior Engineer Persona
 

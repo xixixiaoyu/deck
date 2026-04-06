@@ -1,6 +1,6 @@
-# Vue PPT - 演示文稿系统
+# Jiansi Deck | 简思演示
 
-一个基于 Vue 3 + TypeScript + Vite 构建的现代化演示文稿系统，支持多种幻灯片模板、动态背景效果和交互式演示。
+一个基于 Vue 3 + TypeScript + Vite 构建的现代化演示文稿引擎。
 
 ## ✨ 特性
 

@@ -1,4 +1,4 @@
-# Vue PPT 演示文稿系统 - 工程上下文 (AGENTS.md)
+# Jiansi Deck (简思演示) - 工程上下文 (AGENTS.md)
 
 ## 项目使命 (Mission)
 
