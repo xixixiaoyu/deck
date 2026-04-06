@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Deck (极简演示) 自动化部署脚本
-# 功能：本地构建 -> SSH 同步 -> 远程部署
+# Deck (极简演示) 自动化本地部署脚本
+# 功能：本地构建 -> 本地分发 -> 权限设置
 # 作者：Senior Engineer Persona
 
 # 颜色定义
@@ -16,7 +16,7 @@ CONFIG_FILE=".env.deploy"
 # 检查配置文件是否存在
 if [ ! -f "$CONFIG_FILE" ]; then
     echo -e "${RED}错误: 找不到配置文件 $CONFIG_FILE${NC}"
-    echo -e "请根据 .env.deploy.example 创建该文件并填写服务器信息。"
+    echo -e "请根据 .env.deploy.example 创建该文件。"
     exit 1
 fi
 
@@ -24,49 +24,54 @@ fi
 source "$CONFIG_FILE"
 
 # 检查必要参数
-if [[ -z "$SERVER_IP" || -z "$SERVER_USER" || -z "$SERVER_PATH" ]]; then
-    echo -e "${RED}错误: $CONFIG_FILE 中缺少必要参数 (SERVER_IP, SERVER_USER, SERVER_PATH)${NC}"
+if [[ -z "$SERVER_PATH" ]]; then
+    echo -e "${RED}错误: $CONFIG_FILE 中缺少必要参数 (SERVER_PATH)${NC}"
     exit 1
 fi
 
 echo -e "${BLUE}>>> 1. 开始本地构建...${NC}"
 
-# 1. 安装依赖 (可选，默认跳过以提高速度)
-# pnpm install
+# 1. 安装依赖 (如果 node_modules 不存在)
+if [ ! -d "node_modules" ]; then
+    echo -e "${BLUE}检测到 node_modules 缺失，正在安装依赖...${NC}"
+    pnpm install
+fi
 
 # 2. 执行构建
 if pnpm run build; then
     echo -e "${GREEN}构建成功!${NC}"
 else
-    echo -e "${RED}构建失败，请检查本地代码。${NC}"
+    echo -e "${RED}构建失败，请检查代码。${NC}"
     exit 1
 fi
 
-echo -e "${BLUE}>>> 2. 准备同步到服务器: $SERVER_IP ...${NC}"
+echo -e "${BLUE}>>> 2. 准备分发到本地目标目录: $SERVER_PATH ...${NC}"
 
-# 3. 使用 rsync 同步 dist 目录
-# -a: 归档模式
-# -v: 显示详情
-# -z: 传输时压缩
-# --delete: 删除服务器上多余的文件 (确保目录完全同步)
-# -e "ssh -o StrictHostKeyChecking=no": 自动接受 SSH 主机密钥
-rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ "${SERVER_USER}@${SERVER_IP}:${SERVER_PATH}"
+# 3. 确保目标目录存在
+if [ ! -d "$SERVER_PATH" ]; then
+    echo -e "目标目录不存在，正在创建: $SERVER_PATH"
+    mkdir -p "$SERVER_PATH"
+fi
+
+# 4. 同步 dist 目录到目标位置 (使用本地 cp 而非 rsync)
+# 注意：这里我们只同步内容，不删除目标目录本身，以免权限丢失
+cp -R dist/* "$SERVER_PATH/"
 
 if [ $? -eq 0 ]; then
-    echo -e "${GREEN}同步成功!${NC}"
+    echo -e "${GREEN}本地分发成功!${NC}"
 else
-    echo -e "${RED}同步失败，请检查 SSH 连接。${NC}"
+    echo -e "${RED}分发失败，请检查目录权限。${NC}"
     exit 1
 fi
 
-# 4. 可选: 同步 Nginx 配置 (默认注释，需手动开启并配置 NGINX_PATH)
-# if [[ -n "$NGINX_PATH" ]]; then
-#     echo -e "${BLUE}>>> 正在同步 Nginx 配置...${NC}"
-#     scp -o StrictHostKeyChecking=no scripts/nginx.conf "${SERVER_USER}@${SERVER_IP}:${NGINX_PATH}"
-#     ssh -o StrictHostKeyChecking=no "${SERVER_USER}@${SERVER_IP}" "sudo nginx -s reload"
-#     echo -e "${GREEN}Nginx 配置已重载!${NC}"
-# fi
+# 5. 可选: 复制 Nginx 配置并重载 (如果提供了 NGINX_PATH 且具有 sudo 权限)
+if [[ -n "$NGINX_PATH" ]]; then
+    echo -e "${BLUE}>>> 正在更新 Nginx 配置...${NC}"
+    sudo cp scripts/nginx.conf "$NGINX_PATH"
+    sudo nginx -s reload
+    echo -e "${GREEN}Nginx 配置已重载!${NC}"
+fi
 
 echo -e "${BLUE}>>> 3. 部署完成!${NC}"
-echo -e "访问地址: http://${SERVER_IP}/deck"
-echo -e "正式地址: http://jiansi.xyz/deck"
+echo -e "项目路径: $SERVER_PATH"
+echo -e "访问地址: http://jiansi.xyz/deck"
