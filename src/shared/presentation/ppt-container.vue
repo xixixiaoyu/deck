@@ -23,8 +23,21 @@
         @click="previousSlide"
         :disabled="currentSlide === 0"
         class="control-btn"
+        title="上一页 (Left / PageUp)"
       >
-        ←
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
       </button>
 
       <div class="slide-info">
@@ -43,15 +56,54 @@
           @blur="commitInlinePageJump"
           :title="`当前页码 / 总页数 (按 Enter 确认跳转)`"
         />
-        <span> / {{ slides.length }}</span>
+        <span class="total-pages"> / {{ slides.length }}</span>
       </div>
 
       <button
         @click="nextSlide"
         :disabled="currentSlide === slides.length - 1"
         class="control-btn"
+        title="下一页 (Right / PageDown / Space)"
       >
-        →
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+
+      <div class="control-divider"></div>
+
+      <button
+        @click="showThumbnails = !showThumbnails"
+        class="control-btn overview-toggle"
+        :class="{ active: showThumbnails }"
+        title="概览模式 (G / T)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
       </button>
     </div>
 
@@ -63,31 +115,76 @@
       ></div>
     </div>
 
-    <!-- 缩略图面板 -->
-    <div class="thumbnails" v-show="showThumbnails">
-      <div class="thumbnails-header">
-        <h3>{{ thumbnailsLabel }}</h3>
-        <button @click="showThumbnails = false">✕</button>
-      </div>
-      <div class="thumbnails-grid">
-        <div
-          v-for="(slide, index) in slides"
-          :key="index"
-          class="thumbnail"
-          :class="{ active: currentSlide === index }"
-          @click="goToSlide(index)"
-        >
-          <div class="thumbnail-number">{{ index + 1 }}</div>
-          <div class="thumbnail-preview">
-            <component
-              :is="slide"
-              :isActive="false"
-              :isPreview="true"
-            ></component>
+    <!-- 概览模式 (Overview Mode) -->
+    <Transition name="fade-scale">
+      <div
+        class="overview-overlay"
+        v-show="showThumbnails"
+        @click.self="showThumbnails = false"
+      >
+        <div class="overview-container">
+          <div class="overview-header">
+            <h2 class="overview-title">
+              <span class="title-gradient">{{ title }}</span>
+              <span class="slide-count"
+                >{{ slides.length }} {{ thumbnailsLabel }}</span
+              >
+            </h2>
+            <button
+              @click="showThumbnails = false"
+              class="close-btn"
+              title="关闭概览 (Esc)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div class="overview-grid custom-scrollbar">
+            <div
+              v-for="(slide, index) in slides"
+              :key="index"
+              class="overview-item"
+              :class="{ active: currentSlide === index }"
+              @click="goToSlide(index)"
+            >
+              <div class="overview-item-inner">
+                <div class="overview-preview-wrapper">
+                  <div class="overview-preview">
+                    <component
+                      :is="slide"
+                      :isActive="false"
+                      :isPreview="true"
+                    ></component>
+                  </div>
+                </div>
+                <div class="overview-info">
+                  <span class="overview-number">{{
+                    String(index + 1).padStart(2, '0')
+                  }}</span>
+                  <div
+                    class="active-indicator"
+                    v-if="currentSlide === index"
+                  ></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Transition>
   </div>
 </template>
 
@@ -212,9 +309,12 @@ const handleKeyDown = (event: KeyboardEvent) => {
       break
     case 'Escape':
       event.preventDefault()
-      showThumbnails.value = !showThumbnails.value
+      showThumbnails.value = false
       break
     case 't':
+    case 'g':
+    case 'G':
+    case 'T':
       event.preventDefault()
       showThumbnails.value = !showThumbnails.value
       break
@@ -419,29 +519,39 @@ watch(currentSlide, (newVal, oldVal) => {
 
 .controls {
   position: fixed;
-  bottom: 24px;
+  bottom: 32px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 12px;
-  background: rgba(255, 255, 255, 0.7);
+  gap: 8px;
+  background: rgba(var(--surface) / 0.7);
   border: 1px solid rgb(var(--border) / 0.4);
-  padding: 8px 16px;
-  border-radius: 20px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 12px rgb(var(--text-primary) / 0.06);
+  padding: 6px 12px;
+  border-radius: 24px;
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 4px 20px -4px rgb(0 0 0 / 0.1),
+    0 2px 8px -2px rgb(0 0 0 / 0.05);
   z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.controls:hover {
+  background: rgba(var(--surface) / 0.85);
+  box-shadow:
+    0 10px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.05);
+  transform: translateX(-50%) translateY(-2px);
 }
 
 .control-btn {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   background: transparent;
   color: rgb(var(--text-muted));
-  font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -452,39 +562,55 @@ watch(currentSlide, (newVal, oldVal) => {
 .control-btn:hover:not(:disabled) {
   background: rgb(var(--accent) / 0.1);
   color: rgb(var(--accent));
-  transform: scale(1.05);
+}
+
+.control-btn.active {
+  background: rgb(var(--accent));
+  color: white;
 }
 
 .control-btn:disabled {
-  opacity: 0.3;
+  opacity: 0.2;
   cursor: not-allowed;
 }
 
+.control-divider {
+  width: 1px;
+  height: 20px;
+  background: rgb(var(--border) / 0.6);
+  margin: 0 4px;
+}
+
 .slide-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: rgb(var(--text-muted));
   font-weight: 500;
-  min-width: 60px;
-  text-align: center;
+  padding: 0 8px;
   font-size: 13px;
-  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.total-pages {
+  opacity: 0.6;
 }
 
 .page-edit {
-  display: inline-block;
-  min-width: 28px;
-  padding: 2px 4px;
+  min-width: 32px;
+  padding: 2px 6px;
   border-radius: 6px;
-  background: rgb(var(--surface-muted));
+  background: rgb(var(--surface-muted) / 0.5);
   color: rgb(var(--text-primary));
   border: 1px solid transparent;
-  transition: border-color 0.2s ease;
-  text-align: center;
-  font-variant-numeric: tabular-nums;
+  transition: all 0.2s ease;
+  font-weight: 600;
 }
 
 .page-edit:focus {
   outline: none;
-  border-color: rgb(var(--accent) / 0.5);
+  background: rgb(var(--surface-muted));
+  border-color: rgb(var(--accent) / 0.3);
 }
 
 .progress-bar {
@@ -492,127 +618,219 @@ watch(currentSlide, (newVal, oldVal) => {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  height: 4px;
+  background: rgb(var(--border) / 0.2);
   z-index: 1000;
 }
 
 .progress {
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
-  transition: width 0.3s ease;
+  background: linear-gradient(90deg, rgb(var(--accent)), #9333ea);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgb(var(--accent) / 0.4);
 }
 
-.thumbnails {
+/* 概览模式样式 */
+.overview-overlay {
   position: fixed;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  width: 300px;
-  max-height: 80vh;
-  background: rgba(0, 0, 0, 0.9);
-  border-radius: 12px;
+  inset: 0;
+  background: rgba(var(--surface) / 0.8);
   backdrop-filter: blur(20px);
   z-index: 2000;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
 
-.thumbnails-header {
+.overview-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.overview-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.thumbnails-header h3 {
-  color: white;
-  margin: 0;
-  font-size: 16px;
+.overview-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-.thumbnails-header button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
+.title-gradient {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--text-primary)),
+    rgb(var(--accent))
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.02em;
+}
+
+.slide-count {
+  font-size: 14px;
+  color: rgb(var(--text-muted));
+  font-weight: 500;
+}
+
+.close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--border) / 0.6);
+  background: rgb(var(--surface));
+  color: rgb(var(--text-primary));
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.thumbnails-header button:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.thumbnails-grid {
-  padding: 16px;
-  max-height: calc(80vh - 60px);
-  overflow-y: auto;
-}
-
-.thumbnail {
-  width: 100%;
-  height: 120px;
-  margin-bottom: 12px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgb(var(--surface-muted));
+  transform: rotate(90deg);
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  overflow-y: auto;
+  padding: 4px;
+  flex: 1;
+}
+
+.overview-item {
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.overview-item-inner {
   position: relative;
-  overflow: hidden;
-}
-
-.thumbnail:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
-}
-
-.thumbnail.active {
-  background: rgba(102, 126, 234, 0.3);
-  border: 2px solid #667eea;
-}
-
-.thumbnail-number {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 4px 8px;
+  background: rgb(var(--surface));
   border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  z-index: 10;
+  border: 1px solid rgb(var(--border) / 0.6);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.03);
 }
 
-.thumbnail-preview {
+.overview-item:hover .overview-item-inner {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgb(var(--accent) / 0.4);
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.05);
+}
+
+.overview-item.active .overview-item-inner {
+  border-color: rgb(var(--accent));
+  border-width: 2px;
+  box-shadow: 0 0 0 4px rgb(var(--accent) / 0.1);
+}
+
+.overview-preview-wrapper {
+  aspect-ratio: 16/9;
   width: 100%;
-  height: 100%;
-  transform: scale(0.2);
+  overflow: hidden;
+  background: rgb(var(--surface-muted) / 0.3);
+}
+
+.overview-preview {
+  width: 100vw;
+  height: 100vh;
+  transform: scale(calc(240 / 1920)); /* 根据网格最小宽度缩放，1920为基准宽度 */
   transform-origin: top left;
   pointer-events: none;
 }
 
+/* 适配不同宽度的缩放 */
+@media (min-width: 1024px) {
+  .overview-preview {
+    transform: scale(calc(280 / 1920));
+  }
+}
+
+.overview-info {
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(var(--surface));
+}
+
+.overview-number {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgb(var(--text-muted));
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.active-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(var(--accent));
+  box-shadow: 0 0 8px rgb(var(--accent) / 0.6);
+}
+
+/* 动画 */
+.fade-scale-enter-active,
+.fade-scale-leave-active {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-scale-enter-from,
+.fade-scale-leave-to {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--text-muted) / 0.4);
+}
+
 @media (max-width: 768px) {
-  .thumbnails {
-    width: calc(100vw - 40px);
-    right: 20px;
+  .overview-overlay {
+    padding: 20px;
+  }
+
+  .overview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .overview-preview {
+    transform: scale(calc(160 / 1920));
   }
 
   .controls {
-    padding: 10px 16px;
-    gap: 15px;
-  }
-
-  .control-btn {
-    width: 40px;
-    height: 40px;
+    bottom: 20px;
+    padding: 8px 12px;
   }
 }
 </style>
