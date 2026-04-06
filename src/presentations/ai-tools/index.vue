@@ -17,13 +17,14 @@ import Slide06Copilot from './slide-06-copilot.vue'
 import Slide07Tabnine from './slide-07-tabnine.vue'
 import Slide08AmazonQ from './slide-08-amazon-q.vue'
 import Slide09ClaudeCode from './slide-09-claude-code.vue'
-import Slide10Trae from './slide-10-trae.vue'
-import Slide11Comate from './slide-11-comate.vue'
-import Slide12CodeBuddy from './slide-12-codebuddy.vue'
-import Slide13Comparison from './slide-13-comparison.vue'
-import Slide14CommonFeatures from './slide-14-common-features.vue'
-import Slide15Recommendations from './slide-15-recommendations.vue'
-import Slide16ThankYou from './slide-16-thank-you.vue'
+import Slide10Qoder from './slide-10-qoder.vue'
+import Slide11Trae from './slide-11-trae.vue'
+import Slide12Comate from './slide-12-comate.vue'
+import Slide13CodeBuddy from './slide-13-codebuddy.vue'
+import Slide14Comparison from './slide-14-comparison.vue'
+import Slide15CommonFeatures from './slide-15-common-features.vue'
+import Slide16Recommendations from './slide-16-recommendations.vue'
+import Slide17ThankYou from './slide-17-thank-you.vue'
 
 const localeOptions = [
   {
@@ -57,13 +58,14 @@ const slides = [
   Slide07Tabnine,
   Slide08AmazonQ,
   Slide09ClaudeCode,
-  Slide10Trae,
-  Slide11Comate,
-  Slide12CodeBuddy,
-  Slide13Comparison,
-  Slide14CommonFeatures,
-  Slide15Recommendations,
-  Slide16ThankYou,
+  Slide10Qoder,
+  Slide11Trae,
+  Slide12Comate,
+  Slide13CodeBuddy,
+  Slide14Comparison,
+  Slide15CommonFeatures,
+  Slide16Recommendations,
+  Slide17ThankYou,
 ]
 </script>
 
