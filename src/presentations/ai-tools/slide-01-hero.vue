@@ -58,9 +58,6 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
           >
             2026 年 AI 编码工具深度调研报告
           </HeadingGradient>
-          <p class="mt-5 text-lg md:text-2xl text-slate-700 max-w-4xl mx-auto">
-            全景扫描 · 细节下钻 · 风险核查 · 权威校验
-          </p>
           <div class="mt-8 flex flex-wrap justify-center gap-3">
             <span
               class="inline-flex items-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"
