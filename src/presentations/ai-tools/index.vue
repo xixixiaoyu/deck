@@ -10,8 +10,7 @@ import {
 import SlideChapterDivider from '@/template/SlideChapterDivider.vue'
 
 import Slide01Hero from './slide-01-hero.vue'
-import Slide01aFirstPrinciples from './slide-01a-first-principles.vue'
-import Slide02Overview from './slide-02-overview.vue'
+import Slide02Evolution from './slide-02-evolution.vue'
 import Slide03Categories from './slide-03-categories.vue'
 import Slide04Cursor from './slide-04-cursor.vue'
 import Slide05Windsurf from './slide-05-windsurf.vue'
@@ -113,8 +112,7 @@ providePresentationContext(presentationContext)
 const slides = [
   // 1. 引言与框架
   Slide01Hero,
-  Slide01aFirstPrinciples,
-  Slide02Overview,
+  Slide02Evolution,
   Slide03Categories,
 
   // 2. 第一类：AI 原生 IDE / 工作台
