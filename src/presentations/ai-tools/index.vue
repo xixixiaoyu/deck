@@ -82,7 +82,7 @@ const CodingPlanDivider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Infrastructure',
       title: 'Coding Plan 全景',
-      description: '2026 年 AI 编程场景的“基建级”订阅模式与选型建议。',
+      description: '开发者在 AI 编码时代的“成本解放”：从算力焦虑到创造自由。',
     })
   },
 })

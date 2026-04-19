@@ -38,20 +38,21 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-4">选型建议</h3>
-          <ul class="space-y-3 text-sm text-slate-600 flex-grow">
-            <li>
-              • <strong class="text-blue-700">轻度试水:</strong> MiniMax Starter
-              (¥29) 或阿里/腾讯秒杀 Lite (¥7.9)。
+          <h3 class="text-xl font-bold text-slate-900 mb-4">
+            第一性原理：自问
+          </h3>
+          <ul class="space-y-4 text-sm text-slate-600 flex-grow">
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">01.</span>
+              <span>预算几何？(¥29 入门 vs ¥199 生产力)</span>
             </li>
-            <li>
-              • <strong class="text-blue-700">OpenClaw 重度:</strong> 阿里云百炼
-              Pro 或智谱 GLM Pro。
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">02.</span>
+              <span>主要场景是轻量脚本还是大型全栈/Agent？</span>
             </li>
-            <li>
-              •
-              <strong class="text-blue-700">Claude Code 深度:</strong> 火山方舟
-              (Anthropic 协议原生支持)。
+            <li class="flex items-start gap-2">
+              <span class="font-bold text-blue-600">03.</span>
+              <span>最看重模型深度、工具广度还是额度自由？</span>
             </li>
           </ul>
         </div>
@@ -75,24 +76,29 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-4">避坑指南</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">场景化推荐</h3>
           <ul class="space-y-3 text-sm text-slate-600 flex-grow">
             <li>
-              • <strong class="text-amber-700">额度虚高:</strong> 复杂 Agent
-              项目可能只够几百次真实交互。
+              • <strong class="text-slate-800">轻度/预算敏感:</strong> MiniMax
+              Starter 或无问芯穹。
             </li>
             <li>
-              • <strong class="text-amber-700">配置关键:</strong> 必须使用专用
-              API Key + Base URL，否则按量计费。
+              •
+              <strong class="text-slate-800">模型多样性:</strong>
+              火山方舟或阿里云百炼。
             </li>
             <li>
-              • <strong class="text-amber-700">高峰限流:</strong> 14–18
-              点消耗翻倍，建议错峰或多平台备选。
+              • <strong class="text-slate-800">复杂推理/Agent:</strong> 智谱 GLM
+              系列 (SOTA 性能)。
+            </li>
+            <li>
+              • <strong class="text-slate-800">多模态/视觉:</strong> Kimi
+              Allegretto。
             </li>
           </ul>
         </div>
 
-        <!-- 为什么爆发 -->
+        <!-- 总结陈词 -->
         <div
           class="p-6 rounded-2xl bg-slate-900 text-slate-100 shadow-xl flex flex-col h-full"
         >
@@ -111,13 +117,14 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
               />
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-4">为什么是爆发期？</h3>
+          <h3 class="text-xl font-bold text-white mb-4">编码即创造</h3>
           <p class="text-sm text-slate-400 leading-relaxed flex-grow">
-            2026 年 AI Agent (OpenClaw 类) 成为标配。 单次任务 Token 消耗达传统
-            Chat 的 <span class="text-blue-400 font-bold">100–1000 倍</span>。
-            Coding Plan 把“高性价比 + 可预测成本”做到极致，是
-            <span class="italic">"vibe coding + agentic workflow"</span>
-            落地的重要基建。
+            Coding Plan 只是工具，而非终点。 它通过
+            <span class="text-blue-400 font-bold">移除算力焦虑</span>，
+            让开发者把注意力放回问题本身。 <br /><br />
+            在 AI
+            时代，真正的竞争力不再是拥有最贵的大模型，而是找到最匹配自己节奏的
+            <span class="italic text-slate-200">“使用权”</span>。
           </p>
         </div>
       </div>
