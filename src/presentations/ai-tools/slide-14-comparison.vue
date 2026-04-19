@@ -64,12 +64,12 @@ const tierData: Tier[] = [
     ],
   },
   {
-    id: '拉',
-    label: '有点拉胯',
-    subLabel: '落后时代 / 效率瓶颈',
+    id: '待',
+    label: '待升级',
+    subLabel: '传统方案 / 建议迭代',
     color: 'bg-gradient-to-br from-slate-500 to-slate-700 shadow-slate-200/50',
     tools: [
-      { name: '传统补全插件', desc: '还停留在单行补全时代，建议尽快升级' },
+      { name: '传统补全插件', desc: '基础单行补全，建议升级至 Agent 方案' },
     ],
   },
 ]
