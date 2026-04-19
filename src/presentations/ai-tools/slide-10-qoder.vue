@@ -24,12 +24,7 @@ const features = [
 const highlights = [
   { label: '付费模式', value: '$10/月起', color: 'blue' },
   { label: '选型建议', value: '企业级大型项目', color: 'cyan' },
-  { label: '知识图谱', value: '10万文件深度理解', color: 'emerald' },
-]
-const whyImportant = [
-  '自然语言需求自动规划生成完整项目，适合原型构建与企业级大型项目。',
-  'Repo Wiki 项目知识图，深度理解复杂业务逻辑。',
-  '国产性价比极高，Windows 终端准确率领先，适配优秀。',
+  { label: '知识图谱', value: '10万文件深度', color: 'emerald' },
 ]
 </script>
 <template>
@@ -44,87 +39,122 @@ const whyImportant = [
           </div>
           <div>
             <HeadingGradient :level="2" size="3xl"> Qoder </HeadingGradient>
-            <p class="text-gray-600 dark:text-gray-300 text-lg">
-              阿里 · Quest 模式 Agentic 平台
-            </p>
+            <p class="text-slate-500 text-sm">阿里 · Quest 模式 Agentic 平台</p>
           </div>
         </div>
-        <p class="text-slate-600 mb-6">
+        <p class="text-slate-600">
           企业级大型项目、原型构建、遗留系统改造开发者闭眼入。专为大型工程设计的项目知识图谱。
         </p>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div>
-            <h3
-              class="text-xl font-semibold mb-4 text-gray-900 dark:text-white"
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3
+            class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
+          >
+            <svg
+              class="w-5 h-5 text-orange-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              核心特色
-            </h3>
-            <ul class="space-y-3">
-              <li
-                v-for="(feature, index) in features"
-                :key="index"
-                class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800"
-              >
-                <div class="font-medium text-gray-900 dark:text-white">
-                  {{ feature.title }}
-                </div>
-                <div class="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                  {{ feature.description }}
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3
-              class="text-xl font-semibold mb-4 text-gray-900 dark:text-white"
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            核心功能
+          </h3>
+          <div class="space-y-3">
+            <div
+              v-for="(feature, index) in features"
+              :key="index"
+              class="p-4 rounded-xl bg-white/60 border border-slate-200 hover:shadow-md transition-shadow"
             >
-              关键指标
-            </h3>
-            <div class="grid grid-cols-3 gap-4 mb-6">
-              <div
-                v-for="(highlight, index) in highlights"
-                :key="index"
-                class="text-center p-3 rounded-lg"
-                :class="{
-                  'bg-blue-50 dark:bg-blue-900/20': highlight.color === 'blue',
-                  'bg-cyan-50 dark:bg-cyan-900/20': highlight.color === 'cyan',
-                  'bg-emerald-50 dark:bg-emerald-900/20':
-                    highlight.color === 'emerald',
-                }"
-              >
-                <div class="text-sm text-gray-600 dark:text-gray-300">
-                  {{ highlight.label }}
-                </div>
-                <div
-                  class="font-bold text-lg"
-                  :class="{
-                    'text-blue-600 dark:text-blue-400':
-                      highlight.color === 'blue',
-                    'text-cyan-600 dark:text-cyan-400':
-                      highlight.color === 'cyan',
-                    'text-emerald-600 dark:text-emerald-400':
-                      highlight.color === 'emerald',
-                  }"
-                >
-                  {{ highlight.value }}
-                </div>
-              </div>
+              <h4 class="font-semibold text-slate-800 mb-1">
+                {{ feature.title }}
+              </h4>
+              <p class="text-sm text-slate-600">{{ feature.description }}</p>
             </div>
-            <h3
-              class="text-xl font-semibold mb-4 text-gray-900 dark:text-white"
+          </div>
+        </div>
+        <div>
+          <h3
+            class="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2"
+          >
+            <svg
+              class="w-5 h-5 text-amber-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              为什么现在值得关注
-            </h3>
-            <ul class="space-y-2">
-              <li
-                v-for="(item, index) in whyImportant"
-                :key="index"
-                class="flex items-start gap-2 text-gray-700 dark:text-gray-300"
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              />
+            </svg>
+            关键指标
+          </h3>
+          <div class="grid grid-cols-3 gap-3 mb-6">
+            <div
+              v-for="(item, index) in highlights"
+              :key="index"
+              class="text-center p-4 rounded-xl border"
+              :class="[
+                item.color === 'blue' ? 'bg-blue-50 border-blue-200' : '',
+                item.color === 'cyan' ? 'bg-cyan-50 border-cyan-200' : '',
+                item.color === 'emerald'
+                  ? 'bg-emerald-50 border-emerald-200'
+                  : '',
+              ]"
+            >
+              <div
+                class="text-xl font-bold"
+                :class="[
+                  item.color === 'blue' ? 'text-blue-600' : '',
+                  item.color === 'cyan' ? 'text-cyan-600' : '',
+                  item.color === 'emerald' ? 'text-emerald-600' : '',
+                ]"
               >
-                <span class="text-emerald-500 mt-1">•</span>
-                <span>{{ item }}</span>
-              </li>
-            </ul>
+                {{ item.value }}
+              </div>
+              <div class="text-xs text-slate-600 mt-1">{{ item.label }}</div>
+            </div>
+          </div>
+          <div
+            class="p-4 rounded-xl bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200"
+          >
+            <h4
+              class="font-semibold text-slate-800 mb-2 flex items-center gap-2"
+            >
+              <svg
+                class="w-4 h-4 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+              核心优势
+            </h4>
+            <p class="text-sm text-slate-600">
+              Repo Wiki 项目知识图，深度理解复杂业务
+            </p>
+          </div>
+          <div class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-semibold text-slate-800 mb-2">适用场景</h4>
+            <p class="text-sm text-slate-600">
+              原型构建、大型工程、Windows 终端开发
+            </p>
+            <p class="text-xs text-slate-500 mt-2">国产性价比首选</p>
           </div>
         </div>
       </div>
