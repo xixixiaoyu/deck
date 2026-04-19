@@ -54,7 +54,7 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             :level="1"
             size="7xl"
             palette="sky-cyan-emerald"
-            class="leading-tight mb-6"
+            class="leading-normal mb-6"
           >
             2026 AI 编程工具：<br />从补全到 Agent 的范式转移
           </HeadingGradient>

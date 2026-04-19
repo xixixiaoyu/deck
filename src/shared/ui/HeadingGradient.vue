@@ -37,7 +37,7 @@ const paletteClass = computed(() => {
   <component
     :is="tag"
     :class="[
-      'font-black tracking-tight text-transparent bg-clip-text leading-tight',
+      'inline-block font-black tracking-tight text-transparent bg-clip-text leading-tight pb-1',
       sizeClass,
       paletteClass,
       props.class,
