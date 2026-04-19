@@ -14,24 +14,24 @@ interface TimelineStage {
 const timeline = ref<TimelineStage[]>([
   {
     year: '2020-2022',
-    title: '代码补全时代',
+    title: '代码补全时代 (Assistant)',
     description: '基于上下文的智能补全，提升输入效率',
     color: 'blue',
     features: ['行内提示', '函数补全', '语法感知'],
   },
   {
     year: '2023-2024',
-    title: '智能助手时代',
+    title: '智能助手时代 (Copilot)',
     description: 'Chat 交互、代码生成、多文件理解',
     color: 'cyan',
     features: ['自然语言对话', '代码生成', '项目级上下文'],
   },
   {
     year: '2025-2026',
-    title: 'Agentic 时代',
-    description: '自主规划、跨文件重构、端到端交付',
+    title: 'Agentic 时代 (Partner)',
+    description: '理解全代码库、自主规划、运行终端命令并迭代优化',
     color: 'emerald',
-    features: ['Agent 自主多文件编辑', '测试闭环', '全流程自动化'],
+    features: ['自主规划', '多文件重构', '终端执行与迭代'],
   },
 ])
 const colorMap: Record<string, string> = {

@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'Quest 模式 Agentic 平台，10 万文件知识图 + 多专家团并行',
+    title: 'Quest 模式 Agentic 平台',
+    description: '内置 Quest 模式与 Repo Wiki，支持 10 万文件级项目解析。',
   },
   {
-    title: '工作流改变',
-    description: '输入一句需求，AI 自己调研、拆任务、写代码、测试',
+    title: '全栈开发与文档',
+    description: '在文档生成与全栈开发上表现出色，适合构建复杂的业务原型。',
   },
   {
-    title: 'Quest 模式委托',
-    description: '程序员从“执行者”变成“需求定义者”，专攻大型工程',
+    title: '浏览器 Agent',
+    description: '集成浏览器 Agent 能力，能够进行 Web 调研并辅助编码决策。',
   },
   {
-    title: '优缺点小结',
-    description: '国产性价比高，Windows 终端准确率领先；国际模型切换稍弱',
+    title: '权衡与局限',
+    description: '当前仍处公测免费期，未来模型透明度与定价细节仍有待明晰。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '$10/月起', color: 'blue' },
-  { label: '选型建议', value: '企业级大型项目', color: 'cyan' },
-  { label: '知识图谱', value: '10万文件深度', color: 'emerald' },
+  { label: '付费模式', value: '公测免费 / 预估 $20+', color: 'blue' },
+  { label: '选型建议', value: '中国开发者生态', color: 'cyan' },
+  { label: '项目规模', value: '10万文件级解析', color: 'emerald' },
 ]
 </script>
 <template>

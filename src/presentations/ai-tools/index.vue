@@ -10,6 +10,7 @@ import {
 import SlideChapterDivider from '@/template/SlideChapterDivider.vue'
 
 import Slide01Hero from './slide-01-hero.vue'
+import Slide01aFirstPrinciples from './slide-01a-first-principles.vue'
 import Slide02Overview from './slide-02-overview.vue'
 import Slide03Categories from './slide-03-categories.vue'
 import Slide04Cursor from './slide-04-cursor.vue'
@@ -42,7 +43,7 @@ const Category1Divider = defineComponent({
       chapter: 'Category 01',
       title: 'AI 原生 IDE / 工作台',
       description:
-        '大多基于 VS Code 生态深度重构（Fork），将 AI 注入编辑器底层 API，兼顾生态兼容性与原生 Agent 体验。',
+        '重构编辑器内核以实现深度代码库感知，追求“零摩擦”的原生 Agent 体验。',
     })
   },
 })
@@ -52,7 +53,7 @@ const Category2Divider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Category 02',
       title: 'IDE 扩展/助手',
-      description: '无缝嵌入现有 VS Code/JetBrains 工作流。',
+      description: '保留现有习惯，以最小侵入性强化环境，追求最大兼容性。',
     })
   },
 })
@@ -62,7 +63,7 @@ const Category3Divider = defineComponent({
     return h(SlideChapterDivider, {
       chapter: 'Category 03',
       title: 'Terminal/CLI Agent',
-      description: '终端原生推理、自主执行命令、极致性能。',
+      description: '拥抱 Unix 哲学，追求极致推理性能与命令行级自主执行。',
     })
   },
 })
@@ -112,6 +113,7 @@ providePresentationContext(presentationContext)
 const slides = [
   // 1. 引言与框架
   Slide01Hero,
+  Slide01aFirstPrinciples,
   Slide02Overview,
   Slide03Categories,
 

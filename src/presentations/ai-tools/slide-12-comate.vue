@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '先强制生成规范文档 → Tasks → Code，极大降低幻觉与返工',
+    title: '多模态协作编码',
+    description: '支持图像、语音等多种输入形态，实现多智能体协同办公。',
   },
   {
-    title: '工作流改变',
-    description: '“代码审查前置”，先确认规格再执行，提升质量与可维护性',
+    title: '高代码生成率',
+    description: '2025 年内部数据显示，已在百度内部实现 43% 的代码生成率。',
   },
   {
-    title: 'SPEC 规范驱动',
-    description: '白盒化开发过程，适合注重工程标准与合规的项目',
+    title: '深度中文优化',
+    description: '针对中文语义与中国开发者习惯深度优化，符合国内安全合规。',
   },
   {
-    title: '优缺点小结',
-    description: '幻觉少、可追溯性强；但生成速度稍慢于纯速度派工具',
+    title: '权衡与局限',
+    description: '目前定价细节尚不完全透明，国际模型生态集成仍在追赶中。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '个人核心免费', color: 'emerald' },
-  { label: '选型建议', value: '注重规范/安全', color: 'blue' },
-  { label: '适用场景', value: '企业/合规项目', color: 'cyan' },
+  { label: '代码生成率', value: '内部实测 43%', color: 'emerald' },
+  { label: '选型建议', value: '中文场景 · 安全合规', color: 'blue' },
+  { label: '特色', value: '多模态 (语音/图)', color: 'cyan' },
 ]
 </script>
 <template>

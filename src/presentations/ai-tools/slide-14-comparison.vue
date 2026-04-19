@@ -22,54 +22,53 @@ const tierData: Tier[] = [
   {
     id: '夯',
     label: '夯中之夯',
-    subLabel: '深度工程化 / 极致硬核',
+    subLabel: '极致 Agent / 深度架构理解',
     color: 'bg-gradient-to-br from-red-600 to-red-800 shadow-red-200/50',
     tools: [
-      { name: 'Claude Code', desc: '终端最强推理 Agent，Anthropic 原生加持' },
-      { name: 'Augment', desc: '企业级性能怪兽，全链路上下文极速索引' },
+      { name: 'Claude Code', desc: '终端最强推理大脑，SWE-Bench 80.9% 领跑者' },
+      { name: 'Cursor', desc: 'AI 原生标杆，Composer 跨文件编辑 + Agent 模式' },
+      { name: 'Windsurf', desc: 'Cascade Agent “提前10步思考”，心流体验极佳' },
     ],
   },
   {
     id: '顶级',
     label: '确实顶级',
-    subLabel: '第一梯队 / 差异化神作',
+    subLabel: '高性能索引 / 专业领域神作',
     color:
       'bg-gradient-to-br from-orange-500 to-orange-700 shadow-orange-200/50',
     tools: [
-      { name: 'Codex', desc: 'OpenAI 编程模型鼻祖，虽然低调但底蕴深厚' },
-      { name: 'Qoder', desc: '代码知识图谱 + 深度工程化，重构与理解之王' },
+      { name: 'Augment', desc: '40万+文件索引，大型代码库重构的性能怪兽' },
+      { name: 'Qoder', desc: 'Quest 模式 + Repo Wiki，擅长 10万级文件解析' },
+      { name: 'Opencode', desc: '极客首选，支持 75+ 模型，完全自控与隐私' },
     ],
   },
   {
     id: '人上人',
-    label: '人上人选',
-    subLabel: '进阶之选 / 主流神作',
+    label: '主流之选',
+    subLabel: '生态无缝 / 零成本起步',
     color: 'bg-gradient-to-br from-amber-400 to-amber-600 shadow-amber-200/50',
     tools: [
-      { name: 'Cursor', desc: '目前公认的主流 T0，Composer 2.0 体验极佳' },
-      { name: 'Windsurf', desc: 'Cascade 深度 Agent，心流预判与编排极强' },
+      { name: 'Trae', desc: '字节出品，“完全免费”的原生 IDE 颠覆者' },
+      {
+        name: 'GitHub Copilot',
+        desc: '生态王者，Workspace 自动化 (Issue to PR)',
+      },
+      { name: 'Kiro', desc: 'Spec-Driven 规范驱动，AWS 生态深度集成' },
     ],
   },
   {
     id: 'NPC',
     label: '众生相',
-    subLabel: '常规插件 / 标准补全',
+    subLabel: '常规增强 / 垂直场景',
     color:
       'bg-gradient-to-br from-emerald-500 to-emerald-700 shadow-emerald-200/50',
     tools: [
-      { name: 'Trae', desc: '设计稿直出 + 深度中文优化，字节出品稳如 NPC' },
-      { name: 'Comate', desc: '百度出品，稳健的补全与合规性落地选择' },
-      { name: 'CodeBuddy', desc: '中规中矩的编程助手，适合基础场景辅助' },
-      { name: 'Kiro', desc: '专注极致规范与代码审计，特定场景可用' },
-    ],
-  },
-  {
-    id: '拉',
-    label: '有点拉胯',
-    subLabel: '落后时代 / 效率瓶颈',
-    color: 'bg-gradient-to-br from-slate-500 to-slate-700 shadow-slate-200/50',
-    tools: [
-      { name: '传统补全插件', desc: '还停留在单行补全时代，建议尽快升级' },
+      { name: 'Comate', desc: '百度出品，43% 代码生成率，多模态交互领先' },
+      { name: 'CodeBuddy', desc: '腾讯云一体化，设计转代码 + 沙箱执行' },
+      {
+        name: 'Antigravity',
+        desc: 'Google 系 Agent-First 平台，双视图 Mission Control',
+      },
     ],
   },
 ]

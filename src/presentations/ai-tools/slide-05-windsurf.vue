@@ -5,26 +5,29 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'Cascade Agent 能提前 10 步思考、自动修复与部署',
+    title: 'Cascade Agent',
+    description:
+      '主动“思考 10 步 ahead”，运行终端命令、搜索网络并多文件顺序修改。',
   },
   {
-    title: '工作流改变',
-    description: '从“打断式补全”变成“心流式共创”，原型速度升 5-10 倍',
+    title: 'Flows 结构化序列',
+    description: '支持开发过程的暂停与重放，实现高度可控的自动化重构。',
   },
   {
-    title: 'Flow + Cascade',
-    description: 'AI 像“贴身搭档”提前预览修改，主动预测式开发',
+    title: '主动陪伴模式',
+    description:
+      '强调 AI 作为主动伙伴而非被动插件，在 2026 年初 Agent 流畅度榜首。',
   },
   {
-    title: '优缺点小结',
-    description: '性价比之王；但调试支持稍弱，收购后路线图需关注',
+    title: '权衡与局限',
+    description:
+      '配额制度（从信用制转向周/日限额）曾引发争议，需关注其稳定性。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $15-20/月', color: 'emerald' },
-  { label: '选型建议', value: '预算敏感 · 追求心流', color: 'cyan' },
-  { label: '免费额度', value: '慷慨额度 + 无限 Tab', color: 'blue' },
+  { label: 'Agent 排名', value: '流畅度 Top 1', color: 'emerald' },
+  { label: '选型建议', value: '预算敏感 · 复杂重构', color: 'cyan' },
+  { label: '付费模式', value: 'Free / Pro $15-20', color: 'blue' },
 ]
 </script>
 <template>

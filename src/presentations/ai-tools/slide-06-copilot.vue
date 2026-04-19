@@ -5,26 +5,30 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'GitHub 原生生态 + PR 自动审查、多模型可选，协作零摩擦',
+    title: '生态王者',
+    description:
+      '覆盖 10+ IDE（VS Code, JetBrains, Neovim 等），支持多模型可选。',
   },
   {
-    title: '工作流改变',
-    description: '补全 + Chat + Agent 无缝嵌入，AI 成为“隐形搭档”',
+    title: 'Workspace 自动化',
+    description:
+      '2026 企业版已深度集成 Workspace，实现从 Issue 到 PR 的全自动流程。',
   },
   {
-    title: '优缺点小结',
-    description: '价格最低、生态最稳；但 Agent 能力略逊于纯 Agent 工具',
+    title: '企业级合规',
+    description:
+      '最强企业合规性（SOC 2），适合对代码隐私与法律合规有极高要求的组织。',
   },
   {
-    title: '选型建议',
-    description: 'GitHub 重度用户、团队协作开发者闭眼入',
+    title: '权衡与局限',
+    description:
+      '代码库深度感知略逊于 AI 原生 IDE，适合标准化团队而非极致追求 Agent。',
   },
 ]
 const highlights = [
   { label: '付费模式', value: 'Pro $10/月', color: 'cyan' },
-  { label: '性价比', value: '市场最高性价比', color: 'blue' },
-  { label: '生态', value: 'GitHub 无缝集成', color: 'emerald' },
+  { label: '合规性', value: 'SOC 2 企业首选', color: 'blue' },
+  { label: '集成度', value: 'Issue to PR 闭环', color: 'emerald' },
 ]
 </script>
 <template>

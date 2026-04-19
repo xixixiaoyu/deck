@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '顶级推理能力',
-    description: 'SWE-bench 80.8% 领跑，1M 上下文 + Opus 4.6 模型',
+    title: '最强推理大脑',
+    description: 'SWE-Bench 得分领跑（80.9%），1M 上下文，适合大型架构重构。',
   },
   {
-    title: 'Agent Teams 协作',
-    description: '革命性团队模式：多 Agent 并行、自我协调、直接通信',
+    title: '终端原生执行',
+    description: '全代码库理解、多文件重构与 git 自动提交，极致性能与速度。',
   },
   {
-    title: 'Subagents 深度执行',
-    description: '隔离 Context 处理长时任务，专家级分工（Test/Review/Explore）',
+    title: '资深工程师思维',
+    description: '让 AI 像资深工程师一样自主思考与行动，无视觉反馈干扰。',
   },
   {
-    title: '工作流重构',
-    description: '程序员转型“项目经理”，从亲力亲为到“指挥 Agent 团队”',
+    title: '权衡与局限',
+    description: '学习曲线较陡，无免费层，Pro $20/月起（Max $100-200/月）。',
   },
 ]
 const highlights = [
-  { label: '协作模式', value: 'Agent Teams', color: 'emerald' },
-  { label: '选型建议', value: '大型项目 · 重构', color: 'blue' },
-  { label: '上下文', value: '1M Context', color: 'cyan' },
+  { label: '基准测试', value: 'SWE-Bench 80.9%', color: 'emerald' },
+  { label: '上下文', value: '1,000,000 Tokens', color: 'blue' },
+  { label: '选型建议', value: '终端原住民 · 重构', color: 'cyan' },
 ]
 </script>
 <template>

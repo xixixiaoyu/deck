@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '完全开源、可自托管、Plan & Build 双模式，零厂商锁定',
+    title: '开源与灵活性',
+    description: '支持 75+ 模型提供商，可完全本地运行，实现极致隐私保护。',
   },
   {
-    title: '工作流改变',
-    description: '终端内自主 Plan → 执行，自定义工具链，像“私人 AI 工程师”',
+    title: '三栖工具形态',
+    description: '提供 TUI + 桌面 App + IDE 扩展，适应不同场景的开发需求。',
   },
   {
-    title: '75+ 模型支持',
-    description: '支持主流 API + 本地运行（如 Ollama），极客首选',
+    title: '多会话管理',
+    description: '支持多会话并行，完全免费（BYOK）或极低成本的订阅计划。',
   },
   {
-    title: '优缺点小结',
-    description: '零成本灵活、隐私至上；但需自行管理 API Key 与环境',
+    title: '权衡与局限',
+    description: '在预算敏感场景无敌，但工具本身的优化深度略逊于 Claude Code。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '工具完全免费', color: 'emerald' },
-  { label: '选型建议', value: '成本敏感 · 极客', color: 'blue' },
-  { label: '部署', value: '支持本地运行', color: 'orange' },
+  { label: '支持模型', value: '75+ Providers', color: 'emerald' },
+  { label: '付费模式', value: '完全免费 (BYOK)', color: 'blue' },
+  { label: '形态', value: 'TUI / App / IDE', color: 'orange' },
 ]
 </script>
 <template>

@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '多模态 + 定时任务 + 批量处理，ChatGPT 生态无缝',
-  },
-  {
-    title: '工作流改变',
-    description: 'AI 可自主运行长期/重复任务，程序员像“指挥官”下达战略指令',
+    title: '跨平台 Agent',
+    description: '已演变为跨平台工具（桌面 App、CLI、扩展），支持并行 Agent。',
   },
   {
     title: '云端沙盒执行',
-    description: 'OpenAI CLI/桌面 Agent，隔离环境中读写文件与跑测试',
+    description: '支持在隔离的沙盒环境中读写文件、运行测试并迭代修复。',
   },
   {
-    title: '优缺点小结',
-    description: '生态最成熟；但依赖 OpenAI 模型，定价随之波动',
+    title: '长任务自动化',
+    description: '在异步长任务处理中表现领先，适合需要长时间推理的复杂工程。',
+  },
+  {
+    title: '权衡与局限',
+    description: '图形界面体验不如原生 IDE 完整，包含在 ChatGPT Plus 订阅中。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '$20/月起', color: 'emerald' },
-  { label: '选型建议', value: 'OpenAI 生态用户', color: 'teal' },
-  { label: '集成', value: 'ChatGPT Plus 内含', color: 'green' },
+  { label: '执行环境', value: '云端沙盒 / CLI', color: 'emerald' },
+  { label: '核心优势', value: '异步长任务处理', color: 'teal' },
+  { label: '订阅模式', value: 'Plus $20 / Pro $200', color: 'green' },
 ]
 </script>
 <template>

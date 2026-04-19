@@ -54,10 +54,15 @@ defineProps<{ isActive?: boolean; isPreview?: boolean }>()
             :level="1"
             size="7xl"
             palette="sky-cyan-emerald"
-            class="leading-tight"
+            class="leading-tight mb-6"
           >
-            2026 年 AI 编码工具深度调研报告
+            2026 AI 编程工具：<br />从补全到 Agent 的范式转移
           </HeadingGradient>
+          <p
+            class="text-2xl text-slate-500 font-light tracking-widest max-w-4xl mx-auto mb-12 backdrop-blur-sm bg-white/10 py-4 rounded-2xl border border-white/20 shadow-xl shadow-blue-500/5"
+          >
+            重新定义开发者与代码对话的本质
+          </p>
           <div class="mt-8 flex flex-wrap justify-center gap-3">
             <span
               class="inline-flex items-center rounded-full bg-blue-50 px-4 py-1.5 text-sm font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10"

@@ -3,52 +3,59 @@ import Section from '@/shared/ui/Section.vue'
 import Card from '@/shared/ui/Card.vue'
 import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
-const recommendations = [
+const questions = [
   {
-    title: '预算有限',
-    description: '优先 Trae / antigravity / Opencode / Windsurf',
+    question: '你更依赖视觉反馈还是命令行速度？',
+    answer: '视觉派选 Cursor/Windsurf；终端派选 Claude Code/Opencode。',
+    icon: '👁️',
+  },
+  {
+    question: '代码库规模与复杂度如何？',
+    answer: '超大型项目选 Augment/Qoder；中小型选 Trae/Copilot。',
+    icon: '📊',
+  },
+  {
+    question: '预算与企业合规是否是硬约束？',
+    answer: '高合规选 Copilot/CodeBuddy；零预算选 Trae/Opencode。',
+    icon: '⚖️',
+  },
+]
+
+const strategies = [
+  {
+    title: '极致生产力 (混合策略)',
+    description: 'Cursor/Windsurf (日常) + Claude Code (重构) + Copilot (兼容)',
+    icon: '🚀',
+    color: 'rose',
+  },
+  {
+    title: '零成本全能型',
+    description: 'Trae (IDE) + Opencode (CLI) + Kiro (Spec)',
     icon: '💰',
     color: 'emerald',
   },
   {
-    title: '追求规范/合规',
-    description: 'Comate / Kiro / Augment',
-    icon: '📏',
-    color: 'blue',
-  },
-  {
-    title: '大型项目/企业',
-    description: 'Qoder / Codebuddy / Augment',
+    title: '企业标准化',
+    description: 'GitHub Copilot + Augment + CodeBuddy',
     icon: '🏢',
-    color: 'cyan',
-  },
-  {
-    title: '生态绑定',
-    description: 'Copilot / Codebuddy / Codex',
-    icon: '�',
-    color: 'amber',
-  },
-  {
-    title: '极致体验',
-    description: 'Cursor / Claude Code',
-    icon: '🚀',
-    color: 'rose',
+    color: 'blue',
   },
 ]
-const futureTrends = [
+
+const coreInsights = [
   {
-    title: '多 Agent 协作',
-    description: '从“人写代码”到“人管 Agent”的范式转移',
+    title: 'AI 工具的终极价值',
+    description: '放大人类判断而非取代，看见代码背后的系统逻辑与设计之美。',
     color: 'blue',
   },
   {
-    title: 'Vibe Coding',
-    description: '自然语言直接构建，零代码闭环交付',
+    title: '混合策略成为主流',
+    description: '不再迷信单一工具，而是根据任务复杂度编排工具链。',
     color: 'emerald',
   },
   {
-    title: '记忆持久化',
-    description: '跨会话深度理解开发者偏好与业务上下文',
+    title: '从补全到 Agent',
+    description: 'Agentic Workflow 将成为 2026 年后开发者的基本肌肉记忆。',
     color: 'cyan',
   },
 ]
@@ -83,73 +90,69 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
 <template>
   <Section>
     <Card padding="lg">
-      <div class="mb-6 text-center">
-        <HeadingGradient :level="2" size="4xl"> 分享小贴士 </HeadingGradient>
+      <div class="mb-8 text-center">
+        <HeadingGradient :level="2" size="4xl">
+          选型框架与建议
+        </HeadingGradient>
         <p class="mt-3 text-slate-600 text-lg">
-          如何根据不同场景选型 AI 编程工具
+          2026 混合策略：放大人类判断，看见设计之美
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">
+
+      <!-- Selection Framework -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         <div
-          v-for="(rec, index) in recommendations"
+          v-for="(q, index) in questions"
           :key="index"
-          class="p-4 rounded-xl border bg-white/60 backdrop-blur-sm flex flex-col items-center text-center"
-          :class="[colorMap[rec.color].border]"
+          class="p-6 rounded-2xl border border-slate-200 bg-white/40 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
         >
-          <div class="mb-3">
-            <span class="text-3xl">{{ rec.icon }}</span>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">{{ q.icon }}</span>
+            <h4 class="font-bold text-slate-800 leading-tight">
+              {{ q.question }}
+            </h4>
           </div>
-          <h3
-            class="font-semibold text-base mb-2"
-            :class="[colorMap[rec.color].text]"
-          >
-            {{ rec.title }}
-          </h3>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            {{ rec.description }}
+          <p class="text-sm text-slate-600 leading-relaxed italic">
+            "{{ q.answer }}"
           </p>
         </div>
       </div>
-      <div
-        class="p-6 rounded-xl bg-gradient-to-r from-blue-50 via-cyan-50 to-emerald-50 border border-slate-200"
-      >
-        <h4 class="font-semibold text-slate-800 mb-4 flex items-center gap-2">
-          <svg
-            class="w-5 h-5 text-blue-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-            />
-          </svg>
-          未来趋势（2026已见端倪）
-        </h4>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+      <!-- Hybrid Strategies -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div
+          v-for="(strat, index) in strategies"
+          :key="index"
+          class="p-5 rounded-2xl border bg-white/60 backdrop-blur-sm flex flex-col items-center text-center group hover:scale-105 transition-all duration-300"
+          :class="[colorMap[strat.color].border]"
+        >
           <div
-            v-for="(trend, index) in futureTrends"
-            :key="index"
-            class="p-4 rounded-lg border bg-white/60"
-            :class="[colorMap[trend.color].border]"
+            :class="[
+              'w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4 shadow-sm group-hover:rotate-6 transition-transform',
+              colorMap[strat.color].bg,
+            ]"
           >
-            <h5
-              class="font-semibold mb-1"
-              :class="[colorMap[trend.color].text]"
-            >
-              {{ trend.title }}
-            </h5>
-            <p class="text-xs text-slate-600">{{ trend.description }}</p>
+            {{ strat.icon }}
           </div>
+          <h3
+            class="font-bold text-lg mb-2"
+            :class="[colorMap[strat.color].text]"
+          >
+            {{ strat.title }}
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed px-2">
+            {{ strat.description }}
+          </p>
         </div>
       </div>
-      <div class="mt-6 p-5 rounded-xl bg-slate-50 border border-slate-200">
-        <h4 class="font-semibold text-slate-800 mb-3 flex items-center gap-2">
+
+      <!-- Core Insights -->
+      <div
+        class="p-6 rounded-2xl bg-gradient-to-r from-blue-50 via-cyan-50 to-emerald-50 border border-slate-200"
+      >
+        <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
           <svg
-            class="w-5 h-5 text-emerald-500"
+            class="w-6 h-6 text-blue-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -158,19 +161,29 @@ const colorMap: Record<string, { bg: string; border: string; text: string }> = {
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
-              d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              d="M13 10V3L4 14h7v7l9-11h-7z"
             />
           </svg>
-          日常工作流建议
+          2026 核心洞察
         </h4>
-        <p class="text-sm text-slate-600 leading-relaxed">
-          先用<strong class="text-blue-600">Chat + 项目上下文</strong
-          >快速理解陌生代码库， 再用<strong class="text-cyan-600"
-            >补全 + 重构</strong
-          >高效迭代， 最后让AI生成<strong class="text-emerald-600"
-            >测试闭环</strong
-          >—— 这套组合在所有工具里都通用，可直接节省每天8-12小时。
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            v-for="(insight, index) in coreInsights"
+            :key="index"
+            class="p-4 rounded-xl border bg-white/80 hover:bg-white transition-colors"
+            :class="[colorMap[insight.color].border]"
+          >
+            <h5
+              class="font-bold mb-2 text-sm"
+              :class="[colorMap[insight.color].text]"
+            >
+              {{ insight.title }}
+            </h5>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              {{ insight.description }}
+            </p>
+          </div>
+        </div>
       </div>
     </Card>
   </Section>

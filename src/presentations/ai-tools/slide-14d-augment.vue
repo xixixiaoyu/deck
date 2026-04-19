@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '400K+ 文件语义索引 + 多 Agent 并行，SWE-bench 冠军',
+    title: 'Context Engine',
+    description: '专注大型代码库，可索引 40 万+ 文件，提供极深的代码库感知。',
   },
   {
-    title: '工作流改变',
-    description: 'AI 真正“懂”整个代码库，程序员从“查找上下文”解放为“专注架构”',
+    title: 'Task List Agent',
+    description: '提供结构化规划与任务列表 Agent，擅长处理复杂的长任务编排。',
   },
   {
-    title: '自动 PR 修复',
-    description: '企业级代码库理解平台，自动修复能力最强',
+    title: '遗留系统重构',
+    description: '在处理数十万行代码的遗留系统重构中表现突出，稳定性极佳。',
   },
   {
-    title: '优缺点小结',
-    description: '企业级上下文最强；但初次索引耗时较长',
+    title: '权衡与局限',
+    description: '初始全量索引耗时较长，定价对个人用户稍高（Indie $20/月起）。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Indie $20/月', color: 'rose' },
-  { label: '选型建议', value: '大型复杂项目', color: 'pink' },
-  { label: '团队版', value: '$60/用户/月起', color: 'red' },
+  { label: '索引能力', value: '400,000+ 文件', color: 'rose' },
+  { label: '选型建议', value: '超大型遗留系统', color: 'pink' },
+  { label: '付费模式', value: 'Indie $20 / Dev 免费', color: 'red' },
 ]
 </script>
 <template>

@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: 'Tab 极致补全',
-    description: '毫秒级感知意图，支持跨文件预测与 Copilot++ 丝滑心流体验',
+    title: 'Composer 多文件编辑',
+    description: '描述需求即生成跨文件变更，支持 Agent 模式并行处理后台任务。',
   },
   {
-    title: '工作流改变',
-    description: '从“单行纠错”跃升为“全量委托”，支持 16+ 并行 Agent 协作',
+    title: '深度代码库感知',
+    description: '集成 GPT-5 系列与 Claude 4.6，理解架构意图而非仅补全语法。',
   },
   {
-    title: 'Composer 2 进化',
-    description: '基于 Kimi K2.5 + RL 强化学习，支持 100+ 步长周期任务处理',
+    title: '企业级规模',
+    description: '估值 293 亿美元，NVIDIA 等巨头超 4 万名工程师已全面切换。',
   },
   {
-    title: '优缺点小结',
-    description: '生态无缝、极致体验；但重度使用有软限，初学者有门槛',
+    title: '权衡与局限',
+    description: '重度使用时内存占用较高，Agent 幻觉仍需人工校验与闭环。',
   },
 ]
 const highlights = [
-  { label: '补全黑科技', value: 'Copilot++', color: 'blue' },
-  { label: 'Agent 引擎', value: 'Composer 2', color: 'cyan' },
-  { label: '订阅模式', value: 'Pro $20/月', color: 'emerald' },
+  { label: '多模型支持', value: 'GPT-5 / Claude 4.6', color: 'blue' },
+  { label: '企业标杆', value: '40,000+ NVIDIA Devs', color: 'cyan' },
+  { label: '订阅模式', value: 'Pro $20 / Ultra $200', color: 'emerald' },
 ]
 </script>
 <template>

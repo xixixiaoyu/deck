@@ -5,26 +5,27 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '图像/设计稿直出代码 + SOLO 闭环 Agent，基础版永久免费',
+    title: '完全免费颠覆者',
+    description: '保持核心功能完全免费，旨在降低 AI 原生 IDE 的试错成本。',
   },
   {
-    title: '工作流改变',
-    description: '从“敲键盘”变成“指挥 AI 闭环”，中文语义理解极准',
+    title: 'Solo 深度模式',
+    description:
+      '内置 Solo 模式实现深度上下文对话与多 Agent 协作，UI 极其精炼。',
   },
   {
-    title: 'UI 重度友好',
-    description: '前端/设计转代码几乎零代码，Figma/设计稿直接转换',
+    title: '零成本原生体验',
+    description: '采用类似 Cursor 的 VS Code 式界面，实现无缝迁移与深度智能。',
   },
   {
-    title: '优缺点小结',
-    description: '上手快、免费门槛低；超大型代码库上下文深度略逊',
+    title: '权衡与局限',
+    description: '企业级合规与模型选择灵活性暂逊于 Cursor，适合个人与小团队。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '基础永久免费', color: 'emerald' },
-  { label: '选型建议', value: '国内开发者 · UI重度', color: 'blue' },
-  { label: '低价Pro', value: '约 $10/月', color: 'cyan' },
+  { label: '付费模式', value: '完全免费 (Core)', color: 'emerald' },
+  { label: '选型建议', value: '零成本 · 原生体验', color: 'blue' },
+  { label: '核心优势', value: 'Solo 深度模式', color: 'cyan' },
 ]
 </script>
 <template>

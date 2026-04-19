@@ -5,26 +5,27 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '自然语言 → 编码 → 构建 → 部署一键闭环 + 等保三级安全',
+    title: '设计转代码',
+    description: '支持从设计稿直接生成高质量前端代码，并进行沙箱预览。',
   },
   {
-    title: '工作流改变',
-    description: '从“写代码”到“管全链路”，程序员像产品经理一键落地应用',
+    title: '云原生深度融合',
+    description:
+      '支持云端沙箱执行与多模型切换（Claude/GPT/GLM），实现一键部署。',
   },
   {
-    title: '微信/腾讯云生态',
-    description: '深度集成腾讯云/微信生态，小程序开发与部署深度优化',
+    title: '端到端工作台',
+    description: '不仅是编辑器插件，更是一个集成云服务与安全合规的开发工作台。',
   },
   {
-    title: '优缺点小结',
-    description: '安全与生态极强；但国际模型支持需切换',
+    title: '权衡与局限',
+    description: '强调企业安全（等保三级），但对纯本地离线工作流的适配稍弱。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '约 $10/月起', color: 'emerald' },
-  { label: '选型建议', value: '腾讯云/微信用户', color: 'blue' },
-  { label: '安全等级', value: '等保三级安全', color: 'cyan' },
+  { label: '付费模式', value: '约 $9.95/月起', color: 'emerald' },
+  { label: '核心优势', value: '设计转代码 / 沙箱', color: 'blue' },
+  { label: '安全合规', value: '等保三级认证', color: 'cyan' },
 ]
 </script>
 <template>

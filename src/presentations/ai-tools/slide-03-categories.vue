@@ -15,7 +15,8 @@ const categories: Category[] = [
   {
     id: 'ai-native-ide',
     title: 'AI 原生 IDE',
-    description: '深度魔改（Fork）自 VS Code，将 AI 注入内核 API',
+    description:
+      '重构编辑器内核以实现深度代码库感知，追求“零摩擦”的 Agent 体验。',
     tools: [
       'Cursor',
       'Windsurf',
@@ -24,7 +25,7 @@ const categories: Category[] = [
       'CodeBuddy',
       'antigravity',
       'Kiro',
-      '文心快码',
+      'Comate',
     ],
     color: 'blue',
     icon: '🚀',
@@ -32,7 +33,8 @@ const categories: Category[] = [
   {
     id: 'ide-extension',
     title: 'IDE 扩展/助手',
-    description: '无缝嵌入现有工作流（VS Code/JetBrains），最易上手',
+    description:
+      '保留宿主生态与开发者习惯，以最小侵入性强化现有环境，降低迁移成本。',
     tools: ['GitHub Copilot', 'Augment', 'Codex'],
     color: 'cyan',
     icon: '🔌',
@@ -40,7 +42,8 @@ const categories: Category[] = [
   {
     id: 'terminal-cli',
     title: 'Terminal/CLI Agent',
-    description: '终端原生推理、自主执行命令、极致工程性能',
+    description:
+      '拥抱 Unix 哲学，利用终端的轻量性追求极致速度、自主推理与可组合性。',
     tools: ['Claude Code', 'Opencode'],
     color: 'emerald',
     icon: '💻',

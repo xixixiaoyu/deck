@@ -5,26 +5,27 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: 'Vibe（快）与 Spec（结构）双模式，先出规格文档再执行',
+    title: 'Spec-Driven 开发',
+    description: '先生成需求、设计文档与任务列表再编码，避免“直接上手”的混乱。',
   },
   {
-    title: '工作流改变',
-    description: '强制“先思考再写”，程序员获得清晰文档链条，审计性强',
+    title: 'MCP 支持极强',
+    description:
+      '深度支持 Model Context Protocol (MCP)，扩展 AI 交互能力边界。',
   },
   {
-    title: '4 层架构 Agent',
-    description: 'Spec 规范驱动，意图结构化，适合复杂架构或合规场景',
+    title: 'Vibe 与 Spec 模式',
+    description: '双模式切换：Vibe 追求极致速度，Spec 追求严谨的结构化交付。',
   },
   {
-    title: '优缺点小结',
-    description: '可追溯性一流；但 Spec 模式生成速度稍慢于纯速度工具',
+    title: '权衡与局限',
+    description: '主要面向 AWS 生态团队，第三方模型（除 Claude 外）选择受限。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: 'Pro $20/月起', color: 'cyan' },
-  { label: '选型建议', value: 'AWS 用户/受管行业', color: 'teal' },
-  { label: '审计', value: 'Traceability 极强', color: 'blue' },
+  { label: '核心哲学', value: 'Spec-Driven', color: 'cyan' },
+  { label: '选型建议', value: 'AWS 生态 / 架构先行', color: 'teal' },
+  { label: '付费模式', value: 'Pro $20/月 (信用制)', color: 'blue' },
 ]
 </script>
 <template>

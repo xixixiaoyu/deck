@@ -5,26 +5,26 @@ import HeadingGradient from '@/shared/ui/HeadingGradient.vue'
 defineProps<{ isActive?: boolean; isPreview?: boolean }>()
 const features = [
   {
-    title: '核心差异点',
-    description: '免费获取 Claude Opus 4.6 + Gemini 3 等顶级模型',
+    title: 'Agent-First 平台',
+    description: '采用双视图（Editor + Manager）实现多 Agent 并行编排。',
   },
   {
-    title: '工作流改变',
-    description: 'Mission Control 面板管理异步 Agent，程序员像“乐团指挥”',
+    title: 'Gemini 3 Pro 驱动',
+    description: '预览期内 Gemini 3 Pro 表现惊艳，擅长复杂推理与视觉任务。',
   },
   {
-    title: '浏览器自动化',
-    description: 'Agent 优先的 Mission Control，网页任务自动化能力极强',
+    title: 'Mission Control',
+    description: '通过任务控制中心管理异步 Agent，适合浏览器自动化与视觉推理。',
   },
   {
-    title: '优缺点小结',
-    description: '免费门槛最低；预览期权限与稳定性仍需观察',
+    title: '权衡与局限',
+    description: '目前处于免费预览期，企业级成熟度与定价策略仍在迭代中。',
   },
 ]
 const highlights = [
-  { label: '付费模式', value: '预览期完全免费', color: 'emerald' },
-  { label: '选型建议', value: '预算紧/原型爱好者', color: 'teal' },
-  { label: '模型', value: '顶级模型白嫖', color: 'blue' },
+  { label: '核心架构', value: '双视图 / Agent-First', color: 'emerald' },
+  { label: '主打模型', value: 'Gemini 3 Pro', color: 'teal' },
+  { label: '付费模式', value: '预览期完全免费', color: 'blue' },
 ]
 </script>
 <template>
